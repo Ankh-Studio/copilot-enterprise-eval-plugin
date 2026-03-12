@@ -32,6 +32,7 @@ Evaluate the provided integration pattern against the structured integration rub
 ## Usage
 
 Provide the path to the integration file you want evaluated:
+
 - `.github/integration/integration-name.integration.md`
 - Any custom integration file path
 

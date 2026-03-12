@@ -5,6 +5,7 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ## Core Evaluation Skills
 
 ### Single Artifact Evaluation
+
 ```
 /evaluate-artifact .github/prompts/code-review.prompt.md
 /evaluate-prompt .github/prompts/feature-generation.prompt.md
@@ -19,6 +20,7 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ```
 
 ### Batch Evaluation
+
 ```
 /eval-batch .github/prompts/
 /eval-batch --parallel skills/
@@ -26,6 +28,7 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ```
 
 ### Quality Gates
+
 ```
 /eval-quality-gates --pre-deploy .github/prompts/
 /eval-quality-gates --compliance --report detailed
@@ -33,6 +36,7 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ```
 
 ### Performance Testing
+
 ```
 /eval-performance --benchmark .github/prompts/
 /eval-performance --optimize --cache-results
@@ -42,6 +46,7 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ## Advanced Evaluation Skills
 
 ### Improvement Recommendations
+
 ```
 /eval-improve .github/prompts/code-review.prompt.md --focus=clarity
 /eval-improve skills/evaluate-artifact/SKILL.md --comprehensive
@@ -49,6 +54,7 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ```
 
 ### Debate and Analysis
+
 ```
 /eval-debate .github/prompts/code-review.prompt.md vs .github/prompts/feature-generation.prompt.md
 /eval-debate --criteria effectiveness,clarity .github/prompts/
@@ -56,6 +62,7 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ```
 
 ### Rubric Validation
+
 ```
 /eval-validate-rubrics rubrics/prompt-evaluation.md
 /eval-validate-rubrics --thorough rubrics/skill-evaluation.md
@@ -65,6 +72,7 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ## Security and Quality Assurance
 
 ### Adversarial Testing
+
 ```
 /eval-adversarial --full-suite --target rubrics/
 /eval-adversarial --attack-pattern scoring --rubric prompt.md
@@ -73,6 +81,7 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ```
 
 ### Regression Testing
+
 ```
 /eval-regression --full --baseline v1.0
 /eval-regression --scoring-consistency --artifact-type prompt
@@ -81,6 +90,7 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ```
 
 ### TL;DR Summaries
+
 ```
 /eval-tldr .github/prompts/code-review.prompt.md
 /eval-tldr --batch .github/prompts/
@@ -90,6 +100,7 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ## Edge Cases and Stress Testing
 
 ### Empty/Invalid Inputs
+
 ```
 /evaluate-artifact non-existent-file.md
 /eval-batch empty-directory/
@@ -98,6 +109,7 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ```
 
 ### Large Scale Testing
+
 ```
 /eval-batch --parallel --recursive .github/
 /eval-adversarial --comprehensive --report detailed
@@ -105,6 +117,7 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ```
 
 ### Concurrent Operations
+
 ```
 /eval-performance --benchmark --concurrent 5 &
 /eval-quality-gates --pre-deploy .github/prompts/ &
@@ -114,6 +127,7 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ## Integration Testing
 
 ### Cross-Skill Workflows
+
 ```
 /evaluate-artifact .github/prompts/code-review.prompt.md
 /eval-improve .github/prompts/code-review.prompt.md --focus=clarity
@@ -122,6 +136,7 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ```
 
 ### End-to-End Pipelines
+
 ```
 /eval-batch .github/prompts/ --comparative
 /eval-quality-gates --compliance --report detailed
@@ -131,26 +146,30 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 
 ## Expected Outcomes
 
-### Successful Evaluations Should:
+### Successful Evaluations Should
+
 - Return scores between 1.0-4.0
 - Provide detailed feedback and recommendations
 - Generate consistent results across multiple runs
 - Complete within reasonable time limits
 - Handle errors gracefully with informative messages
 
-### Quality Gates Should:
+### Quality Gates Should
+
 - Block deployments that don't meet thresholds
 - Generate compliance reports
 - Provide clear pass/fail criteria
 - Include remediation recommendations
 
-### Performance Tests Should:
+### Performance Tests Should
+
 - Benchmark evaluation speed and resource usage
 - Identify bottlenecks and optimization opportunities
 - Support concurrent operations
 - Maintain accuracy under load
 
-### Security Tests Should:
+### Security Tests Should
+
 - Identify scoring manipulation vulnerabilities
 - Test edge cases and boundary conditions
 - Validate input sanitization

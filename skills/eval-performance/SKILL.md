@@ -16,18 +16,21 @@ Maximize evaluation performance through intelligent caching, parallel processing
 ## Strategies
 
 ### Caching
+
 - Evaluation cache for identical artifacts
 - Rubric cache to avoid repeated parsing
 - Pattern cache for common responses
 - Incremental updates for changes only
 
 ### Parallel Processing
+
 - Batch parallelization for multiple artifacts
 - Rubric parallelization for concurrent application
 - Verification parallelization
 - Pipeline processing with overlapping stages
 
 ### Resource Optimization
+
 - Memory management for large artifact sets
 - CPU balancing across available cores
 - I/O optimization for file access
@@ -36,12 +39,14 @@ Maximize evaluation performance through intelligent caching, parallel processing
 ## Usage
 
 ### Analysis
+
 ```
 /eval-performance --analyze .github/prompts/
 /eval-performance --bottlenecks --detailed
 ```
 
 ### Cache Management
+
 ```
 /eval-performance --cache-enable --size 1GB
 /eval-performance --cache-clear --older-than 7days
@@ -49,12 +54,14 @@ Maximize evaluation performance through intelligent caching, parallel processing
 ```
 
 ### Parallel Processing
+
 ```
 /eval-performance --parallel --workers 4 .github/
 /eval-performance --batch-size 10 --timeout 300s
 ```
 
 ### Resource Optimization
+
 ```
 /eval-performance --optimize-memory --limit 2GB
 /eval-performance --balance-cpu --cores 8
@@ -63,12 +70,14 @@ Maximize evaluation performance through intelligent caching, parallel processing
 ## Metrics
 
 ### Speed
+
 - Single artifact: <2 seconds
 - Batch processing: 10x faster than sequential
 - Cache hit rate: >80% for repeated evaluations
 - Parallel efficiency: >90% CPU utilization
 
 ### Resources
+
 - Memory: <100MB per concurrent evaluation
 - CPU scaling: Linear improvement with cores
 - I/O: 50% reduction in file system calls
@@ -77,6 +86,7 @@ Maximize evaluation performance through intelligent caching, parallel processing
 ## Configuration Options
 
 ### Cache Settings
+
 ```json
 {
   "cache": {
@@ -90,6 +100,7 @@ Maximize evaluation performance through intelligent caching, parallel processing
 ```
 
 ### Parallel Settings
+
 ```json
 {
   "parallel": {
@@ -102,6 +113,7 @@ Maximize evaluation performance through intelligent caching, parallel processing
 ```
 
 ### Resource Limits
+
 ```json
 {
   "resources": {
@@ -116,12 +128,14 @@ Maximize evaluation performance through intelligent caching, parallel processing
 ## Performance Monitoring
 
 ### Real-time Metrics
+
 - **Active Evaluations**: Current number of running evaluations
 - **Cache Performance**: Hit rates and memory usage
 - **Resource Utilization**: CPU, memory, and I/O usage
 - **Throughput**: Evaluations per second
 
 ### Historical Analysis
+
 - **Performance Trends**: Speed improvements over time
 - **Cache Effectiveness**: Long-term cache performance
 - **Resource Patterns**: Usage patterns and optimization opportunities
@@ -130,12 +144,14 @@ Maximize evaluation performance through intelligent caching, parallel processing
 ## Advanced Features
 
 ### Predictive Caching
+
 - **Pattern Recognition**: Learn from evaluation patterns
 - **Preemptive Caching**: Cache likely future evaluations
 - **Smart Eviction**: Remove least valuable cache entries
 - **Adaptive Sizing**: Adjust cache size based on usage
 
 ### Dynamic Optimization
+
 - **Auto-tuning**: Automatically adjust parameters for optimal performance
 - **Load Balancing**: Distribute work across available resources
 - **Adaptive Batching**: Adjust batch sizes based on system load

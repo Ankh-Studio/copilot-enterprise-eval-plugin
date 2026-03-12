@@ -17,6 +17,7 @@ Evaluate any Copilot artifact against its structured rubric with verification.
 ## Usage
 
 Specify artifact path:
+
 - `.github/prompts/name.prompt.md`
 - `.github/skills/name/SKILL.md`
 - `.github/workflows/name/WORKFLOW.md`

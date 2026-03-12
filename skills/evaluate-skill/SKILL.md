@@ -32,6 +32,7 @@ Evaluate the provided skill against the structured skill rubric criteria.
 ## Usage
 
 Provide the path to the skill directory you want evaluated:
+
 - `.github/skills/skill-name/SKILL.md`
 - Any custom skill directory path
 

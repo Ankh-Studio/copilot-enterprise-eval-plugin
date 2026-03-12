@@ -32,6 +32,7 @@ Evaluate the provided agent against the structured agent rubric criteria.
 ## Usage
 
 Provide the path to the agent directory you want evaluated:
+
 - `.github/agents/agent-name/AGENT.md`
 - Any custom agent directory path
 

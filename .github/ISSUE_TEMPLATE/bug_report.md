@@ -13,9 +13,9 @@ assignees: ''
 ## 🔄 Reproduction Steps
 <!-- Steps to reproduce the behavior -->
 
-1. 
-2. 
-3. 
+1.
+2.
+3.
 
 ## 🎯 Expected Behavior
 <!-- What you expected to happen -->
@@ -24,15 +24,17 @@ assignees: ''
 <!-- What actually happened -->
 
 ## 📋 Environment
-- **Plugin Version**: 
-- **Node Version**: 
-- **OS**: 
+
+- **Plugin Version**:
+- **Node Version**:
+- **OS**:
 - **VS Code Version**: (if applicable)
 - **Copilot Extension Version**: (if applicable)
 
 ## 📦 Package Information
-- **Skill/Pack Affected**: 
-- **Related Files**: 
+
+- **Skill/Pack Affected**:
+- **Related Files**:
 
 ## 📸 Screenshots
 <!-- If applicable, add screenshots to help explain your problem -->

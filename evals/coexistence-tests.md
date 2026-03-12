@@ -7,10 +7,12 @@ This file defines tests to verify that overlapping skills can coexist without co
 ### 1. General vs Specialized Evaluators
 
 **Skills:**
+
 - `evaluate-artifact` (general)
 - `evaluate-prompt`, `evaluate-skill`, `evaluate-instruction`, etc. (specialized)
 
 **Test Cases:**
+
 ```
 # Test that both can evaluate the same file with different perspectives
 /evaluate-artifact .github/prompts/code-review.prompt.md
@@ -26,6 +28,7 @@ This file defines tests to verify that overlapping skills can coexist without co
 ```
 
 **Expected Results:**
+
 - General evaluator provides overall quality assessment
 - Specialized evaluator provides domain-specific insights
 - Scores should be in similar ranges but with different focus areas
@@ -34,10 +37,12 @@ This file defines tests to verify that overlapping skills can coexist without co
 ### 2. Batch vs Individual Processing
 
 **Skills:**
+
 - `eval-batch` (batch processing)
 - Individual evaluation skills
 
 **Test Cases:**
+
 ```
 # Batch vs individual consistency
 /eval-batch .github/prompts/
@@ -54,6 +59,7 @@ This file defines tests to verify that overlapping skills can coexist without co
 ```
 
 **Expected Results:**
+
 - Batch results should aggregate individual results accurately
 - Performance should be better in batch mode
 - No data loss or corruption in batch processing
@@ -62,10 +68,12 @@ This file defines tests to verify that overlapping skills can coexist without co
 ### 3. Quality Gates vs Evaluation Skills
 
 **Skills:**
+
 - `eval-quality-gates` (quality enforcement)
 - All evaluation skills (quality assessment)
 
 **Test Cases:**
+
 ```
 # Quality gates after evaluation
 /evaluate-artifact .github/prompts/code-review.prompt.md
@@ -81,6 +89,7 @@ This file defines tests to verify that overlapping skills can coexist without co
 ```
 
 **Expected Results:**
+
 - Quality gates should use evaluation scores for decisions
 - Clear pass/fail criteria based on evaluation results
 - Consistent application of thresholds
@@ -89,10 +98,12 @@ This file defines tests to verify that overlapping skills can coexist without co
 ### 4. Performance vs Functionality
 
 **Skills:**
+
 - `eval-performance` (performance optimization)
 - All other skills (functionality)
 
 **Test Cases:**
+
 ```
 # Performance impact on other skills
 /eval-performance --benchmark .github/prompts/
@@ -108,6 +119,7 @@ This file defines tests to verify that overlapping skills can coexist without co
 ```
 
 **Expected Results:**
+
 - Performance optimization shouldn't affect accuracy
 - Caching should improve speed without changing results
 - Concurrent operations should maintain consistency
@@ -116,10 +128,12 @@ This file defines tests to verify that overlapping skills can coexist without co
 ### 5. Improvement vs Evaluation
 
 **Skills:**
+
 - `eval-improve` (improvement recommendations)
 - Evaluation skills (assessment)
 
 **Test Cases:**
+
 ```
 # Evaluation before and after improvement
 /evaluate-artifact .github/prompts/code-review.prompt.md
@@ -137,6 +151,7 @@ This file defines tests to verify that overlapping skills can coexist without co
 ```
 
 **Expected Results:**
+
 - Improvements should lead to better evaluation scores
 - Recommendations should be actionable and specific
 - No degradation in core functionality
@@ -145,10 +160,12 @@ This file defines tests to verify that overlapping skills can coexist without co
 ### 6. Debate vs Consensus
 
 **Skills:**
+
 - `eval-debate` (comparative analysis)
 - Individual evaluations (independent assessment)
 
 **Test Cases:**
+
 ```
 # Debate vs individual evaluations
 /eval-debate .github/prompts/code-review.prompt.md vs .github/prompts/feature-generation.prompt.md
@@ -165,6 +182,7 @@ This file defines tests to verify that overlapping skills can coexist without co
 ```
 
 **Expected Results:**
+
 - Debate should provide deeper insights than individual evaluations
 - Consensus mechanisms should resolve conflicts
 - Criteria analysis should align with evaluation rubrics
@@ -173,10 +191,12 @@ This file defines tests to verify that overlapping skills can coexist without co
 ### 7. Validation vs Application
 
 **Skills:**
+
 - `eval-validate-rubrics` (rubric validation)
 - Evaluation skills (rubric application)
 
 **Test Cases:**
+
 ```
 # Rubric validation before use
 /eval-validate-rubrics rubrics/prompt-evaluation.md
@@ -192,6 +212,7 @@ This file defines tests to verify that overlapping skills can coexist without co
 ```
 
 **Expected Results:**
+
 - Validated rubrics should produce more consistent results
 - Validation feedback should improve evaluation quality
 - Stress testing should identify rubric weaknesses
@@ -200,10 +221,12 @@ This file defines tests to verify that overlapping skills can coexist without co
 ### 8. Security vs Functionality
 
 **Skills:**
+
 - `eval-adversarial` (security testing)
 - All evaluation skills (core functionality)
 
 **Test Cases:**
+
 ```
 # Adversarial testing of evaluations
 /eval-adversarial --attack-pattern scoring --rubric prompt.md
@@ -219,6 +242,7 @@ This file defines tests to verify that overlapping skills can coexist without co
 ```
 
 **Expected Results:**
+
 - Security tests shouldn't break core functionality
 - Identified vulnerabilities should be addressable
 - Performance under stress should remain acceptable
@@ -227,10 +251,12 @@ This file defines tests to verify that overlapping skills can coexist without co
 ### 9. Regression vs Progress
 
 **Skills:**
+
 - `eval-regression` (regression testing)
 - All evaluation skills (current functionality)
 
 **Test Cases:**
+
 ```
 # Baseline establishment
 /eval-regression --full --baseline v1.0
@@ -246,6 +272,7 @@ This file defines tests to verify that overlapping skills can coexist without co
 ```
 
 **Expected Results:**
+
 - Regression tests should catch quality degradation
 - Performance metrics should remain stable
 - Consistent scoring across evaluation runs
@@ -254,10 +281,12 @@ This file defines tests to verify that overlapping skills can coexist without co
 ### 10. Summary vs Detail
 
 **Skills:**
+
 - `eval-tldr` (summary generation)
 - Evaluation skills (detailed analysis)
 
 **Test Cases:**
+
 ```
 # TL;DR vs full evaluation
 /evaluate-artifact .github/prompts/code-review.prompt.md
@@ -273,6 +302,7 @@ This file defines tests to verify that overlapping skills can coexist without co
 ```
 
 **Expected Results:**
+
 - Summaries should accurately reflect detailed evaluations
 - Key scores and findings should be preserved
 - Actionable insights should be maintained
@@ -281,6 +311,7 @@ This file defines tests to verify that overlapping skills can coexist without co
 ## Conflict Resolution Tests
 
 ### Priority Hierarchies
+
 ```
 # Test that quality gates can override other skills
 /eval-quality-gates --threshold strict .github/prompts/
@@ -294,6 +325,7 @@ This file defines tests to verify that overlapping skills can coexist without co
 ```
 
 ### Resource Competition
+
 ```
 # Concurrent skill execution
 /eval-batch --parallel .github/prompts/ &
@@ -310,16 +342,19 @@ This file defines tests to verify that overlapping skills can coexist without co
 ## Expected Coexistence Behaviors
 
 ### Positive Interactions
+
 - Skills should enhance each other's capabilities
 - Shared data and insights should improve overall quality
 - Complementary perspectives should provide comprehensive analysis
 
 ### Neutral Interactions
+
 - Skills should operate independently when appropriate
 - No interference between unrelated functionalities
 - Clean separation of concerns
 
 ### Controlled Conflicts
+
 - Quality gates should override when standards aren't met
 - Security tests should take precedence over performance
 - Regression tests should block releases with quality issues

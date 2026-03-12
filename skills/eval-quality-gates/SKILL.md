@@ -16,16 +16,19 @@ Implement automated quality gates that enforce standards and prevent low-quality
 ## Gate Types
 
 ### Entry Gates
+
 - Prompt Quality: Minimum 3.0/4.0 for production use
 - Instruction Completeness: All mandatory sections, 2.5+ score
 - Skill Functionality: Core functionality must exceed 3.0/4.0
 
 ### Progression Gates
+
 - Template Reusability: Minimum 2.5/4.0 for cross-project use
 - Workflow Reliability: Error handling scored 3.0+/4.0
 - Agent Performance: Task specialization 3.0+/4.0
 
 ### Release Gates
+
 - Integration Compatibility: All criteria 3.0+/4.0
 - Context Accuracy: Data quality and relevance 3.5+/4.0
 - Validation Coverage: Comprehensive scenario handling 3.0+/4.0
@@ -33,18 +36,21 @@ Implement automated quality gates that enforce standards and prevent low-quality
 ## Usage
 
 ### Single Check
+
 ```
 /eval-quality-gates .github/prompts/api-design.prompt.md --gate production
 /eval-quality-gates .github/skills/deploy/SKILL.md --gate release
 ```
 
 ### Bulk Enforcement
+
 ```
 /eval-quality-gates .github/ --all-gates --strict
 /eval-quality-gates .github/prompts/ --gate entry --batch
 ```
 
 ### Policy Configuration
+
 ```
 /quality-gates --configure-policy organization-standards.json
 /quality-gates --set-threshold prompt-min-score:3.2

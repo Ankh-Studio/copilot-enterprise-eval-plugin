@@ -1,6 +1,7 @@
-## 📋 Pull Request
+# 📋 Pull Request
 
-### 🎯 Type
+## 🎯 Type
+
 - [ ] 🐛 Bug fix
 - [ ] ✨ New feature
 - [ ] 📚 Documentation
@@ -8,41 +9,44 @@
 - [ ] 🚀 Performance
 - [ ] ⚡ Workflow improvement
 
-### 📝 Description
+## 📝 Description
 <!-- Brief description of changes -->
 
-### 🔄 Changes
+## 🔄 Changes
 <!-- List of specific changes made -->
 
-### 🧪 Testing
+## 🧪 Testing
+
 - [ ] Unit tests pass
 - [ ] Integration tests pass
 - [ ] Manual testing completed
 - [ ] Workflow validation passes
 
-### 📦 Package Impact
+## 📦 Package Impact
+
 - [ ] Version bump required
 - [ ] Skills added/modified
 - [ ] Starter packs updated
 - [ ] Documentation updated
 
-### 🔗 Related Issues
+## 🔗 Related Issues
 <!-- Closes #123, Fixes #456 -->
 
-### 📸 Screenshots
+## 📸 Screenshots
 <!-- If applicable -->
 
-### 📋 Checklist
+## 📋 Checklist
+
 - [ ] Code follows project style guidelines
 - [ ] Self-review completed
 - [ ] Documentation updated
 - [ ] Tests added/updated
 - [ ] Ready for review
 
-### 🚀 Release Notes
+## 🚀 Release Notes
 <!-- Brief description for release notes -->
 
 ---
 
-### 💡 Additional Notes
+## 💡 Additional Notes
 <!-- Any additional context for reviewers -->

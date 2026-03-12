@@ -26,6 +26,7 @@ Be aggressive - this is stress-testing, not validation.
 ```
 
 Focus on scenarios where rubric might fail under adversarial conditions.
+
 - `rubrics/validation.md` - Validation rule evaluation rubric
 - `rubrics/integration.md` - Integration pattern evaluation rubric
 

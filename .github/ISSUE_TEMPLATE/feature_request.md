@@ -26,10 +26,11 @@ assignees: ''
 <!-- If applicable, describe the user interface or experience -->
 
 ## 📦 Package Impact
-- **New Skills**: 
-- **Modified Skills**: 
-- **New Starter Packs**: 
-- **Documentation**: 
+
+- **New Skills**:
+- **Modified Skills**:
+- **New Starter Packs**:
+- **Documentation**:
 
 ## 🧪 Testing Requirements
 <!-- What tests should be included? -->

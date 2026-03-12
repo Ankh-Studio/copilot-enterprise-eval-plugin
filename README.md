@@ -1,6 +1,8 @@
 # Copilot Eval Plugin
 
-A GitHub Copilot CLI plugin for auditing and improving Copilot customizations in client repositories. It evaluates prompts, instructions, skills, agents, workflows, validation rules, and integration artifacts against structured rubrics. It also helps teams explain what each artifact does, how it works, where it's weak, and what to improve next.
+A GitHub Copilot CLI plugin for auditing and improving Copilot customizations in client repositories.
+It evaluates prompts, instructions, skills, agents, workflows, validation rules, and integration artifacts against structured rubrics.
+It also helps teams explain what each artifact does, how it works, where it's weak, and what to improve next.
 
 ## 🎯 What Makes This Different
 
@@ -29,10 +31,10 @@ A GitHub Copilot CLI plugin for auditing and improving Copilot customizations in
   - [Automated Quality Checks](#automated-quality-checks)
   - [Supported Artifact Types](#supported-artifact-types)
 - [Advanced Features](#advanced-features)
-  - [Chain-of-Verification Evaluation](#chain-of-verification-evaluation)
-  - [Adversarial Rubric Testing](#adversarial-rubric-testing)
-  - [Multi-Persona Architecture Decisions](#multi-persona-architecture-decisions)
-  - [Production-Grade Quality Assurance](#production-grade-quality-assurance)
+  - [Chain-of-Verification Evaluation](#-chain-of-verification-evaluation)
+  - [Adversarial Rubric Testing](#-adversarial-rubric-testing)
+  - [Multi-Persona Architecture Decisions](#️-multi-persona-architecture-decisions)
+  - [Production-Grade Quality Assurance](#-production-grade-quality-assurance)
 - [Quick Start](#quick-start)
 - [Evaluation Criteria](#evaluation-criteria)
 - [Scoring](#scoring)
@@ -51,6 +53,7 @@ A GitHub Copilot CLI plugin for auditing and improving Copilot customizations in
 This plugin provides **17 evaluation-focused skills** organized into four categories:
 
 ### 🔍 Core Evaluation Skills (10)
+
 - `evaluate-artifact` - Universal evaluation with Chain-of-Verification
 - `evaluate-prompt` - Specialized prompt quality assessment
 - `evaluate-instruction` - Instruction clarity and effectiveness
@@ -63,15 +66,18 @@ This plugin provides **17 evaluation-focused skills** organized into four catego
 - `evaluate-integration` - Integration pattern quality
 
 ### ⚡ Enhanced Evaluation Skills (3)
+
 - `batch-evaluation` - Process multiple artifacts efficiently
 - `quality-gates` - Enforce evaluation standards automatically
 - `performance-optimizer` - Optimize evaluation speed and resources
 
 ### � Improvement & Chaining Skills (2)
+
 - `improve-artifact` - Apply targeted improvements based on evaluation feedback
 - `iterative-improvement` - Automated evaluation-improvement-verification cycles
 
 ### �️ Quality Assurance Skills (2)
+
 - `validate-rubrics` - Stress-test evaluation criteria
 - `architecture-debate` - Multi-perspective design decisions
 
@@ -92,6 +98,7 @@ copilot plugin install ./copilot-eval-plugin
 ## Usage
 
 ### Basic Evaluation
+
 ```bash
 # Universal evaluation with verification
 /evaluate-artifact .github/prompts/code-review.prompt.md
@@ -131,6 +138,7 @@ copilot plugin install ./copilot-eval-plugin
 The plugin supports powerful prompt chaining workflows for systematic quality enhancement:
 
 #### Evaluation → Improvement → Verification Cycle
+
 ```bash
 # 1. Evaluate current state
 /evaluate-artifact .github/prompts/api-design.prompt.md
@@ -143,6 +151,7 @@ The plugin supports powerful prompt chaining workflows for systematic quality en
 ```
 
 #### Automated Iterative Improvement
+
 ```bash
 # Complete automated improvement workflow
 /iterative-improvement .github/skills/deploy/SKILL.md --target=3.5 --cycles=3
@@ -152,6 +161,7 @@ The plugin supports powerful prompt chaining workflows for systematic quality en
 ```
 
 #### Multi-Persona Enhancement Chain
+
 ```bash
 # 1. Baseline evaluation
 /evaluate-artifact .github/workflows/ci-cd/WORKFLOW.md
@@ -167,14 +177,17 @@ The plugin supports powerful prompt chaining workflows for systematic quality en
 ```
 
 ### Automated Quality Checks
+
 The plugin includes hooks that automatically ensure quality:
+
 - **Pre-generation**: Verifies prompt quality with self-critique
 - **Post-generation**: Reviews content with evidence-based analysis
 - **Pre-edit**: Checks content against best practices
 - **Post-edit**: Validates changes for consistency
 
 ### Example Output
-```
+
+```text
 Chain-of-Verification Evaluation Results:
 
 🔍 Initial Analysis:
@@ -231,28 +244,36 @@ The plugin includes hooks that automatically evaluate content:
 ## Advanced Features
 
 ### 🧠 Chain-of-Verification Evaluation
+
 Every evaluation includes mandatory self-critique for higher accuracy:
+
 - **Error Identification**: Lists 3 specific ways analysis could be incomplete or misleading
 - **Evidence Citation**: Cites specific evidence from artifact content to verify concerns
 - **Corrected Analysis**: Provides revised analysis incorporating verified corrections
 - **Quality Assurance**: Final review for consistency and actionability
 
 ### ⚡ Adversarial Rubric Testing
+
 Validate rubrics before production deployment with systematic stress-testing:
+
 - **Edge Case Generation**: Creates challenging artifacts that could break scoring logic
 - **Vulnerability Assessment**: Identifies 5+ ways rubrics could produce biased results
 - **Severity Rating**: Prioritizes issues by Critical/High/Medium/Low severity and likelihood
 - **Hardened Rubrics**: Provides improved versions that survive stress-testing
 
 ### 🏛️ Multi-Persona Architecture Decisions
+
 Resolve complex design tradeoffs with structured debate methodology:
+
 - **Plugin Developer**: Focuses on maintainability, testing, and extensibility
 - **End User**: Prioritizes ease of use, clear feedback, and immediate value
 - **System Admin**: Emphasizes performance, resource usage, and scalability
 - **Survivor Synthesis**: Strongest approach that survives all critiques
 
 ### 🔄 Production-Grade Quality Assurance
+
 Systematic approach to evaluation reliability:
+
 - **Verification Stage**: Mandatory self-critique before final assessment
 - **Evidence-Based**: All claims backed by specific artifact evidence
 - **Consistent Methodology**: Unified evaluation across all artifact types
@@ -279,6 +300,7 @@ copilot plugin install ./copilot-eval-plugin
 Each artifact type is evaluated against specific criteria:
 
 ### Prompts
+
 - **Clarity** (25%): Unambiguous, specific, easily understood
 - **Specificity** (25%): Clear expectations and constraints
 - **Context** (20%): Relevant background and environment
@@ -286,6 +308,7 @@ Each artifact type is evaluated against specific criteria:
 - **Examples** (15%): Illustrative examples and use cases
 
 ### Instructions
+
 - **Clarity** (25%): Clear and understandable guidance
 - **Completeness** (25%): Comprehensive coverage of topic
 - **Structure** (20%): Logical organization and flow
@@ -293,6 +316,7 @@ Each artifact type is evaluated against specific criteria:
 - **Best Practices** (15%): Industry standards and proven methods
 
 ### Skills
+
 - **Functionality** (25%): Core functionality and effectiveness
 - **Documentation** (25%): Clear instructions and examples
 - **Error Handling** (20%): Robust error management
@@ -300,6 +324,7 @@ Each artifact type is evaluated against specific criteria:
 - **Integration** (15%): Compatibility with existing systems
 
 ### Templates
+
 - **Structure** (25%): Clear organization and sections
 - **Flexibility** (25%): Customization and adaptability
 - **Documentation** (20%): Usage instructions and examples
@@ -307,6 +332,7 @@ Each artifact type is evaluated against specific criteria:
 - **Reusability** (15%): Cross-project applicability
 
 ### Workflows
+
 - **Sequence Logic** (25%): Logical step progression
 - **Automation** (25%): Minimized manual intervention
 - **Error Handling** (20%): Comprehensive error management
@@ -314,6 +340,7 @@ Each artifact type is evaluated against specific criteria:
 - **Scalability** (15%): Performance under load
 
 ### Agents
+
 - **Persona Definition** (25%): Clear identity and expertise
 - **Domain Expertise** (25%): Deep knowledge in specialization
 - **Task Specialization** (20%): Focused task capabilities
@@ -321,6 +348,7 @@ Each artifact type is evaluated against specific criteria:
 - **Reliability** (15%): Consistent performance
 
 ### Context Providers
+
 - **Data Quality** (25%): Accurate and current information
 - **Relevance** (25%): Direct applicability to use cases
 - **Coverage** (20%): Comprehensive domain inclusion
@@ -328,6 +356,7 @@ Each artifact type is evaluated against specific criteria:
 - **Maintainability** (15%): Easy updates and organization
 
 ### Validation Rules
+
 - **Coverage** (25%): Comprehensive scenario handling
 - **Accuracy** (25%): Minimal false positives/negatives
 - **Performance** (20%): Minimal workflow impact
@@ -335,6 +364,7 @@ Each artifact type is evaluated against specific criteria:
 - **Integration** (15%): Seamless tool compatibility
 
 ### Integration Patterns
+
 - **Compatibility** (25%): Broad system support
 - **Reliability** (25%): Consistent behavior
 - **Documentation** (20%): Comprehensive guides
@@ -356,23 +386,26 @@ The total score is calculated using the weighted criteria.
 ## 🎯 Why This Matters
 
 ### For Development Teams
+
 - **Consistent Quality**: Systematic evaluation ensures all artifacts meet standards
 - **Faster Reviews**: Automated verification reduces manual review time
 - **Better Decisions**: Architecture debates prevent costly design mistakes
 
 ### For Enterprise Deployments
+
 - **Risk Reduction**: Adversarial testing eliminates evaluation vulnerabilities
 - **Compliance**: Documented evaluation process for audit requirements
 - **Scalability**: Automated hooks maintain quality at scale
 
 ### For Open Source Projects
+
 - **Contributor Quality**: Clear evaluation criteria for community contributions
 - **Documentation**: Evaluation rubrics serve as quality guidelines
 - **Reliability**: Stress-tested rubrics ensure consistent assessments
 
 ## Plugin Structure
 
-```
+```text
 copilot-eval-plugin/
 ├── plugin.json              # Plugin manifest (12 skills registered)
 ├── agents/
@@ -409,6 +442,7 @@ copilot-eval-plugin/
 ## Development
 
 ### Quality Assurance Testing
+
 ```bash
 # Test evaluation with verification
 /evaluate-artifact .github/prompts/test.prompt.md
@@ -451,5 +485,6 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ## Support
 
 For issues and questions:
+
 - GitHub Issues: [Create an issue](https://github.com/yourusername/copilot-eval-plugin/issues)
 - Documentation: [GitHub Copilot CLI Plugin Docs](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-finding-installing)

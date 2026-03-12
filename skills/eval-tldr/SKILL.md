@@ -43,6 +43,7 @@ Use this exact tldr format for all summaries:
 ## Usage Examples
 
 ### Single Artifact Summary
+
 ```bash
 /eval-tldr .github/prompts/code-review.prompt.md
 /eval-tldr evaluation-output.json
@@ -50,6 +51,7 @@ Use this exact tldr format for all summaries:
 ```
 
 ### Batch Processing
+
 ```bash
 /eval-tldr --batch .github/prompts/
 /eval-tldr --summary evaluation-results/
@@ -57,6 +59,7 @@ Use this exact tldr format for all summaries:
 ```
 
 ### Detailed Analysis Options
+
 ```bash
 /eval-tldr --detailed --findings artifact-path
 /eval-tldr --recommendations --priority high

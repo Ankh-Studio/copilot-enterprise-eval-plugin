@@ -10,14 +10,17 @@ Simulate structured debate between three experts to resolve architecture decisio
 Three personas debate with different priorities:
 
 **Developer**: Maintainability & extensibility
+
 - Argues for modular architecture with clear separation
 - Focus: Code maintainability, testing, future features
 
 **User**: Ease of use & clear feedback  
+
 - Argues for simple, intuitive interface with immediate value
 - Focus: User experience, learning curve, actionable insights
 
 **Admin**: Performance & minimal resources
+
 - Argues for efficient resource utilization and fast execution
 - Focus: Performance, scalability, system impact
 
@@ -42,6 +45,7 @@ The synthesis should NOT be a compromise - it should be the strongest position t
 ## Usage
 
 Specify the architecture decision to debate:
+
 - Plugin structure (universal vs. specialized skills)
 - Evaluation methodology (scoring approach, feedback format)
 - Integration strategy (hooks, automation, performance)
