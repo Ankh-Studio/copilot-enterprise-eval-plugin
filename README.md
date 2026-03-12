@@ -47,16 +47,14 @@ It also helps teams explain what each artifact does, how it works, where it's we
   - [Local Testing](#local-testing)
   - [Custom Rubrics](#custom-rubrics)
   - [Contributing](#contributing)
-- [License](#license)
-- [Support](#support)
 
 ## 📊 Plugin Skills Overview
 
-This plugin provides **17 evaluation-focused skills** organized into four categories:
+This plugin provides **23 evaluation-focused skills** organized into five categories:
 
 ### 🔍 Core Evaluation Skills (10)
 
-- `evaluate-artifact` - Universal evaluation with Chain-of-Verification
+- `evaluate-artifact` - Universal evaluation with persona-aware routing and Chain-of-Verification
 - `evaluate-prompt` - Specialized prompt quality assessment
 - `evaluate-instruction` - Instruction clarity and effectiveness
 - `evaluate-skill` - Skill functionality and design
@@ -67,21 +65,29 @@ This plugin provides **17 evaluation-focused skills** organized into four catego
 - `evaluate-validation` - Validation rule effectiveness
 - `evaluate-integration` - Integration pattern quality
 
-### ⚡ Enhanced Evaluation Skills (3)
+### 🎭 Persona-Enhanced Skills (5)
 
-- `batch-evaluation` - Process multiple artifacts efficiently
-- `quality-gates` - Enforce evaluation standards automatically
-- `performance-optimizer` - Optimize evaluation speed and resources
+- `eval-debate` - Multi-perspective architecture decisions with systematic persona routing
+- `eval-tldr` - Persona-aware concise summaries and documentation
+- `recommend-workspace-pack` - Persona-driven pack recommendations and expertise matching
+- `eval-starter-pack` - Starter pack evaluation with persona context
+- `eval-improve` - Targeted improvements with persona-specific insights
 
-### � Improvement & Chaining Skills (2)
+### ⚡ Advanced Evaluation Skills (8)
 
-- `improve-artifact` - Apply targeted improvements based on evaluation feedback
-- `iterative-improvement` - Automated evaluation-improvement-verification cycles
+- `eval-batch` - Process multiple artifacts efficiently
+- `eval-quality-gates` - Enforce evaluation standards automatically
+- `eval-performance` - Optimize evaluation speed and resources
+- `eval-validate-rubrics` - Stress-test evaluation criteria
+- `eval-adversarial` - Adversarial testing and vulnerability assessment
+- `eval-regression` - Regression testing and validation
+- `generate-pr-overview` - Comprehensive PR analysis and reporting
+- `repo-workflow-planner` - Repository workflow optimization
 
-### �️ Quality Assurance Skills (2)
+### 🛠️ Utility Skills (2)
 
-- `validate-rubrics` - Stress-test evaluation criteria
-- `architecture-debate` - Multi-perspective design decisions
+- `add-api-service` - API service integration and setup
+- `eval-starter-pack` - Starter pack evaluation and recommendations
 
 ## Installation
 
