@@ -1,0 +1,324 @@
+# Advanced Routing Configuration
+# Controls persona selection, confidence scoring, and routing behavior
+
+routing:
+  # Confidence thresholds for routing decisions
+  thresholds:
+    high_confidence: 80      # Direct routing without confirmation
+    medium_confidence: 60    # Routing with brief explanation
+    low_confidence: 40       # Routing with detailed justification
+    multi_persona_trigger: 70 # Threshold for multi-persona coordination
+    fallback_threshold: 30    # When to use fallback strategies
+  
+  # Weight factors for confidence scoring
+  weights:
+    context_relevance: 0.4    # How well persona fits the context
+    mission_alignment: 0.3    # How well persona aligns with mission
+    historical_performance: 0.2 # Past success rate
+    conflict_resolution: 0.1  # Conflict handling capability
+  
+  # Routing strategies
+  strategies:
+    default_strategy: "primary_persona"
+    fallback_strategy: "multi_persona"
+    conflict_strategy: "evidence_weighted"
+    learning_strategy: "adaptive"
+  
+  # Performance optimization
+  optimization:
+    cache_enabled: true
+    cache_ttl: 3600          # Cache duration in seconds
+    parallel_routing: true   # Enable parallel persona evaluation
+    max_parallel_personas: 3
+    timeout_ms: 5000         # Maximum routing decision time
+
+# Persona definitions and mappings
+personas:
+  team-staff-engineer:
+    name: "Staff Engineer"
+    primary_contexts: 
+      - "technical_architecture"
+      - "code_quality"
+      - "performance_optimization"
+      - "scalability"
+    confidence_boost:
+      - "typescript"
+      - "react"
+      - "complexity"
+      - "architecture_patterns"
+    conflict_resolution: "technical_priority"
+    weight_adjustments:
+      context_relevance: 0.5
+      mission_alignment: 0.3
+      historical_performance: 0.2
+  
+  business-product-manager:
+    name: "Product Manager"
+    primary_contexts:
+      - "user_experience"
+      - "business_value"
+      - "feature_completeness"
+      - "time_to_market"
+    confidence_boost:
+      - "user_workflows"
+      - "business_metrics"
+      - "feature_coverage"
+      - "market_analysis"
+    conflict_resolution: "business_priority"
+    weight_adjustments:
+      context_relevance: 0.4
+      mission_alignment: 0.4
+      historical_performance: 0.2
+  
+  team-qa-lead:
+    name: "QA Lead"
+    primary_contexts:
+      - "quality_assurance"
+      - "testing_patterns"
+      - "error_handling"
+      - "compliance"
+    confidence_boost:
+      - "test_coverage"
+      - "quality_gates"
+      - "error_scenarios"
+      - "accessibility"
+    conflict_resolution: "quality_priority"
+    weight_adjustments:
+      context_relevance: 0.45
+      mission_alignment: 0.35
+      historical_performance: 0.2
+  
+  business-repo-maintainer:
+    name: "Repository Maintainer"
+    primary_contexts:
+      - "repository_health"
+      - "documentation"
+      - "consistency"
+      - "community"
+    confidence_boost:
+      - "documentation_quality"
+      - "consistency_patterns"
+      - "community_guidelines"
+      - "maintainability"
+    conflict_resolution: "maintainability_priority"
+    weight_adjustments:
+      context_relevance: 0.4
+      mission_alignment: 0.35
+      historical_performance: 0.25
+  
+  execution-starter-pack-advisor:
+    name: "Starter Pack Advisor"
+    primary_contexts:
+      - "integration_expertise"
+      - "compatibility"
+      - "migration"
+      - "user_onboarding"
+    confidence_boost:
+      - "integration_patterns"
+      - "compatibility_matrices"
+      - "migration_success"
+      - "setup_ease"
+    conflict_resolution: "integration_priority"
+    weight_adjustments:
+      context_relevance: 0.4
+      mission_alignment: 0.3
+      historical_performance: 0.3
+
+# Context pattern mappings
+context_patterns:
+  technical_architecture:
+    keywords: ["architecture", "design", "structure", "pattern", "scalability"]
+    file_patterns: ["*.ts", "*.tsx", "src/components", "src/lib"]
+    persona_ranking: ["team-staff-engineer", "team-qa-lead", "execution-starter-pack-advisor"]
+  
+  user_experience:
+    keywords: ["user", "experience", "workflow", "interface", "usability"]
+    file_patterns: ["*.md", "docs/", "README", "user-guide"]
+    persona_ranking: ["business-product-manager", "team-staff-engineer", "team-qa-lead"]
+  
+  quality_assurance:
+    keywords: ["test", "quality", "coverage", "validation", "verification"]
+    file_patterns: ["*.test.*", "test/", "spec/", "__tests__"]
+    persona_ranking: ["team-qa-lead", "team-staff-engineer", "business-repo-maintainer"]
+  
+  repository_health:
+    keywords: ["documentation", "consistency", "maintainability", "community"]
+    file_patterns: ["CONTRIBUTING", "LICENSE", "*.md", "docs/"]
+    persona_ranking: ["business-repo-maintainer", "team-staff-engineer", "team-qa-lead"]
+  
+  integration_expertise:
+    keywords: ["integration", "compatibility", "migration", "setup"]
+    file_patterns: ["package.json", "config/", "scripts/", "starter-pack"]
+    persona_ranking: ["execution-starter-pack-advisor", "team-staff-engineer", "business-product-manager"]
+
+# Multi-persona coordination rules
+coordination:
+  # When to use multi-persona approach
+  triggers:
+    - confidence_below_threshold: 60
+    - conflicting_contexts: true
+    - complex_scenario: true
+    - user_expertise: "expert"
+  
+  # Coordination strategies
+  strategies:
+    sequential:
+      description: "Personas evaluate in sequence, each building on previous"
+      order: ["team-staff-engineer", "team-qa-lead", "business-product-manager"]
+    
+    parallel:
+      description: "Personas evaluate simultaneously, results synthesized"
+      max_personas: 3
+      synthesis_method: "weighted_average"
+    
+    hierarchical:
+      description: "Primary persona leads, others provide validation"
+      lead_personas: ["team-staff-engineer", "business-product-manager"]
+      validation_personas: ["team-qa-lead", "business-repo-maintainer"]
+    
+    collaborative:
+      description: "All personas collaborate with debate and consensus"
+      consensus_threshold: 0.7
+      debate_rounds: 2
+
+# Learning and adaptation settings
+learning:
+  # Pattern recognition
+  pattern_detection:
+    min_occurrences: 5        # Minimum occurrences to consider a pattern
+    confidence_threshold: 0.8 # Confidence level for pattern recognition
+    retention_period: 90      # Days to retain pattern data
+  
+  # Performance tracking
+  performance_metrics:
+    track_accuracy: true
+    track_user_satisfaction: true
+    track_response_time: true
+    track_confidence_reliability: true
+  
+  # Adaptation rules
+  adaptation:
+    auto_adjust_thresholds: true
+    learning_rate: 0.1
+    max_adjustment_per_cycle: 0.05
+    validation_period: 30      # Days between adaptation cycles
+
+# Fallback and error handling
+fallback:
+  # Fallback strategies when routing fails
+  strategies:
+    manual_selection:
+      description: "Present options to user for manual selection"
+      max_options: 3
+    
+    default_persona:
+      description: "Use default persona based on context type"
+      default_context_mapping:
+        technical: "team-staff-engineer"
+        business: "business-product-manager"
+        quality: "team-qa-lead"
+        community: "business-repo-maintainer"
+        integration: "execution-starter-pack-advisor"
+    
+    multi_persona:
+      description: "Use multi-persona approach as fallback"
+      max_personas: 2
+  
+  # Error handling
+  error_handling:
+    retry_attempts: 3
+    retry_delay_ms: 1000
+    escalate_on_failure: true
+    log_errors: true
+
+# Monitoring and analytics
+monitoring:
+  # Metrics to track
+  metrics:
+    routing_accuracy: true
+    confidence_distribution: true
+    response_time: true
+    persona_usage: true
+    user_satisfaction: true
+    pattern_effectiveness: true
+  
+  # Alert thresholds
+  alerts:
+    low_accuracy_threshold: 0.8
+    high_response_time_threshold: 2000  # milliseconds
+    low_confidence_threshold: 0.5
+    persona_overuse_threshold: 0.7
+  
+  # Reporting
+  reporting:
+    daily_summary: true
+    weekly_analysis: true
+    monthly_insights: true
+    export_format: ["json", "csv"]
+
+# Integration settings
+integration:
+  # Skill integration points
+  skills:
+    evaluate-artifact:
+      routing_enabled: true
+      context_analysis: true
+      multi_persona_support: true
+    
+    eval-debate:
+      routing_enabled: true
+      coordination_strategy: "collaborative"
+      conflict_resolution: "debate"
+    
+    eval-tldr:
+      routing_enabled: true
+      persona_specific_templates: true
+    
+    recommend-workspace-pack:
+      routing_enabled: true
+      repository_context_analysis: true
+    
+    eval-starter-pack:
+      routing_enabled: true
+      persona_weighted_evaluation: true
+  
+  # API endpoints
+  api:
+    base_url: "/api/routing"
+    endpoints:
+      - route: "/route"
+        method: "POST"
+        description: "Route evaluation request"
+      - route: "/confidence"
+        method: "POST"
+        description: "Calculate confidence score"
+      - route: "/learn"
+        method: "POST"
+        description: "Learn from outcome"
+      - route: "/metrics"
+        method: "GET"
+        description: "Get routing metrics"
+      - route: "/config"
+        method: "PUT"
+        description: "Update configuration"
+
+# Security and compliance
+security:
+  # Access control
+  access_control:
+    require_authentication: false
+    rate_limiting: true
+    max_requests_per_minute: 100
+  
+  # Data privacy
+  privacy:
+    anonymize_user_data: true
+    retention_period: 90
+    gdpr_compliant: true
+  
+  # Audit logging
+  audit:
+    log_routing_decisions: true
+    log_configuration_changes: true
+    log_access_attempts: true
+    log_retention_days: 30

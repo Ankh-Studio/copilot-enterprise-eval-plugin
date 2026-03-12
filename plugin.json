@@ -36,6 +36,8 @@
     "skills/eval-tldr/",
     "skills/recommend-workspace-pack/",
     "skills/eval-starter-pack/",
+    "skills/advanced-router/",
+    "skills/routing-analytics/",
     "skills/generate-pr-overview/",
     "skills/repo-workflow-planner/",
     "skills/add-api-service/"
