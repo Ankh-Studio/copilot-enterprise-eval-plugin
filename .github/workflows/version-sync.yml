@@ -1,0 +1,54 @@
+name: Sync Version
+
+on:
+  push:
+    paths:
+      - 'package.json'
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  sync-version:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get version from package.json
+        id: version
+        run: echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+
+      - name: Update plugin.json version
+        run: |
+          jq --arg version "${{ steps.version.outputs.version }}" '.version = $version' plugin.json > plugin.json.tmp
+          mv plugin.json.tmp plugin.json
+
+      - name: Check if plugin.json changed
+        id: changed
+        run: |
+          if git diff --quiet plugin.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.changed.outputs.changed == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add plugin.json
+          git commit -m "chore: sync plugin.json version to ${{ steps.version.outputs.version }}"
+          git push
+
+      - name: Create tag
+        if: steps.changed.outputs.changed == 'true'
+        run: |
+          git tag v${{ steps.version.outputs.version }}
+          git push origin v${{ steps.version.outputs.version }}

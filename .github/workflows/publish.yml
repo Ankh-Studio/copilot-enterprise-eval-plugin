@@ -1,0 +1,84 @@
+name: Publish to npm
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to publish (e.g., 1.2.3)'
+        required: true
+        type: string
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Get version from tag or input
+        id: version
+        run: |
+          if [ -n "${{ github.event.inputs.version }}" ]; then
+            echo "version=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+          else
+            echo "version=${{ github.ref_name }}" | sed 's/^v//' >> $GITHUB_OUTPUT
+          fi
+
+      - name: Validate package.json
+        run: |
+          npm pkg fix
+          node -e "const pkg = require('./package.json'); console.log('Package version:', pkg.version); console.log('Expected version:', '${{ steps.version.outputs.version }}'); if (pkg.version !== '${{ steps.version.outputs.version }}') { process.exit(1) }"
+
+      - name: Validate plugin.json
+        run: |
+          node -e "const plugin = require('./plugin.json'); console.log('Plugin version:', plugin.version); console.log('Expected version:', '${{ steps.version.outputs.version }}'); if (plugin.version !== '${{ steps.version.outputs.version }}') { process.exit(1) }"
+
+      - name: Check if package exists on npm
+        id: check
+        run: |
+          if npm view @ankh-studio/copilot-eval-plugin@${{ steps.version.outputs.version }} >/dev/null 2>&1; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "Package version ${{ steps.version.outputs.version }} already exists on npm"
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "Package version ${{ steps.version.outputs.version }} does not exist on npm"
+          fi
+
+      - name: Publish to npm
+        if: steps.check.outputs.exists == 'false'
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Skip publish (already exists)
+        if: steps.check.outputs.exists == 'true'
+        run: echo "Skipping publish - version already exists on npm"
+
+      - name: Verify published package
+        if: steps.check.outputs.exists == 'false'
+        run: |
+          sleep 10  # Wait for npm registry to update
+          npm view @ankh-studio/copilot-eval-plugin@${{ steps.version.outputs.version }}
+
+      - name: Publish summary
+        run: |
+          echo "## Publish Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Version**: ${{ steps.version.outputs.version }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Package**: @ankh-studio/copilot-eval-plugin" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.check.outputs.exists }}" == "false" ]; then
+            echo "- **Status**: ✅ Published successfully" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **Status**: ⏭️ Skipped (already exists)" >> $GITHUB_STEP_SUMMARY
+          fi
