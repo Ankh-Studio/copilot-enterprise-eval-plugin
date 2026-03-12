@@ -39,5 +39,6 @@
     "skills/generate-pr-overview/",
     "skills/repo-workflow-planner/",
     "skills/add-api-service/"
-  ]
+  ],
+  "personas": "personas/"
 }

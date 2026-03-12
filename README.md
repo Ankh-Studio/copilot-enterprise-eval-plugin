@@ -10,7 +10,9 @@ It also helps teams explain what each artifact does, how it works, where it's we
 
 **Adversarial Rubric Testing**: All rubrics are stress-tested against edge cases and adversarial scenarios to eliminate scoring vulnerabilities and ensure consistent results.
 
-**Multi-Persona Architecture Analysis**: Structured debates between Plugin Developer, End User, and System Admin personas to resolve complex design decisions.
+**Multi-Persona Architecture Analysis**: Structured debates between business-user, team-member, and execution personas with evidence-based reasoning and systematic routing.
+
+**Persona-Driven Evaluation**: Bounded operating modes with role-specific missions, evidence requirements, and output contracts to reduce hallucination and improve consistency.
 
 **Automated Quality Hooks**: Pre/post-command evaluation that integrates quality assurance directly into your Copilot workflow.
 
@@ -265,10 +267,19 @@ Validate rubrics before production deployment with systematic stress-testing:
 
 Resolve complex design tradeoffs with structured debate methodology:
 
-- **Plugin Developer**: Focuses on maintainability, testing, and extensibility
-- **End User**: Prioritizes ease of use, clear feedback, and immediate value
-- **System Admin**: Emphasizes performance, resource usage, and scalability
-- **Survivor Synthesis**: Strongest approach that survives all critiques
+- **Business-User Personas**: Repo Maintainer, Engineering Manager, Product Manager
+- **Team-Member Personas**: Staff Engineer, QA Lead, Accessibility Reviewer, Release Manager  
+- **Execution Personas**: Spec Reviewer, Rubric Designer, Starter Pack Advisor
+- **Evidence-Based Synthesis**: Strongest approach that survives all critiques
+
+### 🎭 Persona-Driven Evaluation
+
+Bounded operating modes with role-specific missions and evidence requirements:
+
+- **Structured Framework**: Each persona has defined mission, scope, and evidence sources
+- **Evidence Grounding**: All persona claims must cite specific evidence sources
+- **Output Contracts**: Structured formats with confidence scoring and validation
+- **Small-Model Optimization**: Concise prompts and explicit boundaries for constrained models
 
 ### 🔄 Production-Grade Quality Assurance
 
