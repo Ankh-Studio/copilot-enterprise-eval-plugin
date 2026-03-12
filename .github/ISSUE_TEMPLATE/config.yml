@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: GitHub Discussions
+    url: https://github.com/Ankh-Studio/copilot-eval-plugin/discussions
+    about: Use GitHub Discussions for questions and general conversation
+  - name: Documentation
+    url: https://github.com/Ankh-Studio/copilot-eval-plugin#readme
+    about: Check the documentation for usage guides and examples
+  - name: npm Package
+    url: https://www.npmjs.com/package/@ankh-studio/copilot-eval-plugin
+    about: View package information and installation instructions
