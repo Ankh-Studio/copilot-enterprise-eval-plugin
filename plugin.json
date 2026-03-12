@@ -25,13 +25,16 @@
     "skills/evaluate-context/",
     "skills/evaluate-validation/",
     "skills/evaluate-integration/",
-    "skills/validate-rubrics/",
-    "skills/architecture-debate/",
-    "skills/batch-evaluation/",
-    "skills/quality-gates/",
-    "skills/performance-optimizer/",
-    "skills/improve-artifact/",
-    "skills/iterative-improvement/"
-  ],
-  "hooks": "hooks.json"
+    "skills/eval-batch/",
+    "skills/eval-quality-gates/",
+    "skills/eval-performance/",
+    "skills/eval-improve/",
+    "skills/eval-debate/",
+    "skills/eval-validate-rubrics/",
+    "skills/eval-adversarial/",
+    "skills/eval-regression/",
+    "skills/eval-tldr/",
+    "skills/recommend-workspace-pack/",
+    "skills/eval-starter-pack/"
+  ]
 }
