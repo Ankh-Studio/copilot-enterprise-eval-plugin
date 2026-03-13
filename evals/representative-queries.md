@@ -1,12 +1,13 @@
 # Representative Evaluation Queries
 
-This file contains representative queries for testing the copilot-eval-plugin functionality across different skill categories and use cases.
+This file contains representative queries for testing the copilot-eval-plugin functionality across
+different skill categories and use cases.
 
 ## Core Evaluation Skills
 
 ### Single Artifact Evaluation
 
-```bash
+````bash
 /artifact .github/prompts/code-review.prompt.md
 /prompt .github/prompts/feature-generation.prompt.md
 /skill skills/artifact/SKILL.md
@@ -176,3 +177,4 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 - Ensure consistent behavior under adversarial conditions
 
 These queries serve as the foundation for comprehensive testing and validation of the copilot-eval-plugin functionality.
+````

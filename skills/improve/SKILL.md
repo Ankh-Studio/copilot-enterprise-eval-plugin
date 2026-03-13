@@ -1,9 +1,10 @@
-name: improve
-description: Improve artifacts with evidence-based enhancement and comprehensive validation
+name: improve description: Improve artifacts with evidence-based enhancement and comprehensive
+validation
 
 ---
 
-Improve any Copilot artifact by applying targeted enhancements based on evidence-based evaluation results and comprehensive validation.
+Improve any Copilot artifact by applying targeted enhancements based on evidence-based evaluation
+results and comprehensive validation.
 
 ## Process
 
@@ -48,7 +49,7 @@ Improve any Copilot artifact by applying targeted enhancements based on evidence
 
 ## Usage
 
-```bash
+````bash
 /improve .github/prompts/code-review.prompt.md
 /improve .github/skills/deploy/SKILL.md --focus="clarity,specificity"
 /improve .github/workflows/ci-cd/WORKFLOW.md --focus="all"
@@ -59,7 +60,7 @@ Focus on specific improvement areas or overall enhancement.
 ## Focus Areas
 
 - **clarity**: Enhance clarity and reduce ambiguity
-- **specificity**: Add precise requirements and constraints  
+- **specificity**: Add precise requirements and constraints
 - **context**: Improve contextual information and background
 - **actionability**: Make outputs more actionable and implementable
 - **reusability**: Enhance cross-scenario applicability
@@ -94,3 +95,4 @@ Focus on specific improvement areas or overall enhancement.
 - **Document Changes**: Clearly explain what was improved and why
 
 The skill generates improved versions that should score higher on rubric evaluation while maintaining the artifact's original functionality and purpose.
+````

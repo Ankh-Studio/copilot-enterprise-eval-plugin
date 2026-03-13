@@ -5,7 +5,8 @@ description: Evaluate multiple artifacts with comparative analysis and parallel 
 
 # Batch
 
-Evaluate multiple Copilot artifacts efficiently with parallel processing, comparative analysis, and executive reporting.
+Evaluate multiple Copilot artifacts efficiently with parallel processing, comparative analysis, and
+executive reporting.
 
 ## Core Process
 
@@ -18,7 +19,7 @@ Evaluate multiple Copilot artifacts efficiently with parallel processing, compar
 
 ### Directory Scanning
 
-```bash
+````bash
 /batch .github/prompts/ --type prompt
 /batch .github/skills/ --type skill
 /batch .github/ --all --recursive
@@ -79,3 +80,4 @@ Evaluate multiple Copilot artifacts efficiently with parallel processing, compar
 - **Resource Management**: Optimize memory and CPU usage
 
 Enables enterprise-scale quality assurance with efficient batch processing and comprehensive reporting.
+````

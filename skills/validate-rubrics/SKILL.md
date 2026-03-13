@@ -5,7 +5,6 @@ description: Validate and test evaluation rubrics for completeness and accuracy
 
 # Eval Validate Rubrics
 
-
 Apply adversarial stress-testing to identify and fix vulnerabilities in evaluation rubrics.
 
 ## Process
@@ -23,7 +22,7 @@ Be aggressive - this is stress-testing, not validation.
 
 ## Usage
 
-```bash
+````bash
 /validate-rubrics rubrics/prompt.md
 /validate-rubrics rubrics/skill.md --thorough
 ```bash
@@ -41,3 +40,4 @@ Focus on scenarios where rubric might fail under adversarial conditions.
 ```bash
 
 This skill ensures rubric robustness by systematically identifying and addressing scoring vulnerabilities before they impact production evaluations.
+````

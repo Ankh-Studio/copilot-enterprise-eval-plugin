@@ -1,13 +1,6 @@
-
-
-
-name: integration
-description: Evaluate integration pattern artifacts against the integration rubric
+name: integration description: Evaluate integration pattern artifacts against the integration rubric
 
 ---
-
-
-
 
 Evaluate the provided integration pattern against the structured integration rubric criteria.
 
@@ -42,4 +35,5 @@ Provide the path to the integration file you want evaluated:
 - `.github/integration/integration-name.integration.md`
 - Any custom integration file path
 
-The skill will automatically load the integration rubric and provide a comprehensive evaluation with actionable feedback for improving compatibility, documentation, and performance.
+The skill will automatically load the integration rubric and provide a comprehensive evaluation with
+actionable feedback for improving compatibility, documentation, and performance.

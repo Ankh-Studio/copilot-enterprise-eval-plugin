@@ -5,11 +5,13 @@ description: Run comprehensive adversarial evaluation suite with attack patterns
 
 # Adversarial
 
-Execute comprehensive adversarial evaluation suite with attack patterns, edge cases, and stress testing to identify vulnerabilities before production deployment.
+Execute comprehensive adversarial evaluation suite with attack patterns, edge cases, and stress
+testing to identify vulnerabilities before production deployment.
 
 ## Process
 
-1. **Attack Vector Generation**: Create malicious/edge-case artifacts targeting specific rubric weaknesses
+1. **Attack Vector Generation**: Create malicious/edge-case artifacts targeting specific rubric
+   weaknesses
 2. **Pattern Analysis**: Identify systematic scoring biases and exploitation opportunities
 3. **Stress Testing**: Apply extreme inputs, boundary conditions, and adversarial prompts
 4. **Vulnerability Assessment**: Rate and categorize discovered weaknesses
@@ -58,7 +60,7 @@ Execute comprehensive adversarial evaluation suite with attack patterns, edge ca
 
 ### Full Suite
 
-```bash
+````bash
 /adversarial --full-suite --target rubrics/
 /adversarial --comprehensive --report detailed
 ```bash
@@ -104,3 +106,4 @@ Execute comprehensive adversarial evaluation suite with attack patterns, edge ca
 Failures trigger automatic remediation workflows and block release progression.
 
 Execute before any production deployment to ensure robustness against adversarial attacks.
+````

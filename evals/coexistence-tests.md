@@ -1,6 +1,7 @@
 # Coexistence Tests for Overlapping Skills
 
-This file defines tests to verify that overlapping skills can coexist without conflicts and provide complementary value.
+This file defines tests to verify that overlapping skills can coexist without conflicts and provide
+complementary value.
 
 ## Overlap Categories
 
@@ -13,7 +14,7 @@ This file defines tests to verify that overlapping skills can coexist without co
 
 **Test Cases:**
 
-```bash
+````bash
 # Test that both can evaluate the same file with different perspectives
 /artifact .github/prompts/code-review.prompt.md
 /prompt .github/prompts/code-review.prompt.md
@@ -360,3 +361,4 @@ This file defines tests to verify that overlapping skills can coexist without co
 - Regression tests should block releases with quality issues
 
 These tests ensure that the copilot-eval-plugin skills can work together harmoniously while maintaining their individual effectiveness and contributing to overall evaluation quality.
+````

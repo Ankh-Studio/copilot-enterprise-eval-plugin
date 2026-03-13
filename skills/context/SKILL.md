@@ -1,13 +1,6 @@
-
-
-
-name: context
-description: Evaluate context provider artifacts against the context rubric
+name: context description: Evaluate context provider artifacts against the context rubric
 
 ---
-
-
-
 
 Evaluate the provided context provider against the structured context rubric criteria.
 
@@ -42,4 +35,5 @@ Provide the path to the context file you want evaluated:
 - `.github/context/context-name.context.md`
 - Any custom context file path
 
-The skill will automatically load the context rubric and provide a comprehensive evaluation with actionable feedback for improving data quality, relevance, and accessibility.
+The skill will automatically load the context rubric and provide a comprehensive evaluation with
+actionable feedback for improving data quality, relevance, and accessibility.

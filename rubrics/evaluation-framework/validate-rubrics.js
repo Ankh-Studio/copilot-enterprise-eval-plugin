@@ -2,7 +2,7 @@
 
 /**
  * Rubric Validation Script
- * 
+ *
  * Validates evaluation rubrics for completeness, consistency, and compliance
  * with evidence-based scoring requirements.
  */
@@ -23,11 +23,11 @@ class RubricValidator {
    */
   validateRubric(filePath) {
     console.log(`\n🔍 Validating rubric: ${path.basename(filePath)}`);
-    
+
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       const rubric = this.parseRubric(content);
-      
+
       // Core validation checks
       this.validateEvidenceBasedScoring(rubric, filePath);
       this.validateCriteriaStructure(rubric, filePath);
@@ -35,7 +35,7 @@ class RubricValidator {
       this.validateEvidenceRequirements(rubric, filePath);
       this.validateScoreProgression(rubric, filePath);
       this.validateAutomationSupport(rubric, filePath);
-      
+
       // Generate validation results
       const results = {
         file: path.basename(filePath),
@@ -43,12 +43,11 @@ class RubricValidator {
         failed: this.failed,
         issues: this.issues,
         warnings: this.warnings,
-        score: this.calculateValidationScore()
+        score: this.calculateValidationScore(),
       };
-      
+
       this.printResults(results);
       return results;
-      
     } catch (error) {
       console.error(`❌ Error validating ${filePath}:`, error.message);
       return {
@@ -57,7 +56,7 @@ class RubricValidator {
         failed: 1,
         issues: [`File read error: ${error.message}`],
         warnings: [],
-        score: 0
+        score: 0,
       };
     }
   }
@@ -71,7 +70,7 @@ class RubricValidator {
       hasEvidenceBasedScoring: false,
       criteria: [],
       validationSection: false,
-      automationSection: false
+      automationSection: false,
     };
 
     let currentCriterion = null;
@@ -79,7 +78,7 @@ class RubricValidator {
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i].trim();
-      
+
       // Check for evidence-based scoring section
       if (line.includes('Evidence-Based Scoring')) {
         rubric.hasEvidenceBasedScoring = true;
@@ -103,14 +102,14 @@ class RubricValidator {
         if (currentCriterion) {
           rubric.criteria.push(currentCriterion);
         }
-        
+
         const weightMatch = line.match(/\(Weight: ([\d.]+)\)/);
         const weight = weightMatch ? parseFloat(weightMatch[1]) : 0;
-        
+
         currentCriterion = {
           name: line.replace('## ', '').split('(Weight:')[0].trim(),
           weight: weight,
-          scores: []
+          scores: [],
         };
         continue;
       }
@@ -122,7 +121,7 @@ class RubricValidator {
           currentScore = {
             level: parseInt(scoreMatch[1]),
             description: [],
-            evidenceRequired: []
+            evidenceRequired: [],
           };
           currentCriterion.scores.push(currentScore);
         }
@@ -174,17 +173,23 @@ class RubricValidator {
     }
 
     let hasIssues = false;
-    
+
     rubric.criteria.forEach(criterion => {
       // Check weight is valid
       if (criterion.weight <= 0 || criterion.weight > 1) {
-        this.addIssue(`Invalid weight for criterion "${criterion.name}": ${criterion.weight}`, filePath);
+        this.addIssue(
+          `Invalid weight for criterion "${criterion.name}": ${criterion.weight}`,
+          filePath
+        );
         hasIssues = true;
       }
 
       // Check score levels (0-4)
       if (criterion.scores.length !== 5) {
-        this.addIssue(`Criterion "${criterion.name}" has ${criterion.scores.length} score levels, expected 5 (0-4)`, filePath);
+        this.addIssue(
+          `Criterion "${criterion.name}" has ${criterion.scores.length} score levels, expected 5 (0-4)`,
+          filePath
+        );
         hasIssues = true;
       }
 
@@ -192,7 +197,10 @@ class RubricValidator {
       const scoreLevels = criterion.scores.map(s => s.level).sort();
       const expectedLevels = [0, 1, 2, 3, 4];
       if (JSON.stringify(scoreLevels) !== JSON.stringify(expectedLevels)) {
-        this.addIssue(`Criterion "${criterion.name}" has invalid score levels: ${scoreLevels.join(', ')}`, filePath);
+        this.addIssue(
+          `Criterion "${criterion.name}" has invalid score levels: ${scoreLevels.join(', ')}`,
+          filePath
+        );
         hasIssues = true;
       }
     });
@@ -209,9 +217,12 @@ class RubricValidator {
    */
   validateWeightDistribution(rubric, filePath) {
     const totalWeight = rubric.criteria.reduce((sum, c) => sum + c.weight, 0);
-    
+
     if (Math.abs(totalWeight - 1.0) > 0.01) {
-      this.addIssue(`Weight distribution sums to ${totalWeight}, expected 1.0`, filePath);
+      this.addIssue(
+        `Weight distribution sums to ${totalWeight}, expected 1.0`,
+        filePath
+      );
       this.failed++;
     } else {
       this.passed++;
@@ -223,19 +234,25 @@ class RubricValidator {
    */
   validateEvidenceRequirements(rubric, filePath) {
     let hasIssues = false;
-    
+
     rubric.criteria.forEach(criterion => {
       criterion.scores.forEach(score => {
         // Scores 3-4 should have evidence requirements
         if (score.level >= 3 && score.evidenceRequired.length === 0) {
-          this.addIssue(`Score ${score.level} for criterion "${criterion.name}" lacks evidence requirements`, filePath);
+          this.addIssue(
+            `Score ${score.level} for criterion "${criterion.name}" lacks evidence requirements`,
+            filePath
+          );
           hasIssues = true;
         }
-        
+
         // Evidence should be specific
         score.evidenceRequired.forEach(evidence => {
           if (evidence.length < 10) {
-            this.addWarning(`Vague evidence requirement for ${criterion.name} score ${score.level}: "${evidence}"`, filePath);
+            this.addWarning(
+              `Vague evidence requirement for ${criterion.name} score ${score.level}: "${evidence}"`,
+              filePath
+            );
           }
         });
       });
@@ -253,22 +270,34 @@ class RubricValidator {
    */
   validateScoreProgression(rubric, filePath) {
     let hasIssues = false;
-    
+
     rubric.criteria.forEach(criterion => {
       const scores = criterion.scores.sort((a, b) => a.level - b.level);
-      
+
       for (let i = 1; i < scores.length; i++) {
         const prev = scores[i - 1];
         const curr = scores[i];
-        
+
         // Higher scores should have more detailed descriptions
-        if (curr.description.length < prev.description.length && curr.level > 2) {
-          this.addWarning(`Score ${curr.level} has fewer description points than score ${prev.level} for criterion "${criterion.name}"`, filePath);
+        if (
+          curr.description.length < prev.description.length &&
+          curr.level > 2
+        ) {
+          this.addWarning(
+            `Score ${curr.level} has fewer description points than score ${prev.level} for criterion "${criterion.name}"`,
+            filePath
+          );
         }
-        
+
         // Higher scores should have more evidence requirements
-        if (curr.evidenceRequired.length < prev.evidenceRequired.length && curr.level > 2) {
-          this.addWarning(`Score ${curr.level} has fewer evidence requirements than score ${prev.level} for criterion "${criterion.name}"`, filePath);
+        if (
+          curr.evidenceRequired.length < prev.evidenceRequired.length &&
+          curr.level > 2
+        ) {
+          this.addWarning(
+            `Score ${curr.level} has fewer evidence requirements than score ${prev.level} for criterion "${criterion.name}"`,
+            filePath
+          );
         }
       }
     });
@@ -299,10 +328,12 @@ class RubricValidator {
     rubric.criteria.forEach(criterion => {
       criterion.scores.forEach(score => {
         score.evidenceRequired.forEach(evidence => {
-          if (evidence.toLowerCase().includes('quantitative') || 
-              evidence.toLowerCase().includes('metric') ||
-              evidence.toLowerCase().includes('count') ||
-              evidence.toLowerCase().includes('percentage')) {
+          if (
+            evidence.toLowerCase().includes('quantitative') ||
+            evidence.toLowerCase().includes('metric') ||
+            evidence.toLowerCase().includes('count') ||
+            evidence.toLowerCase().includes('percentage')
+          ) {
             hasAutomationFeatures = true;
           }
         });
@@ -312,7 +343,10 @@ class RubricValidator {
     if (hasAutomationFeatures) {
       this.passed++;
     } else {
-      this.addWarning('Limited automation support in evidence requirements', filePath);
+      this.addWarning(
+        'Limited automation support in evidence requirements',
+        filePath
+      );
       this.passed++; // Still pass but with warning
     }
   }
@@ -333,7 +367,7 @@ class RubricValidator {
     this.issues.push({
       file: path.basename(filePath),
       message: message,
-      severity: 'error'
+      severity: 'error',
     });
   }
 
@@ -344,7 +378,7 @@ class RubricValidator {
     this.warnings.push({
       file: path.basename(filePath),
       message: message,
-      severity: 'warning'
+      severity: 'warning',
     });
   }
 
@@ -356,14 +390,14 @@ class RubricValidator {
     console.log(`✅ Passed: ${results.passed}`);
     console.log(`❌ Failed: ${results.failed}`);
     console.log(`📈 Score: ${results.score}%`);
-    
+
     if (results.issues.length > 0) {
       console.log('\n🚨 Issues:');
       results.issues.forEach(issue => {
         console.log(`  ❌ ${issue.message}`);
       });
     }
-    
+
     if (results.warnings.length > 0) {
       console.log('\n⚠️  Warnings:');
       results.warnings.forEach(warning => {
@@ -377,8 +411,9 @@ class RubricValidator {
    */
   validateAllRubrics(rubricsDir) {
     console.log('🔍 Starting comprehensive rubric validation...\n');
-    
-    const rubricFiles = fs.readdirSync(rubricsDir)
+
+    const rubricFiles = fs
+      .readdirSync(rubricsDir)
       .filter(file => file.endsWith('.md'))
       .map(file => path.join(rubricsDir, file));
 
@@ -392,7 +427,7 @@ class RubricValidator {
       this.warnings = [];
       this.passed = 0;
       this.failed = 0;
-      
+
       const result = this.validateRubric(file);
       results.push(result);
       totalPassed += result.passed;
@@ -403,11 +438,13 @@ class RubricValidator {
     console.log('\n📋 Validation Summary:');
     console.log(`✅ Total Passed: ${totalPassed}`);
     console.log(`❌ Total Failed: ${totalFailed}`);
-    console.log(`📈 Overall Score: ${Math.round((totalPassed / (totalPassed + totalFailed)) * 100)}%`);
-    
+    console.log(
+      `📈 Overall Score: ${Math.round((totalPassed / (totalPassed + totalFailed)) * 100)}%`
+    );
+
     // Generate report
     this.generateReport(results);
-    
+
     return results;
   }
 
@@ -421,10 +458,12 @@ class RubricValidator {
         total: results.length,
         passed: results.filter(r => r.score >= 80).length,
         failed: results.filter(r => r.score < 80).length,
-        averageScore: Math.round(results.reduce((sum, r) => sum + r.score, 0) / results.length)
+        averageScore: Math.round(
+          results.reduce((sum, r) => sum + r.score, 0) / results.length
+        ),
       },
       results: results,
-      recommendations: this.generateRecommendations(results)
+      recommendations: this.generateRecommendations(results),
     };
 
     const reportPath = path.join(__dirname, 'validation-report.json');
@@ -437,7 +476,7 @@ class RubricValidator {
    */
   generateRecommendations(results) {
     const recommendations = [];
-    
+
     // Common issues analysis
     const issueCounts = {};
     results.forEach(result => {
@@ -456,7 +495,7 @@ class RubricValidator {
           priority: count >= results.length ? 'high' : 'medium',
           issue: issue,
           frequency: count,
-          suggestion: this.getSuggestionForIssue(issue)
+          suggestion: this.getSuggestionForIssue(issue),
         });
       });
 
@@ -487,12 +526,12 @@ class RubricValidator {
 if (require.main === module) {
   const validator = new RubricValidator();
   const rubricsDir = process.argv[2] || path.join(__dirname, '..', '..');
-  
+
   if (!fs.existsSync(rubricsDir)) {
     console.error(`❌ Directory not found: ${rubricsDir}`);
     process.exit(1);
   }
-  
+
   const results = validator.validateAllRubrics(rubricsDir);
   process.exit(results.some(r => r.failed > 0) ? 1 : 0);
 }

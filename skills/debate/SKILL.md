@@ -1,13 +1,6 @@
-
-
-
-name: debate
-description: Facilitate architecture debates and design decision evaluation
+name: debate description: Facilitate architecture debates and design decision evaluation
 
 ---
-
-
-
 
 Simulate structured debate between three experts to resolve architecture decisions.
 
@@ -20,7 +13,7 @@ Three personas debate with different priorities:
 - Argues for modular architecture with clear separation
 - Focus: Code maintainability, testing, future features
 
-**User**: Ease of use & clear feedback  
+**User**: Ease of use & clear feedback
 
 - Argues for simple, intuitive interface with immediate value
 - Focus: User experience, learning curve, actionable insights
@@ -38,7 +31,7 @@ Three personas debate with different priorities:
 
 ## Usage
 
-```bash
+````bash
 /debate --topic "plugin-structure"
 /debate --topic "evaluation-methodology" --focus="all"
 ```bash
@@ -67,3 +60,4 @@ Specify the architecture decision to debate:
 ```bash
 
 This skill ensures architecture decisions are stress-tested from multiple perspectives before implementation, resulting in more robust and widely acceptable solutions.
+````

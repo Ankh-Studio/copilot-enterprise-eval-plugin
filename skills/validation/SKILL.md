@@ -1,13 +1,6 @@
-
-
-
-name: validation
-description: Evaluate validation rule artifacts against the validation rubric
+name: validation description: Evaluate validation rule artifacts against the validation rubric
 
 ---
-
-
-
 
 Evaluate the provided validation rule against the structured validation rubric criteria.
 
@@ -42,4 +35,5 @@ Provide the path to the validation file you want evaluated:
 - `.github/validation/validation-name.validation.md`
 - Any custom validation file path
 
-The skill will automatically load the validation rubric and provide a comprehensive evaluation with actionable feedback for improving coverage, accuracy, and performance.
+The skill will automatically load the validation rubric and provide a comprehensive evaluation with
+actionable feedback for improving coverage, accuracy, and performance.

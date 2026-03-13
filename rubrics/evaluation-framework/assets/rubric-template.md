@@ -2,7 +2,8 @@
 
 ## Evidence-Based Scoring
 
-Each criterion requires concrete evidence for scoring. Evaluators must provide specific examples from the artifact that justify the score.
+Each criterion requires concrete evidence for scoring. Evaluators must provide specific examples
+from the artifact that justify the score.
 
 ## [Criterion 1] (Weight: [0.XX])
 

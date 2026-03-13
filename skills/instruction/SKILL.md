@@ -1,13 +1,6 @@
-
-
-
-name: instruction
-description: Evaluate instruction artifacts against the instruction rubric
+name: instruction description: Evaluate instruction artifacts against the instruction rubric
 
 ---
-
-
-
 
 Evaluate the provided instruction against the structured instruction rubric criteria.
 
@@ -42,4 +35,5 @@ Provide the path to the instruction file you want evaluated:
 - `.github/instructions/instruction-name.md`
 - Any custom instruction file path
 
-The skill will automatically load the instruction rubric and provide a comprehensive evaluation with actionable feedback for improving clarity, completeness, and instructional effectiveness.
+The skill will automatically load the instruction rubric and provide a comprehensive evaluation with
+actionable feedback for improving clarity, completeness, and instructional effectiveness.

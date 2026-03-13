@@ -2,7 +2,9 @@
 
 ## Overview
 
-This guide helps you migrate from the existing evaluation system to the new evidence-based evaluation framework that incorporates learnings from the repo-assessment skill and aligns with agentskills.io specifications.
+This guide helps you migrate from the existing evaluation system to the new evidence-based
+evaluation framework that incorporates learnings from the repo-assessment skill and aligns with
+agentskills.io specifications.
 
 ## Migration Benefits
 
@@ -52,13 +54,15 @@ For each rubric file:
 ```markdown
 ## Evidence-Based Scoring
 
-Each criterion requires concrete evidence for scoring. Evaluators must provide specific examples from the artifact that justify the score.
+Each criterion requires concrete evidence for scoring. Evaluators must provide specific examples
+from the artifact that justify the score.
 ```
 
 1. **Update Scoring Criteria**
 
 ```markdown
 **Score 4**: [Criterion name] demonstrates:
+
 - [Specific requirement 1 with measurable outcome]
 - [Specific requirement 2 with quantitative metric]
 - [Specific requirement 3 with verifiable evidence]
@@ -72,6 +76,7 @@ Each criterion requires concrete evidence for scoring. Evaluators must provide s
 ## Validation Requirements
 
 For each score above 2, evaluators must provide:
+
 1. **Specific Evidence**: Exact quotes or references from the artifact
 2. **Quantitative Metrics**: Numbers, percentages, or counts where applicable
 3. **Cross-Reference**: How evidence maps to scoring criteria
@@ -130,6 +135,7 @@ testSuite.runAllTests();
 ## Evidence-Based Improvement Framework
 
 ### Improvement Effectiveness (Weight: 0.30)
+
 - Quantifiable score gains >0.5 points per targeted criterion
 - Specific before/after evidence with measurable metrics
 ```
@@ -214,9 +220,11 @@ jobs:
 # Evaluation Framework Guide
 
 ## Overview
+
 The evidence-based evaluation framework provides...
 
 ## Usage
+
 1. Run validation: `node scripts/run-full-validation.js`
 2. Create configs: `node agentskills-eval.js create-config`
 3. Run evaluations: `node agentskills-eval.js run-evaluation`
@@ -249,11 +257,13 @@ This project uses an evidence-based evaluation framework:
 # Evidence-Based Scoring Quick Reference
 
 ## Score 4 Requirements
+
 - Specific, measurable outcomes
 - Concrete evidence with examples
 - Quantitative metrics
 
 ## Validation Checklist
+
 - [ ] Evidence provided for scores >2
 - [ ] Quantitative metrics included
 - [ ] Cross-references documented
@@ -291,9 +301,8 @@ This project uses an evidence-based evaluation framework:
 
 #### Issue: Validation Fails on Transformed Rubrics
 
-**Symptoms**: Validation script reports errors in rubric structure
-**Causes**: Missing evidence requirements or incorrect scoring format
-**Solutions**:
+**Symptoms**: Validation script reports errors in rubric structure **Causes**: Missing evidence
+requirements or incorrect scoring format **Solutions**:
 
 1. Check rubric against template: `assets/rubric-template.md`
 2. Run validation with verbose output: `node validate-rubrics.js --verbose`
@@ -301,9 +310,8 @@ This project uses an evidence-based evaluation framework:
 
 #### Issue: Low Adversarial Resilience Score
 
-**Symptoms**: Adversarial validation shows low resilience (<70%)
-**Causes**: Vague evidence requirements or security vulnerabilities
-**Solutions**:
+**Symptoms**: Adversarial validation shows low resilience (<70%) **Causes**: Vague evidence
+requirements or security vulnerabilities **Solutions**:
 
 1. Strengthen evidence requirements with specific metrics
 2. Add quantitative constraints to scoring criteria
@@ -311,9 +319,8 @@ This project uses an evidence-based evaluation framework:
 
 #### Issue: AgentSkills Evaluation Fails
 
-**Symptoms**: JSON evaluation format errors or assertion failures
-**Causes**: Incorrect configuration format or missing test files
-**Solutions**:
+**Symptoms**: JSON evaluation format errors or assertion failures **Causes**: Incorrect
+configuration format or missing test files **Solutions**:
 
 1. Validate configuration: `node agentskills-eval.js validate-config`
 2. Check file paths and permissions
@@ -321,9 +328,8 @@ This project uses an evidence-based evaluation framework:
 
 #### Issue: Performance Degradation
 
-**Symptoms**: Validation scripts running slowly or timing out
-**Causes**: Large rubric files or complex evaluation logic
-**Solutions**:
+**Symptoms**: Validation scripts running slowly or timing out **Causes**: Large rubric files or
+complex evaluation logic **Solutions**:
 
 1. Optimize rubric size and complexity
 2. Use parallel processing: `node scripts/run-full-validation.js --parallel`
@@ -419,4 +425,5 @@ After migration completion:
    - Advanced statistical analysis
    - Machine learning integration
 
-This migration guide ensures a smooth transition to the evidence-based evaluation framework while maintaining system stability and improving evaluation quality.
+This migration guide ensures a smooth transition to the evidence-based evaluation framework while
+maintaining system stability and improving evaluation quality.

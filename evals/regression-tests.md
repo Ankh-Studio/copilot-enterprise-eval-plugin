@@ -1,6 +1,7 @@
 # Regression Tests for README and INSTALL Examples
 
-This file contains regression tests to ensure that examples from README.md and INSTALL.md continue to work correctly across plugin versions.
+This file contains regression tests to ensure that examples from README.md and INSTALL.md continue
+to work correctly across plugin versions.
 
 ## README.md Examples
 
@@ -8,7 +9,7 @@ This file contains regression tests to ensure that examples from README.md and I
 
 **Example 1: Single Artifact Evaluation**
 
-```bash
+````bash
 # From README: Basic evaluation
 copilot eval evaluate-artifact .github/prompts/code-review.prompt.md
 
@@ -355,3 +356,4 @@ copilot eval eval-quality-gates --pre-deploy .github/prompts/code-review.prompt.
 - **Per commit**: Critical path validation
 
 These regression tests ensure that the copilot-eval-plugin maintains backward compatibility and reliable behavior across versions while providing a safety net for future development.
+````

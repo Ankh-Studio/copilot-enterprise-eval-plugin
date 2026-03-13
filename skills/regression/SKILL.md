@@ -1,15 +1,9 @@
-
-
-
-name: regression
-description: Automated regression testing for evaluation quality and consistency
+name: regression description: Automated regression testing for evaluation quality and consistency
 
 ---
 
-
-
-
-Execute automated regression testing to ensure evaluation quality and consistency across versions and prevent performance degradation.
+Execute automated regression testing to ensure evaluation quality and consistency across versions
+and prevent performance degradation.
 
 ## Process
 
@@ -46,7 +40,7 @@ Execute automated regression testing to ensure evaluation quality and consistenc
 
 ### Full Regression Suite
 
-```bash
+````bash
 /regression --full --baseline v1.0
 /regression --comprehensive --report detailed
 ```bash
@@ -109,3 +103,4 @@ Execute automated regression testing to ensure evaluation quality and consistenc
 Automatically runs before releases and can be integrated into CI/CD pipelines for continuous quality assurance.
 
 Failures block release progression and require remediation before deployment.
+````

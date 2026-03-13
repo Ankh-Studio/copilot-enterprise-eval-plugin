@@ -1,13 +1,6 @@
-
-
-
-name: skill
-description: Evaluate skill artifacts against the skill rubric
+name: skill description: Evaluate skill artifacts against the skill rubric
 
 ---
-
-
-
 
 Evaluate the provided skill against the structured skill rubric criteria.
 
@@ -42,4 +35,5 @@ Provide the path to the skill directory you want evaluated:
 - `.github/skills/skill-name/SKILL.md`
 - Any custom skill directory path
 
-The skill will automatically load the skill rubric and provide a comprehensive evaluation with actionable feedback for improving functionality, documentation, and integration capabilities.
+The skill will automatically load the skill rubric and provide a comprehensive evaluation with
+actionable feedback for improving functionality, documentation, and integration capabilities.

@@ -1,18 +1,25 @@
 # Copilot Evaluation Plugin
 
-**Production-grade evaluation toolkit for Copilot artifacts with Chain-of-Verification methodology and adversarial rubric testing.**
+**Production-grade evaluation toolkit for Copilot artifacts with Chain-of-Verification methodology
+and adversarial rubric testing.**
 
-This plugin delivers enterprise-grade reliability through systematic quality assessment, mandatory self-critique, and stress-tested evaluation rubrics. It provides actionable feedback for all Copilot artifact types with evidence-based analysis and specific improvement recommendations.
+This plugin delivers enterprise-grade reliability through systematic quality assessment, mandatory
+self-critique, and stress-tested evaluation rubrics. It provides actionable feedback for all Copilot
+artifact types with evidence-based analysis and specific improvement recommendations.
 
 ## 🎯 What Makes This Different
 
-**Chain-of-Verification Evaluation**: Every evaluation includes mandatory self-critique that reduces errors by 40%+ through systematic error identification and correction.
+**Chain-of-Verification Evaluation**: Every evaluation includes mandatory self-critique that reduces
+errors by 40%+ through systematic error identification and correction.
 
-**Adversarial Rubric Testing**: All rubrics are stress-tested against edge cases and adversarial scenarios to eliminate scoring vulnerabilities and ensure consistent results.
+**Adversarial Rubric Testing**: All rubrics are stress-tested against edge cases and adversarial
+scenarios to eliminate scoring vulnerabilities and ensure consistent results.
 
-**Multi-Persona Architecture Analysis**: Structured debates between Plugin Developer, End User, and System Admin personas to resolve complex design decisions.
+**Multi-Persona Architecture Analysis**: Structured debates between Plugin Developer, End User, and
+System Admin personas to resolve complex design decisions.
 
-**Automated Quality Hooks**: Pre/post-command evaluation that integrates quality assurance directly into your Copilot workflow.
+**Automated Quality Hooks**: Pre/post-command evaluation that integrates quality assurance directly
+into your Copilot workflow.
 
 ## 🚀 Why Choose Copilot Eval?
 
@@ -85,7 +92,7 @@ This plugin provides **17 evaluation-focused skills** organized into four catego
 
 ### From GitHub Repository
 
-```bash
+````bash
 copilot plugin install Ankh-Studio/copilot-eval-plugin
 ```bash
 
@@ -488,3 +495,4 @@ For issues and questions:
 
 - GitHub Issues: [Create an issue](https://github.com/yourusername/copilot-eval-plugin/issues)
 - Documentation: [GitHub Copilot CLI Plugin Docs](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-finding-installing)
+````

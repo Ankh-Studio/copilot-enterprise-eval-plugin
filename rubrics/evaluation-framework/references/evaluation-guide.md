@@ -2,7 +2,8 @@
 
 ## Overview
 
-This evaluation framework implements evidence-based rubric validation following the repo-assessment pattern and agentskills.io specifications.
+This evaluation framework implements evidence-based rubric validation following the repo-assessment
+pattern and agentskills.io specifications.
 
 ## Structure
 

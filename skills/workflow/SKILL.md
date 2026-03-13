@@ -1,13 +1,6 @@
-
-
-
-name: evaluate-workflow
-description: Evaluate workflow artifacts against the workflow rubric
+name: evaluate-workflow description: Evaluate workflow artifacts against the workflow rubric
 
 ---
-
-
-
 
 Evaluate the provided workflow against the structured workflow rubric criteria.
 
@@ -42,4 +35,5 @@ Provide the path to the workflow directory you want evaluated:
 - `.github/workflows/workflow-name/WORKFLOW.md`
 - Any custom workflow directory path
 
-The skill will automatically load the workflow rubric and provide a comprehensive evaluation with actionable feedback for improving sequence logic, automation, and scalability.
+The skill will automatically load the workflow rubric and provide a comprehensive evaluation with
+actionable feedback for improving sequence logic, automation, and scalability.

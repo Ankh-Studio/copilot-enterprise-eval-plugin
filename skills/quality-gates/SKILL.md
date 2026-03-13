@@ -5,7 +5,8 @@ description: Enforce quality standards with automated gating and policy complian
 
 # Eval Quality Gates
 
-Implement automated quality gates that enforce standards and prevent low-quality artifacts from progressing.
+Implement automated quality gates that enforce standards and prevent low-quality artifacts from
+progressing.
 
 ## Process
 
@@ -39,7 +40,7 @@ Implement automated quality gates that enforce standards and prevent low-quality
 
 ### Single Check
 
-```bash
+````bash
 /quality-gates .github/prompts/api-design.prompt.md --gate production
 /quality-gates .github/skills/deploy/SKILL.md --gate release
 ```bash
@@ -80,3 +81,4 @@ Implement automated quality gates that enforce standards and prevent low-quality
 - **Compliance Status**: Audit-ready documentation for standards compliance
 
 This skill ensures consistent quality enforcement across enterprise Copilot deployments with automated gating and comprehensive compliance tracking.
+````

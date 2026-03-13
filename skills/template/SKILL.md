@@ -1,13 +1,6 @@
-
-
-
-name: template
-description: Evaluate template artifacts against the template rubric
+name: template description: Evaluate template artifacts against the template rubric
 
 ---
-
-
-
 
 Evaluate the provided template against the structured template rubric criteria.
 
@@ -42,4 +35,5 @@ Provide the path to the template file you want evaluated:
 - `.github/templates/template-name.template.md`
 - Any custom template file path
 
-The skill will automatically load the template rubric and provide a comprehensive evaluation with actionable feedback for improving structure, flexibility, and reusability.
+The skill will automatically load the template rubric and provide a comprehensive evaluation with
+actionable feedback for improving structure, flexibility, and reusability.

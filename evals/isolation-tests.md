@@ -1,6 +1,7 @@
 # Isolation Tests for Dependencies
 
-This file contains tests to verify that plugin dependencies are properly isolated and don't interfere with each other or the host system.
+This file contains tests to verify that plugin dependencies are properly isolated and don't
+interfere with each other or the host system.
 
 ## Dependency Categories
 
@@ -14,7 +15,7 @@ This file contains tests to verify that plugin dependencies are properly isolate
 
 **Test Cases:**
 
-```bash
+````bash
 # Test: External service failure handling
 # Mock external service failures and verify graceful degradation
 copilot eval eval-quality-gates --pre-deploy .github/prompts/ --offline-mode
@@ -395,3 +396,4 @@ after_count=$(find /tmp -name "copilot-eval-*" | wc -l)
 - **Per commit**: Critical path isolation validation
 
 These isolation tests ensure that the copilot-eval-plugin maintains proper separation of concerns and operates safely within its environment without interfering with other systems or components.
+````

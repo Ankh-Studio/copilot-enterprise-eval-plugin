@@ -1,15 +1,9 @@
-
-
-
-name: performance
-description: Optimize evaluation performance with caching and parallel processing
+name: performance description: Optimize evaluation performance with caching and parallel processing
 
 ---
 
-
-
-
-Maximize evaluation performance through intelligent caching, parallel processing, and resource optimization.
+Maximize evaluation performance through intelligent caching, parallel processing, and resource
+optimization.
 
 ## Process
 
@@ -46,7 +40,7 @@ Maximize evaluation performance through intelligent caching, parallel processing
 
 ### Analysis
 
-```bash
+````bash
 /performance --analyze .github/prompts/
 /performance --bottlenecks --detailed
 ```bash
@@ -164,3 +158,4 @@ Maximize evaluation performance through intelligent caching, parallel processing
 - **Intelligent Throttling**: Prevent resource exhaustion
 
 This skill ensures maximum evaluation performance through comprehensive optimization strategies and intelligent resource management.
+````

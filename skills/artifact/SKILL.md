@@ -27,8 +27,9 @@ Specify artifact path:
 
 ## Example
 
-```bash
+````bash
 /artifact .github/prompts/code-review.prompt.md
 ```bash
 
 Auto-detects artifact type, loads rubric, provides actionable feedback.
+````

@@ -1,10 +1,6 @@
-name: agent
-description: Evaluate agent artifacts against the agent rubric
+name: agent description: Evaluate agent artifacts against the agent rubric
 
 ---
-
-
-
 
 Evaluate the provided agent against the structured agent rubric criteria.
 
@@ -39,4 +35,5 @@ Provide the path to the agent directory you want evaluated:
 - `.github/agents/agent-name/AGENT.md`
 - Any custom agent directory path
 
-The skill will automatically load the agent rubric and provide a comprehensive evaluation with actionable feedback for improving persona definition, domain expertise, and interaction quality.
+The skill will automatically load the agent rubric and provide a comprehensive evaluation with
+actionable feedback for improving persona definition, domain expertise, and interaction quality.

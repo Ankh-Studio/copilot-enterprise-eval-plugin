@@ -31,7 +31,7 @@ Run comprehensive validation:
 # Functional validation
 node skills/repo-assessment/scripts/validate-repo-assessment.js
 
-# Security validation  
+# Security validation
 node skills/repo-assessment/scripts/adversarial-validation.js
 ```
 
@@ -53,11 +53,11 @@ Identify enhancement opportunities:
 
 ### Iteration Tracking
 
-| Iteration | Score | Improvements | Status |
-|-----------|-------|--------------|---------|
-| 1 | 3.4/4.0 | Added test cases, automation | Complete |
-| 2 | 4.0/4.0 | Added security hardening | Complete |
-| 3 | TBD | Future enhancements | Pending |
+| Iteration | Score   | Improvements                 | Status   |
+| --------- | ------- | ---------------------------- | -------- |
+| 1         | 3.4/4.0 | Added test cases, automation | Complete |
+| 2         | 4.0/4.0 | Added security hardening     | Complete |
+| 3         | TBD     | Future enhancements          | Pending  |
 
 ### Self-Contained Benefits
 

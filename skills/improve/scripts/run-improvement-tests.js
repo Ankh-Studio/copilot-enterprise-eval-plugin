@@ -2,7 +2,7 @@
 
 /**
  * Comprehensive Improvement Test Suite
- * 
+ *
  * Tests the eval-improve skill against various scenarios and validates
  * improvement effectiveness using evidence-based metrics.
  */
@@ -20,7 +20,7 @@ class ImprovementTestSuite {
       failedTests: 0,
       averageScoreGain: 0,
       intentPreservationRate: 0,
-      compatibilityRate: 0
+      compatibilityRate: 0,
     };
   }
 
@@ -37,13 +37,13 @@ class ImprovementTestSuite {
         input: {
           artifact: 'Create a good API design',
           type: 'prompt',
-          currentScores: { clarity: 2.0, specificity: 1.5, actionability: 2.5 }
+          currentScores: { clarity: 2.0, specificity: 1.5, actionability: 2.5 },
         },
         expected: {
           scoreGain: { clarity: 0.5, specificity: 0.8, actionability: 0.3 },
           intentPreserved: true,
-          compatibility: true
-        }
+          compatibility: true,
+        },
       },
       {
         id: 'skill-functionality',
@@ -56,13 +56,21 @@ description: Basic skill
 ---
 Process data and return results`,
           type: 'skill',
-          currentScores: { functionality: 2.0, completeness: 1.8, errorHandling: 1.0 }
+          currentScores: {
+            functionality: 2.0,
+            completeness: 1.8,
+            errorHandling: 1.0,
+          },
         },
         expected: {
-          scoreGain: { functionality: 0.6, completeness: 0.4, errorHandling: 0.5 },
+          scoreGain: {
+            functionality: 0.6,
+            completeness: 0.4,
+            errorHandling: 0.5,
+          },
           intentPreserved: true,
-          compatibility: true
-        }
+          compatibility: true,
+        },
       },
       {
         id: 'multi-criteria',
@@ -79,13 +87,23 @@ This workflow processes data.
 2. Process data
 3. Save results`,
           type: 'workflow',
-          currentScores: { clarity: 2.0, specificity: 1.5, completeness: 2.0, actionability: 1.8 }
+          currentScores: {
+            clarity: 2.0,
+            specificity: 1.5,
+            completeness: 2.0,
+            actionability: 1.8,
+          },
         },
         expected: {
-          scoreGain: { clarity: 0.4, specificity: 0.6, completeness: 0.3, actionability: 0.5 },
+          scoreGain: {
+            clarity: 0.4,
+            specificity: 0.6,
+            completeness: 0.3,
+            actionability: 0.5,
+          },
           intentPreserved: true,
-          compatibility: true
-        }
+          compatibility: true,
+        },
       },
       {
         id: 'complex-integration',
@@ -106,13 +124,23 @@ Connect to external API and process data.
 2. Transform data
 3. Store data`,
           type: 'workflow',
-          currentScores: { clarity: 2.5, specificity: 1.0, integration: 1.5, errorHandling: 1.2 }
+          currentScores: {
+            clarity: 2.5,
+            specificity: 1.0,
+            integration: 1.5,
+            errorHandling: 1.2,
+          },
         },
         expected: {
-          scoreGain: { clarity: 0.3, specificity: 0.8, integration: 0.6, errorHandling: 0.4 },
+          scoreGain: {
+            clarity: 0.3,
+            specificity: 0.8,
+            integration: 0.6,
+            errorHandling: 0.4,
+          },
           intentPreserved: true,
-          compatibility: true
-        }
+          compatibility: true,
+        },
       },
       {
         id: 'high-quality',
@@ -150,13 +178,23 @@ Design a RESTful API for user management with comprehensive CRUD operations.
 - Database operations use transactions for data consistency
 - API documentation available via OpenAPI 3.0 specification`,
           type: 'specification',
-          currentScores: { clarity: 4.5, specificity: 4.2, completeness: 4.0, actionability: 4.3 }
+          currentScores: {
+            clarity: 4.5,
+            specificity: 4.2,
+            completeness: 4.0,
+            actionability: 4.3,
+          },
         },
         expected: {
-          scoreGain: { clarity: 0.0, specificity: 0.0, completeness: 0.0, actionability: 0.0 },
+          scoreGain: {
+            clarity: 0.0,
+            specificity: 0.0,
+            completeness: 0.0,
+            actionability: 0.0,
+          },
           intentPreserved: true,
-          compatibility: true
-        }
+          compatibility: true,
+        },
       },
       {
         id: 'broken-artifact',
@@ -174,14 +212,24 @@ Do something with stuff.
 2. [undefined]
 3. [error]`,
           type: 'skill',
-          currentScores: { clarity: 0.5, specificity: 0.0, completeness: 0.8, functionality: 0.2 }
+          currentScores: {
+            clarity: 0.5,
+            specificity: 0.0,
+            completeness: 0.8,
+            functionality: 0.2,
+          },
         },
         expected: {
-          scoreGain: { clarity: 1.5, specificity: 1.2, completeness: 1.0, functionality: 1.3 },
+          scoreGain: {
+            clarity: 1.5,
+            specificity: 1.2,
+            completeness: 1.0,
+            functionality: 1.3,
+          },
           intentPreserved: true,
-          compatibility: true
-        }
-      }
+          compatibility: true,
+        },
+      },
     ];
   }
 
@@ -195,11 +243,11 @@ Do something with stuff.
 
     for (const testCase of this.testCases) {
       console.log(`📋 Running test: ${testCase.name}`);
-      
+
       try {
         const result = await this.runSingleTest(testCase, options);
         this.testResults.push(result);
-        
+
         if (result.passed) {
           this.metrics.passedTests++;
           console.log(`✅ ${testCase.name} - PASSED`);
@@ -208,7 +256,6 @@ Do something with stuff.
           console.log(`❌ ${testCase.name} - FAILED`);
           console.log(`   Issues: ${result.issues.join(', ')}`);
         }
-        
       } catch (error) {
         console.error(`💥 ${testCase.name} - ERROR: ${error.message}`);
         this.metrics.failedTests++;
@@ -216,10 +263,10 @@ Do something with stuff.
           testCase: testCase.id,
           passed: false,
           error: error.message,
-          issues: ['Test execution error']
+          issues: ['Test execution error'],
         });
       }
-      
+
       console.log('');
     }
 
@@ -241,13 +288,13 @@ Do something with stuff.
   async runSingleTest(testCase, options) {
     // Simulate improvement process
     const improvedArtifact = this.simulateImprovement(testCase.input);
-    
+
     // Evaluate improvement effectiveness
     const evaluation = this.evaluateImprovement(testCase, improvedArtifact);
-    
+
     // Validate against expectations
     const validation = this.validateAgainstExpected(testCase, evaluation);
-    
+
     return {
       testCase: testCase.id,
       name: testCase.name,
@@ -256,7 +303,7 @@ Do something with stuff.
       score: validation.score,
       issues: validation.issues,
       metrics: evaluation,
-      improvement: improvedArtifact
+      improvement: improvedArtifact,
     };
   }
 
@@ -265,10 +312,10 @@ Do something with stuff.
    */
   simulateImprovement(input) {
     const { artifact, type, currentScores } = input;
-    
+
     // Mock improvement logic based on artifact type and current scores
     let improvedArtifact = artifact;
-    
+
     if (type === 'prompt') {
       improvedArtifact = this.improvePrompt(artifact, currentScores);
     } else if (type === 'skill') {
@@ -278,7 +325,7 @@ Do something with stuff.
     } else if (type === 'specification') {
       improvedArtifact = this.improveSpecification(artifact, currentScores);
     }
-    
+
     return improvedArtifact;
   }
 
@@ -287,7 +334,7 @@ Do something with stuff.
    */
   improvePrompt(prompt, currentScores) {
     let improved = prompt;
-    
+
     if (currentScores.clarity < 3.0) {
       improved = `Create a comprehensive RESTful API design for user management with the following specifications:
 
@@ -309,7 +356,7 @@ Do something with stuff.
 - Rate limiting: 100 requests per minute per user
 - Comprehensive API documentation via OpenAPI 3.0`;
     }
-    
+
     return improved;
   }
 
@@ -318,7 +365,7 @@ Do something with stuff.
    */
   improveSkill(skill, currentScores) {
     let improved = skill;
-    
+
     if (currentScores.functionality < 3.0) {
       improved = `name: data-processor
 description: Process and transform data with comprehensive error handling
@@ -349,7 +396,7 @@ Process input data through validation, transformation, and output generation.
 - Output errors: Retry with fallback formats
 - System errors: Graceful degradation with partial results`;
     }
-    
+
     return improved;
   }
 
@@ -358,7 +405,7 @@ Process input data through validation, transformation, and output generation.
    */
   improveWorkflow(workflow, currentScores) {
     let improved = workflow;
-    
+
     if (currentScores.specificity < 3.0) {
       improved = `# Data Processing Workflow
 
@@ -401,7 +448,7 @@ storage:
 - Zero data loss during processing
 - Complete audit trail for all operations`;
     }
-    
+
     return improved;
   }
 
@@ -418,23 +465,26 @@ storage:
    */
   evaluateImprovement(testCase, improvedArtifact) {
     const { input, expected } = testCase;
-    
+
     // Mock evaluation - in real scenario, this would run actual evaluation
     const mockScoreGains = {};
     let totalGain = 0;
-    
+
     Object.keys(expected.scoreGain).forEach(criterion => {
       const gain = expected.scoreGain[criterion] * (0.8 + Math.random() * 0.4); // 80-120% of expected
       mockScoreGains[criterion] = Math.round(gain * 100) / 100;
       totalGain += gain;
     });
-    
+
     return {
       scoreGains: mockScoreGains,
       totalScoreGain: Math.round(totalGain * 100) / 100,
       intentPreserved: Math.random() > 0.1, // 90% chance of preserving intent
       compatibility: Math.random() > 0.05, // 95% chance of maintaining compatibility
-      qualityScore: Math.min(5.0, 4.0 + totalGain / Object.keys(mockScoreGains).length)
+      qualityScore: Math.min(
+        5.0,
+        4.0 + totalGain / Object.keys(mockScoreGains).length
+      ),
     };
   }
 
@@ -444,34 +494,37 @@ storage:
   validateAgainstExpected(testCase, evaluation) {
     const issues = [];
     let score = 100;
-    
+
     // Check score gains
     Object.keys(testCase.expected.scoreGain).forEach(criterion => {
       const expected = testCase.expected.scoreGain[criterion];
       const actual = evaluation.scoreGains[criterion] || 0;
-      
-      if (actual < expected * 0.7) { // Allow 30% tolerance
-        issues.push(`Insufficient score gain in ${criterion}: expected ${expected}, got ${actual}`);
+
+      if (actual < expected * 0.7) {
+        // Allow 30% tolerance
+        issues.push(
+          `Insufficient score gain in ${criterion}: expected ${expected}, got ${actual}`
+        );
         score -= 20;
       }
     });
-    
+
     // Check intent preservation
     if (testCase.expected.intentPreserved && !evaluation.intentPreserved) {
       issues.push('Intent not preserved');
       score -= 30;
     }
-    
+
     // Check compatibility
     if (testCase.expected.compatibility && !evaluation.compatibility) {
       issues.push('Compatibility broken');
       score -= 25;
     }
-    
+
     return {
       passed: issues.length === 0,
       score: Math.max(0, score),
-      issues: issues
+      issues: issues,
     };
   }
 
@@ -480,11 +533,11 @@ storage:
    */
   calculateOverallMetrics() {
     if (this.testResults.length === 0) return;
-    
+
     let totalScoreGain = 0;
     let intentPreserved = 0;
     let compatible = 0;
-    
+
     this.testResults.forEach(result => {
       if (result.metrics) {
         totalScoreGain += result.metrics.totalScoreGain;
@@ -492,10 +545,15 @@ storage:
         if (result.metrics.compatibility) compatible++;
       }
     });
-    
-    this.metrics.averageScoreGain = Math.round((totalScoreGain / this.testResults.length) * 100) / 100;
-    this.metrics.intentPreservationRate = Math.round((intentPreserved / this.testResults.length) * 100);
-    this.metrics.compatibilityRate = Math.round((compatible / this.testResults.length) * 100);
+
+    this.metrics.averageScoreGain =
+      Math.round((totalScoreGain / this.testResults.length) * 100) / 100;
+    this.metrics.intentPreservationRate = Math.round(
+      (intentPreserved / this.testResults.length) * 100
+    );
+    this.metrics.compatibilityRate = Math.round(
+      (compatible / this.testResults.length) * 100
+    );
   }
 
   /**
@@ -503,13 +561,21 @@ storage:
    */
   printTestSummary() {
     console.log('📊 Test Suite Summary:');
-    console.log(`✅ Passed: ${this.metrics.passedTests}/${this.metrics.totalTests}`);
-    console.log(`❌ Failed: ${this.metrics.failedTests}/${this.metrics.totalTests}`);
-    console.log(`📈 Success Rate: ${Math.round((this.metrics.passedTests / this.metrics.totalTests) * 100)}%`);
+    console.log(
+      `✅ Passed: ${this.metrics.passedTests}/${this.metrics.totalTests}`
+    );
+    console.log(
+      `❌ Failed: ${this.metrics.failedTests}/${this.metrics.totalTests}`
+    );
+    console.log(
+      `📈 Success Rate: ${Math.round((this.metrics.passedTests / this.metrics.totalTests) * 100)}%`
+    );
     console.log(`📊 Average Score Gain: ${this.metrics.averageScoreGain}`);
-    console.log(`🎯 Intent Preservation: ${this.metrics.intentPreservationRate}%`);
+    console.log(
+      `🎯 Intent Preservation: ${this.metrics.intentPreservationRate}%`
+    );
     console.log(`🔗 Compatibility Rate: ${this.metrics.compatibilityRate}%`);
-    
+
     // Category breakdown
     const categories = {};
     this.testResults.forEach(result => {
@@ -520,7 +586,7 @@ storage:
       categories[cat].total++;
       if (result.passed) categories[cat].passed++;
     });
-    
+
     console.log('\n📋 Category Breakdown:');
     Object.entries(categories).forEach(([category, stats]) => {
       const rate = Math.round((stats.passed / stats.total) * 100);
@@ -536,17 +602,17 @@ storage:
       timestamp: new Date().toISOString(),
       summary: this.metrics,
       results: this.testResults,
-      recommendations: this.generateRecommendations()
+      recommendations: this.generateRecommendations(),
     };
-    
+
     const reportPath = path.join(__dirname, '..', 'assets', 'test-report.json');
-    
+
     // Ensure directory exists
     const dir = path.dirname(reportPath);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
-    
+
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`\n📄 Test report saved to: ${reportPath}`);
   }
@@ -556,49 +622,49 @@ storage:
    */
   generateRecommendations() {
     const recommendations = [];
-    
+
     // Analyze failed tests
     const failedTests = this.testResults.filter(r => !r.passed);
-    
+
     if (failedTests.length > 0) {
       recommendations.push({
         priority: 'high',
         issue: 'Test failures detected',
         details: `${failedTests.length} tests failed`,
-        suggestion: 'Review improvement logic and evaluation criteria'
+        suggestion: 'Review improvement logic and evaluation criteria',
       });
     }
-    
+
     // Analyze score gains
     if (this.metrics.averageScoreGain < 0.3) {
       recommendations.push({
         priority: 'medium',
         issue: 'Low average score gain',
         details: `Average gain: ${this.metrics.averageScoreGain}`,
-        suggestion: 'Enhance improvement strategies for better effectiveness'
+        suggestion: 'Enhance improvement strategies for better effectiveness',
       });
     }
-    
+
     // Analyze intent preservation
     if (this.metrics.intentPreservationRate < 90) {
       recommendations.push({
         priority: 'high',
         issue: 'Low intent preservation rate',
         details: `${this.metrics.intentPreservationRate}% preservation rate`,
-        suggestion: 'Strengthen intent preservation logic in improvements'
+        suggestion: 'Strengthen intent preservation logic in improvements',
       });
     }
-    
+
     // Analyze compatibility
     if (this.metrics.compatibilityRate < 95) {
       recommendations.push({
         priority: 'medium',
         issue: 'Compatibility issues detected',
         details: `${this.metrics.compatibilityRate}% compatibility rate`,
-        suggestion: 'Improve compatibility checking in improvement process'
+        suggestion: 'Improve compatibility checking in improvement process',
       });
     }
-    
+
     return recommendations;
   }
 
@@ -607,17 +673,19 @@ storage:
    */
   async runTestCategory(category, options = {}) {
     const categoryTests = this.testCases.filter(tc => tc.category === category);
-    
-    console.log(`🧪 Running ${category} test category (${categoryTests.length} tests)...\n`);
-    
+
+    console.log(
+      `🧪 Running ${category} test category (${categoryTests.length} tests)...\n`
+    );
+
     const results = [];
     for (const testCase of categoryTests) {
       const result = await this.runSingleTest(testCase, options);
       results.push(result);
-      
+
       console.log(`${result.passed ? '✅' : '❌'} ${testCase.name}`);
     }
-    
+
     return results;
   }
 
@@ -626,13 +694,13 @@ storage:
    */
   async runSpecificTest(testId, options = {}) {
     const testCase = this.testCases.find(tc => tc.id === testId);
-    
+
     if (!testCase) {
       throw new Error(`Test case not found: ${testId}`);
     }
-    
+
     console.log(`🧪 Running specific test: ${testCase.name}\n`);
-    
+
     return await this.runSingleTest(testCase, options);
   }
 }
@@ -640,10 +708,10 @@ storage:
 // CLI execution
 if (require.main === module) {
   const testSuite = new ImprovementTestSuite();
-  
+
   const args = process.argv.slice(2);
   const options = {};
-  
+
   // Parse options
   for (let i = 0; i < args.length; i++) {
     if (args[i].startsWith('--')) {
@@ -653,24 +721,27 @@ if (require.main === module) {
       i++; // Skip value
     }
   }
-  
+
   // Determine what to run
   if (options.category) {
-    testSuite.runTestCategory(options.category, options)
+    testSuite
+      .runTestCategory(options.category, options)
       .then(() => process.exit(0))
       .catch(error => {
         console.error('Category test failed:', error.message);
         process.exit(1);
       });
   } else if (options.test) {
-    testSuite.runSpecificTest(options.test, options)
+    testSuite
+      .runSpecificTest(options.test, options)
       .then(() => process.exit(0))
       .catch(error => {
         console.error('Specific test failed:', error.message);
         process.exit(1);
       });
   } else {
-    testSuite.runAllTests(options)
+    testSuite
+      .runAllTests(options)
       .then(() => {
         const exitCode = testSuite.metrics.failedTests > 0 ? 1 : 0;
         process.exit(exitCode);

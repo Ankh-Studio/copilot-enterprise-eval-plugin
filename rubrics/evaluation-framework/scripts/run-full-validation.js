@@ -2,7 +2,7 @@
 
 /**
  * Full Validation Pipeline Script
- * 
+ *
  * Runs complete validation suite including rubric validation,
  * adversarial testing, and agentskills evaluation framework.
  */
@@ -26,8 +26,8 @@ class FullValidationPipeline {
         overallScore: 0,
         criticalIssues: [],
         recommendations: [],
-        status: 'pending'
-      }
+        status: 'pending',
+      },
     };
   }
 
@@ -40,15 +40,20 @@ class FullValidationPipeline {
     try {
       // Step 1: Rubric Validation
       console.log('📋 Step 1: Running Rubric Validation');
-      this.results.rubricValidation = this.rubricValidator.validateAllRubrics(rubricsDir);
+      this.results.rubricValidation =
+        this.rubricValidator.validateAllRubrics(rubricsDir);
 
       // Step 2: Adversarial Testing
       console.log('\n🛡️  Step 2: Running Adversarial Validation');
-      this.results.adversarialValidation = this.adversarialValidator.validateAllRubrics(rubricsDir);
+      this.results.adversarialValidation =
+        this.adversarialValidator.validateAllRubrics(rubricsDir);
 
       // Step 3: AgentSkills Framework Test (if test cases exist)
       console.log('\n🧪 Step 3: Testing AgentSkills Framework');
-      this.results.agentskillsEvaluation = await this.testAgentSkillsFramework(rubricsDir, options);
+      this.results.agentskillsEvaluation = await this.testAgentSkillsFramework(
+        rubricsDir,
+        options
+      );
 
       // Step 4: Generate Summary
       console.log('\n📊 Step 4: Generating Summary');
@@ -62,7 +67,6 @@ class FullValidationPipeline {
       this.printFinalSummary();
 
       return this.results;
-
     } catch (error) {
       console.error('❌ Validation pipeline failed:', error.message);
       this.results.summary.status = 'failed';
@@ -78,25 +82,28 @@ class FullValidationPipeline {
     try {
       // Create a test evaluation configuration
       const testConfig = this.createTestConfig();
-      
+
       // Create a temporary workspace for testing
       const testWorkspace = path.join(rubricsDir, '..', 'test-workspace');
-      
+
       // Run the evaluation
-      const results = await this.agentskillsFramework.runEvaluation(testConfig, testWorkspace, options);
-      
+      const results = await this.agentskillsFramework.runEvaluation(
+        testConfig,
+        testWorkspace,
+        options
+      );
+
       return {
         status: 'completed',
         framework: results,
         testCases: testConfig.evals.length,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
       };
-
     } catch (error) {
       return {
         status: 'failed',
         error: error.message,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
       };
     }
   }
@@ -106,39 +113,39 @@ class FullValidationPipeline {
    */
   createTestConfig() {
     return {
-      skill_name: "rubric-validation-test",
+      skill_name: 'rubric-validation-test',
       evals: [
         {
           id: 1,
-          prompt: "Test evidence-based scoring validation",
-          expected_output: "Validation results with specific evidence",
+          prompt: 'Test evidence-based scoring validation',
+          expected_output: 'Validation results with specific evidence',
           files: [],
           assertions: [
-            "Evidence requirements are specific and quantifiable",
-            "Score progression is logical and distinct",
-            "Weight distribution sums to 1.0"
+            'Evidence requirements are specific and quantifiable',
+            'Score progression is logical and distinct',
+            'Weight distribution sums to 1.0',
           ],
           metadata: {
-            category: "validation",
-            priority: "high"
-          }
+            category: 'validation',
+            priority: 'high',
+          },
         },
         {
           id: 2,
-          prompt: "Test security and robustness validation",
-          expected_output: "Security assessment results",
+          prompt: 'Test security and robustness validation',
+          expected_output: 'Security assessment results',
           files: [],
           assertions: [
-            "Rubric resists keyword stuffing attacks",
-            "Evidence requirements prevent vague gaming",
-            "Score inflation is controlled"
+            'Rubric resists keyword stuffing attacks',
+            'Evidence requirements prevent vague gaming',
+            'Score inflation is controlled',
           ],
           metadata: {
-            category: "security",
-            priority: "high"
-          }
-        }
-      ]
+            category: 'security',
+            priority: 'high',
+          },
+        },
+      ],
     };
   }
 
@@ -156,26 +163,32 @@ class FullValidationPipeline {
 
     // Rubric validation (40% weight)
     if (rubricResults && rubricResults.length > 0) {
-      const avgRubricScore = rubricResults.reduce((sum, r) => sum + r.score, 0) / rubricResults.length;
+      const avgRubricScore =
+        rubricResults.reduce((sum, r) => sum + r.score, 0) /
+        rubricResults.length;
       totalScore += avgRubricScore * 0.4;
       weightSum += 0.4;
     }
 
     // Adversarial validation (35% weight)
     if (adversarialResults && adversarialResults.length > 0) {
-      const avgResilience = adversarialResults.reduce((sum, r) => sum + r.resilienceScore, 0) / adversarialResults.length;
+      const avgResilience =
+        adversarialResults.reduce((sum, r) => sum + r.resilienceScore, 0) /
+        adversarialResults.length;
       totalScore += avgResilience * 0.35;
       weightSum += 0.35;
     }
 
     // AgentSkills framework (25% weight)
     if (agentskillsResults && agentskillsResults.status === 'completed') {
-      const frameworkScore = agentskillsResults.framework.summary.with_skill.pass_rate.mean * 100;
+      const frameworkScore =
+        agentskillsResults.framework.summary.with_skill.pass_rate.mean * 100;
       totalScore += frameworkScore * 0.25;
       weightSum += 0.25;
     }
 
-    this.results.summary.overallScore = weightSum > 0 ? Math.round(totalScore / weightSum) : 0;
+    this.results.summary.overallScore =
+      weightSum > 0 ? Math.round(totalScore / weightSum) : 0;
 
     // Identify critical issues
     this.identifyCriticalIssues();
@@ -202,7 +215,7 @@ class FullValidationPipeline {
             severity: 'high',
             file: result.file,
             issue: `Low validation score: ${result.score}%`,
-            details: result.issues.slice(0, 3)
+            details: result.issues.slice(0, 3),
           });
         }
       });
@@ -217,19 +230,22 @@ class FullValidationPipeline {
             severity: 'critical',
             file: result.file,
             issue: `Low resilience score: ${result.resilienceScore}%`,
-            details: result.vulnerabilities.slice(0, 3)
+            details: result.vulnerabilities.slice(0, 3),
           });
         }
       });
     }
 
     // Check AgentSkills framework issues
-    if (this.results.agentskillsEvaluation && this.results.agentskillsEvaluation.status === 'failed') {
+    if (
+      this.results.agentskillsEvaluation &&
+      this.results.agentskillsEvaluation.status === 'failed'
+    ) {
       issues.push({
         type: 'framework',
         severity: 'high',
         issue: 'AgentSkills framework test failed',
-        details: [this.results.agentskillsEvaluation.error]
+        details: [this.results.agentskillsEvaluation.error],
       });
     }
 
@@ -245,7 +261,9 @@ class FullValidationPipeline {
     // Analyze common patterns across all validations
     const allIssues = [
       ...(this.results.rubricValidation || []).flatMap(r => r.issues),
-      ...(this.results.adversarialValidation || []).flatMap(r => r.vulnerabilities)
+      ...(this.results.adversarialValidation || []).flatMap(
+        r => r.vulnerabilities
+      ),
     ];
 
     // Group issues by type
@@ -268,12 +286,15 @@ class FullValidationPipeline {
           issue: issue,
           frequency: instances.length,
           suggestion: this.getSuggestionForIssue(issue),
-          affectedFiles: [...new Set(instances.map(i => i.file))]
+          affectedFiles: [...new Set(instances.map(i => i.file))],
         });
       });
 
     // Add framework-specific recommendations
-    if (this.results.agentskillsEvaluation && this.results.agentskillsEvaluation.status === 'completed') {
+    if (
+      this.results.agentskillsEvaluation &&
+      this.results.agentskillsEvaluation.status === 'completed'
+    ) {
       const framework = this.results.agentskillsEvaluation.framework;
       if (framework.recommendations) {
         recommendations.push(...framework.recommendations);
@@ -287,10 +308,14 @@ class FullValidationPipeline {
    * Categorize issue type
    */
   categorizeIssue(issue) {
-    if (issue.includes('evidence') || issue.includes('scoring')) return 'evidence_scoring';
-    if (issue.includes('weight') || issue.includes('distribution')) return 'weight_distribution';
-    if (issue.includes('security') || issue.includes('vulnerability')) return 'security';
-    if (issue.includes('automation') || issue.includes('validation')) return 'automation';
+    if (issue.includes('evidence') || issue.includes('scoring'))
+      return 'evidence_scoring';
+    if (issue.includes('weight') || issue.includes('distribution'))
+      return 'weight_distribution';
+    if (issue.includes('security') || issue.includes('vulnerability'))
+      return 'security';
+    if (issue.includes('automation') || issue.includes('validation'))
+      return 'automation';
     return 'general';
   }
 
@@ -299,14 +324,22 @@ class FullValidationPipeline {
    */
   getSuggestionForIssue(issue) {
     const suggestions = {
-      'Missing evidence-based scoring section': 'Add evidence-based scoring section to all rubrics',
-      'Weight distribution does not sum to 1.0': 'Adjust criterion weights to sum exactly to 1.0',
-      'Vague evidence requirement may accept meaningless statements': 'Make evidence requirements more specific and quantifiable',
-      'May accept automation bypass attempts': 'Require evidence to be directly embedded in evaluation artifacts',
-      'Generic evidence requirement vulnerable to keyword stuffing': 'Replace generic terms with specific, measurable criteria'
+      'Missing evidence-based scoring section':
+        'Add evidence-based scoring section to all rubrics',
+      'Weight distribution does not sum to 1.0':
+        'Adjust criterion weights to sum exactly to 1.0',
+      'Vague evidence requirement may accept meaningless statements':
+        'Make evidence requirements more specific and quantifiable',
+      'May accept automation bypass attempts':
+        'Require evidence to be directly embedded in evaluation artifacts',
+      'Generic evidence requirement vulnerable to keyword stuffing':
+        'Replace generic terms with specific, measurable criteria',
     };
 
-    return suggestions[issue] || 'Review rubric design and strengthen validation requirements';
+    return (
+      suggestions[issue] ||
+      'Review rubric design and strengthen validation requirements'
+    );
   }
 
   /**
@@ -334,14 +367,17 @@ class FullValidationPipeline {
    */
   saveResults(outputDir) {
     const fs = require('fs');
-    
+
     // Ensure output directory exists
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
     }
 
     // Save full results
-    const resultsPath = path.join(outputDir, `full-validation-${Date.now()}.json`);
+    const resultsPath = path.join(
+      outputDir,
+      `full-validation-${Date.now()}.json`
+    );
     fs.writeFileSync(resultsPath, JSON.stringify(this.results, null, 2));
 
     // Save summary report
@@ -404,19 +440,26 @@ ${this.formatNextSteps()}
    */
   generateExecutiveSummary() {
     const score = this.results.summary.overallScore;
-    const criticalCount = this.results.summary.criticalIssues.filter(i => i.severity === 'critical').length;
-    const highCount = this.results.summary.criticalIssues.filter(i => i.severity === 'high').length;
+    const criticalCount = this.results.summary.criticalIssues.filter(
+      i => i.severity === 'critical'
+    ).length;
+    const highCount = this.results.summary.criticalIssues.filter(
+      i => i.severity === 'high'
+    ).length;
 
     let summary = `The evaluation framework achieved an overall score of ${score}%. `;
-    
+
     if (score >= 90) {
       summary += 'The framework demonstrates excellent quality and robustness.';
     } else if (score >= 80) {
-      summary += 'The framework shows good quality with minor areas for improvement.';
+      summary +=
+        'The framework shows good quality with minor areas for improvement.';
     } else if (score >= 70) {
-      summary += 'The framework meets basic requirements but needs significant improvements.';
+      summary +=
+        'The framework meets basic requirements but needs significant improvements.';
     } else {
-      summary += 'The framework requires substantial improvements to meet quality standards.';
+      summary +=
+        'The framework requires substantial improvements to meet quality standards.';
     }
 
     if (criticalCount > 0) {
@@ -433,13 +476,19 @@ ${this.formatNextSteps()}
    * Format rubric validation results
    */
   formatRubricValidationResults() {
-    if (!this.results.rubricValidation || this.results.rubricValidation.length === 0) {
+    if (
+      !this.results.rubricValidation ||
+      this.results.rubricValidation.length === 0
+    ) {
       return 'No rubric validation results available.';
     }
 
-    const results = this.results.rubricValidation.map(r => 
-      `- **${r.file}**: ${r.score}% (${r.passed} passed, ${r.failed} failed)`
-    ).join('\n');
+    const results = this.results.rubricValidation
+      .map(
+        r =>
+          `- **${r.file}**: ${r.score}% (${r.passed} passed, ${r.failed} failed)`
+      )
+      .join('\n');
 
     return results;
   }
@@ -448,13 +497,19 @@ ${this.formatNextSteps()}
    * Format adversarial validation results
    */
   formatAdversarialResults() {
-    if (!this.results.adversarialValidation || this.results.adversarialValidation.length === 0) {
+    if (
+      !this.results.adversarialValidation ||
+      this.results.adversarialValidation.length === 0
+    ) {
       return 'No adversarial validation results available.';
     }
 
-    const results = this.results.adversarialValidation.map(r => 
-      `- **${r.file}**: ${r.resilienceScore}% resilience (${r.totalVulnerabilities} vulnerabilities)`
-    ).join('\n');
+    const results = this.results.adversarialValidation
+      .map(
+        r =>
+          `- **${r.file}**: ${r.resilienceScore}% resilience (${r.totalVulnerabilities} vulnerabilities)`
+      )
+      .join('\n');
 
     return results;
   }
@@ -484,10 +539,17 @@ ${this.formatNextSteps()}
       return 'No critical issues found. 🎉';
     }
 
-    return this.results.summary.criticalIssues.map((issue, index) => {
-      const emoji = issue.severity === 'critical' ? '🚨' : issue.severity === 'high' ? '⚠️' : 'ℹ️';
-      return `${index + 1}. ${emoji} **${issue.type}**: ${issue.issue}`;
-    }).join('\n');
+    return this.results.summary.criticalIssues
+      .map((issue, index) => {
+        const emoji =
+          issue.severity === 'critical'
+            ? '🚨'
+            : issue.severity === 'high'
+              ? '⚠️'
+              : 'ℹ️';
+        return `${index + 1}. ${emoji} **${issue.type}**: ${issue.issue}`;
+      })
+      .join('\n');
   }
 
   /**
@@ -498,10 +560,12 @@ ${this.formatNextSteps()}
       return 'No specific recommendations at this time.';
     }
 
-    return this.results.summary.recommendations.map((rec, index) => {
-      const priority = rec.priority.toUpperCase();
-      return `${index + 1}. **[${priority}]** ${rec.issue}\n   - *Suggestion*: ${rec.suggestion}`;
-    }).join('\n');
+    return this.results.summary.recommendations
+      .map((rec, index) => {
+        const priority = rec.priority.toUpperCase();
+        return `${index + 1}. **[${priority}]** ${rec.issue}\n   - *Suggestion*: ${rec.suggestion}`;
+      })
+      .join('\n');
   }
 
   /**
@@ -510,12 +574,18 @@ ${this.formatNextSteps()}
   formatNextSteps() {
     const steps = [];
 
-    if (this.results.summary.criticalIssues.some(i => i.severity === 'critical')) {
-      steps.push('1. Address all critical security vulnerabilities immediately');
+    if (
+      this.results.summary.criticalIssues.some(i => i.severity === 'critical')
+    ) {
+      steps.push(
+        '1. Address all critical security vulnerabilities immediately'
+      );
     }
 
     if (this.results.summary.overallScore < 80) {
-      steps.push('2. Improve rubric validation scores to meet quality standards');
+      steps.push(
+        '2. Improve rubric validation scores to meet quality standards'
+      );
     }
 
     if (this.results.summary.recommendations.length > 0) {
@@ -535,15 +605,19 @@ ${this.formatNextSteps()}
     console.log('\n🎯 Full Validation Pipeline Complete!');
     console.log(`📊 Overall Score: ${this.results.summary.overallScore}%`);
     console.log(`📋 Status: ${this.results.summary.status.toUpperCase()}`);
-    
+
     if (this.results.summary.criticalIssues.length > 0) {
-      console.log(`🚨 Critical Issues: ${this.results.summary.criticalIssues.length}`);
+      console.log(
+        `🚨 Critical Issues: ${this.results.summary.criticalIssues.length}`
+      );
     }
-    
+
     if (this.results.summary.recommendations.length > 0) {
-      console.log(`💡 Recommendations: ${this.results.summary.recommendations.length}`);
+      console.log(
+        `💡 Recommendations: ${this.results.summary.recommendations.length}`
+      );
     }
-    
+
     console.log('\n✅ Validation completed successfully!');
   }
 }
@@ -551,10 +625,10 @@ ${this.formatNextSteps()}
 // CLI execution
 if (require.main === module) {
   const pipeline = new FullValidationPipeline();
-  
+
   const rubricsDir = process.argv[2] || path.join(__dirname, '..', '..', '..');
   const options = {};
-  
+
   // Parse additional options
   for (let i = 3; i < process.argv.length; i += 2) {
     if (process.argv[i].startsWith('--')) {
@@ -563,8 +637,9 @@ if (require.main === module) {
       options[key] = value;
     }
   }
-  
-  pipeline.runFullValidation(rubricsDir, options)
+
+  pipeline
+    .runFullValidation(rubricsDir, options)
     .then(results => {
       const exitCode = results.summary.status === 'critical' ? 1 : 0;
       process.exit(exitCode);

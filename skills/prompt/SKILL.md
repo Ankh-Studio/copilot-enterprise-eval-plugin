@@ -1,13 +1,6 @@
-
-
-
-name: prompt
-description: Evaluate a prompt against the prompt rubric
+name: prompt description: Evaluate a prompt against the prompt rubric
 
 ---
-
-
-
 
 Evaluate the provided prompt against the structured rubric criteria.
 
@@ -42,4 +35,5 @@ Provide the path to the prompt file you want evaluated:
 - `.github/prompts/prompt-name.prompt.md`
 - Any custom prompt file path
 
-The skill will automatically load the prompt rubric and provide a comprehensive evaluation with actionable feedback.
+The skill will automatically load the prompt rubric and provide a comprehensive evaluation with
+actionable feedback.

@@ -2,7 +2,8 @@
 
 ## Evidence-Based Scoring
 
-Each criterion requires concrete evidence for scoring. Evaluators must provide specific examples from the artifact that justify the score.
+Each criterion requires concrete evidence for scoring. Evaluators must provide specific examples
+from the artifact that justify the score.
 
 ## Scope (Weight: 0.25)
 
@@ -139,7 +140,8 @@ Each criterion requires concrete evidence for scoring. Evaluators must provide s
 - Awareness of system constraints and limitations
 - Alignment with project architecture and standards
 
-**Evidence Required**: Convention understanding, workflow integration, constraint awareness, architectural alignment
+**Evidence Required**: Convention understanding, workflow integration, constraint awareness,
+architectural alignment
 
 **Score 3**: Instruction demonstrates:
 
@@ -181,7 +183,8 @@ Each criterion requires concrete evidence for scoring. Evaluators must provide s
 - Documentation for maintenance and updates
 - Future-proofing with adaptability guidance
 
-**Evidence Required**: Scalability considerations, modular design, maintenance documentation, future-proofing
+**Evidence Required**: Scalability considerations, modular design, maintenance documentation,
+future-proofing
 
 **Score 3**: Instruction promotes:
 

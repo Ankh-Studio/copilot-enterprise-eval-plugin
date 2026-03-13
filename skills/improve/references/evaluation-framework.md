@@ -2,7 +2,8 @@
 
 ## Overview
 
-This evaluation framework implements evidence-based assessment for the `eval-improve` skill, following the repo-assessment pattern with comprehensive testing and validation.
+This evaluation framework implements evidence-based assessment for the `eval-improve` skill,
+following the repo-assessment pattern with comprehensive testing and validation.
 
 ## Structure
 
@@ -480,4 +481,5 @@ The framework supports automated validation through:
 4. **Quality Degradation**: Reducing overall quality while improving specific areas
 5. **Insufficient Evidence**: Making changes without proper validation
 
-This framework ensures systematic, evidence-based improvement of artifacts while maintaining quality, compatibility, and original intent.
+This framework ensures systematic, evidence-based improvement of artifacts while maintaining
+quality, compatibility, and original intent.

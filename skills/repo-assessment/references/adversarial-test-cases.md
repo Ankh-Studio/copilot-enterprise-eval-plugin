@@ -8,7 +8,7 @@
 
 **Scenario**: Repository with excessive keywords to inflate technology detection scores
 
-```json
+````json
 {
   "package.json": {
     "name": "react-webpack-typescript-jest-express-mongodb-python-rust-go-java",
@@ -45,7 +45,7 @@
 ```bash
 .git/
 .gitignore (empty)
-```
+````
 
 **Expected Vulnerability**: Assessment crashes or meaningless scores
 
@@ -84,8 +84,11 @@ src/
 
 ```markdown
 # This is a React Application
+
 ## Built with Vue.js and Angular
+
 ### Using Django backend with Flask
+
 ### Database: MongoDB with PostgreSQL
 ```
 
@@ -109,8 +112,7 @@ src/
 
 - 50,000+ files
 - Deep nesting (100+ levels)
-- Huge file names (255+ characters)
-**Expected Vulnerability**: Performance degradation and timeout
+- Huge file names (255+ characters) **Expected Vulnerability**: Performance degradation and timeout
 
 #### Quality Stress Attack
 
@@ -118,8 +120,7 @@ src/
 
 - Some files perfectly structured
 - Others completely malformed
-- Mixed coding standards
-**Expected Vulnerability**: Inconsistent quality scoring
+- Mixed coding standards **Expected Vulnerability**: Inconsistent quality scoring
 
 ## Vulnerability Assessment Matrix
 
@@ -139,19 +140,28 @@ src/
 
 - [ ] Inconsistent quality scoring
 - [ ] Architecture misclassification
-- [ ] Documentation manipulation
-› npm run lint:check
+- [ ] Documentation manipulation › npm run lint:check
 
-> @ankh-studio/copilot-eval-plugin@1.1.0 lint:check
-> markdownlint 'README.md' 'CODE_OF_CONDUCT.md' 'CONTRIBUTING.md' 'SECURITY.md' 'ROADMAP.md' '.github/**/*.md' 'agents/**/*.md' 'evals/**/*.md' 'skills/**/*.md' 'rubrics/**/*.md' 'personas/**/*.md' 'frameworks/**/*.md' && yamllint-js $(find .github -name '*.yml' -o -name '*.yaml') --config-file .yamllint.yml
+> @ankh-studio/copilot-eval-plugin@1.1.0 lint:check markdownlint 'README.md' 'CODE*OF_CONDUCT.md'
+> 'CONTRIBUTING.md' 'SECURITY.md' 'ROADMAP.md' '.github/**/\*.md' 'agents/**/*.md' 'evals/\*\*/_.md'
+> 'skills/**/\*.md' 'rubrics/**/_.md' 'personas/\*\*/_.md' 'frameworks/\*_/_.md' && yamllint-js
+> $(find .github -name '_.yml' -o -name '\_.yaml') --config-file .yamllint.yml
 
-rubrics/repo-assessment.md:143 error MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "### Quality Thresholds"]
-rubrics/repo-assessment.md:144 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- **Excellent**: 3.5 - 4.0"]
-skills/repo-assessment/assets/repo-assessment.md:143 error MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "### Quality Thresholds"]
-skills/repo-assessment/assets/repo-assessment.md:144 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- **Excellent**: 3.5 - 4.0"]
-skills/repo-assessment/references/adversarial-test-cases.md:68 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
-skills/repo-assessment/references/adversarial-test-cases.md:192 error MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "### Execution Plan"]
-skills/repo-assessment/references/adversarial-test-cases.md:193 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```bash"]
+rubrics/repo-assessment.md:143 error MD022/blanks-around-headings Headings should be surrounded by
+blank lines [Expected: 1; Actual: 0; Below] [Context: "### Quality Thresholds"]
+rubrics/repo-assessment.md:144 error MD032/blanks-around-lists Lists should be surrounded by blank
+lines [Context: "- **Excellent**: 3.5 - 4.0"] skills/repo-assessment/assets/repo-assessment.md:143
+error MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1;
+Actual: 0; Below] [Context: "### Quality Thresholds"]
+skills/repo-assessment/assets/repo-assessment.md:144 error MD032/blanks-around-lists Lists should be
+surrounded by blank lines [Context: "- **Excellent**: 3.5 - 4.0"]
+skills/repo-assessment/references/adversarial-test-cases.md:68 error MD040/fenced-code-language
+Fenced code blocks should have a language specified [Context: "```"]
+skills/repo-assessment/references/adversarial-test-cases.md:192 error MD022/blanks-around-headings
+Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "###
+Execution Plan"] skills/repo-assessment/references/adversarial-test-cases.md:193 error
+MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context:
+"```bash"]
 
 ### Low Severity Issues
 
@@ -208,3 +218,4 @@ skills/repo-assessment/references/adversarial-test-cases.md:193 error MD031/blan
 /adversarial --full-suite --target skills/repo-assessment/
 /adversarial --attack-pattern scoring --rubric rubrics/repo-assessment.md
 /adversarial --stress-test performance --skill repo-assessment
+```

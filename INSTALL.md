@@ -2,7 +2,7 @@
 
 ## Install the Plugin
 
-```bash
+````bash
 # From GitHub repository
 copilot plugin install yourusername/copilot-eval-plugin
 
@@ -19,7 +19,7 @@ copilot plugin list
 # Check available skills
 copilot skills list
 
-# Check available agents  
+# Check available agents
 copilot agent list
 ```bash
 
@@ -44,3 +44,4 @@ copilot
 - **9 Rubrics**: Structured evaluation criteria for all artifact types
 
 The plugin automatically detects artifact types and applies the appropriate evaluation rubric.
+````

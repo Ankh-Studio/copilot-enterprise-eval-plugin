@@ -1,11 +1,16 @@
 ---
 name: repo-assessment
-description: Comprehensive repository assessment and analysis. Use when evaluating code repositories, detecting technologies, analyzing architecture patterns, or assessing code quality. Supports multiple programming languages and framework detection.
+description:
+  Comprehensive repository assessment and analysis. Use when evaluating code repositories, detecting
+  technologies, analyzing architecture patterns, or assessing code quality. Supports multiple
+  programming languages and framework detection.
 license: MIT
-compatibility: Requires file system access, directory traversal, and text analysis tools. Compatible with any repository type and size.
+compatibility:
+  Requires file system access, directory traversal, and text analysis tools. Compatible with any
+  repository type and size.
 metadata:
   author: matthewvandusen
-  version: "1.0"
+  version: '1.0'
   category: analysis
   tags: repo-analysis technology-detection quality-assessment architecture-patterns code-evaluation
   capabilities: technology-detection pattern-recognition quality-assessment security-analysis
@@ -14,7 +19,8 @@ allowed-tools: Read ListDir GrepSearch Bash(find:*,ls:*)
 
 # Repository Assessment
 
-Perform comprehensive analysis of any repository to understand structure, technologies, patterns, and quality.
+Perform comprehensive analysis of any repository to understand structure, technologies, patterns,
+and quality.
 
 ## Process
 
@@ -108,7 +114,8 @@ Analyze specific repository path:
 /repo-assessment ./my-project
 ```
 
-Analyzes the specified repository and provides comprehensive assessment with technology detection, pattern recognition, and quality indicators for repository improvement planning.
+Analyzes the specified repository and provides comprehensive assessment with technology detection,
+pattern recognition, and quality indicators for repository improvement planning.
 
 ## Output Format
 
@@ -178,7 +185,8 @@ The assessment generates a structured JSON report with:
 
 ## Example
 
-Analyzes the specified repository and provides comprehensive assessment with technology detection, pattern recognition, and quality indicators for repository improvement planning.
+Analyzes the specified repository and provides comprehensive assessment with technology detection,
+pattern recognition, and quality indicators for repository improvement planning.
 
 ## Validation
 
