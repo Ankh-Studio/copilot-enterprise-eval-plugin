@@ -1,9 +1,6 @@
-
-
-
+---
 name: eval-validate-rubrics
 description: Validate and test evaluation rubrics for completeness and accuracy
-
 ---
 
 # Eval Validate Rubrics

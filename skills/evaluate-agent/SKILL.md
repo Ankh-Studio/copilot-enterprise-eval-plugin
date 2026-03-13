@@ -6,7 +6,7 @@ description: Evaluate agent artifacts against the agent rubric
 
 ---
 
-# Evaluate Agent
+
 
 
 Evaluate the provided agent against the structured agent rubric criteria.

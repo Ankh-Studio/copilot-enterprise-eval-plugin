@@ -6,7 +6,7 @@ description: Improve artifacts with targeted enhancement and optimization
 
 ---
 
-# Eval Improve
+
 
 
 Improve any Copilot artifact by applying targeted enhancements based on evaluation results.
@@ -45,16 +45,16 @@ Focus on specific improvement areas or overall enhancement.
 ## Chaining Example
 
 ```bash
-# 1. Evaluate current state
+
 /evaluate-artifact .github/prompts/api-design.prompt.md
 
-# 2. Apply targeted improvements
+
 /improve-artifact .github/prompts/api-design.prompt.md --focus="clarity,specificity"
 
-# 3. Verify improvements
+
 /evaluate-artifact .github/prompts/api-design.prompt.md
 
-# 4. Compare results and iterate if needed
+
 ```bash
 
 ## Improvement Guidelines

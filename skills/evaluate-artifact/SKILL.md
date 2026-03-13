@@ -1,11 +1,7 @@
 ---
-
-# Evaluate Artifact
 name: evaluate-artifact
 description: Evaluate any Copilot artifact against its rubric
 ---
-
-# Evaluate Artifact
 
 # Evaluate Artifact
 

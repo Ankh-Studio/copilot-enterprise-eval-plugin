@@ -6,7 +6,7 @@ description: Facilitate architecture debates and design decision evaluation
 
 ---
 
-# Eval Debate
+
 
 
 Simulate structured debate between three experts to resolve architecture decisions.

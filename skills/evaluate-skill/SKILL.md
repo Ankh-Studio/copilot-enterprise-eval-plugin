@@ -6,7 +6,7 @@ description: Evaluate skill artifacts against the skill rubric
 
 ---
 
-# Evaluate Skill
+
 
 
 Evaluate the provided skill against the structured skill rubric criteria.

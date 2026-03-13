@@ -1,13 +1,9 @@
-
-
-
+---
 name: eval-batch
 description: Evaluate multiple artifacts with comparative analysis and parallel processing
-
 ---
 
 # Eval Batch
-
 
 Evaluate multiple Copilot artifacts efficiently with parallel processing, comparative analysis, and executive reporting.
 

@@ -6,7 +6,7 @@ description: Evaluate instruction artifacts against the instruction rubric
 
 ---
 
-# Evaluate Instruction
+
 
 
 Evaluate the provided instruction against the structured instruction rubric criteria.

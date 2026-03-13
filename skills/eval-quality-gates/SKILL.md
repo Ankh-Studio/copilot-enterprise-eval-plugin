@@ -1,13 +1,9 @@
 ---
-
-# Eval Quality Gates
 name: eval-quality-gates
 description: Enforce quality standards with automated gating and policy compliance
 ---
 
 # Eval Quality Gates
-
-# Quality Gates
 
 Implement automated quality gates that enforce standards and prevent low-quality artifacts from progressing.
 

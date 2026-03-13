@@ -6,7 +6,7 @@ description: Evaluate a prompt against the prompt rubric
 
 ---
 
-# Evaluate Prompt
+
 
 
 Evaluate the provided prompt against the structured rubric criteria.

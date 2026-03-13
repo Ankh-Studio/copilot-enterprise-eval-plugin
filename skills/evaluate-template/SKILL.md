@@ -6,7 +6,7 @@ description: Evaluate template artifacts against the template rubric
 
 ---
 
-# Evaluate Template
+
 
 
 Evaluate the provided template against the structured template rubric criteria.

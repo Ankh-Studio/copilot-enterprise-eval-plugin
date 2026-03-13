@@ -6,7 +6,7 @@ description: Evaluate validation rule artifacts against the validation rubric
 
 ---
 
-# Evaluate Validation
+
 
 
 Evaluate the provided validation rule against the structured validation rubric criteria.

@@ -6,7 +6,7 @@ description: Evaluate context provider artifacts against the context rubric
 
 ---
 
-# Evaluate Context
+
 
 
 Evaluate the provided context provider against the structured context rubric criteria.

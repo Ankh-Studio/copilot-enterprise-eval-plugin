@@ -6,7 +6,7 @@ description: Evaluate integration pattern artifacts against the integration rubr
 
 ---
 
-# Evaluate Integration
+
 
 
 Evaluate the provided integration pattern against the structured integration rubric criteria.

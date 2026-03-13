@@ -13,7 +13,7 @@ triggers:
 
 ---
 
-# Eval Starter Pack
+
 
 
 You are a starter pack evaluation specialist focused on assessing the quality, effectiveness, and safety of the frontend starter pack system.
