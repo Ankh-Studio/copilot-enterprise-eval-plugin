@@ -182,7 +182,7 @@ class RepoAnalyzer {
             this.evidence.decisions.push({
               file: file.path,
               line: index + 1,
-              content: line.trim(),
+              content: this.sanitizeContent(line.trim()),
               type: this.classifyDecision(line),
             });
           }
@@ -338,6 +338,39 @@ class RepoAnalyzer {
       );
       return false;
     }
+  }
+
+  /**
+   * Sanitize content to prevent secrets/PII from being logged
+   */
+  sanitizeContent(content) {
+    // Redact common secret patterns
+    return (
+      content
+        // API keys and tokens
+        .replace(/(['"])?[A-Za-z0-9_-]{20,}(['"])?/g, '$1[REDACTED]$2')
+        // Passwords
+        .replace(
+          /password\s*[:=]\s*['"]?[^'"\s]+['"]?/gi,
+          'password: [REDACTED]'
+        )
+        // Email addresses
+        .replace(
+          /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g,
+          '[EMAIL]'
+        )
+        // URLs with potential credentials
+        .replace(/https?:\/\/[^:\s]+:[^@\s]+@/g, 'https://[REDACTED]@')
+        // AWS keys
+        .replace(/AKIA[0-9A-Z]{16}/g, '[AWS_KEY]')
+        // Generic key=value patterns with sensitive keys
+        .replace(
+          /(api[_-]?key|secret|token|credential)\s*[:=]\s*['"]?[^'"\s]+['"]?/gi,
+          '$1: [REDACTED]'
+        )
+        // Trim long strings that might contain encoded data
+        .replace(/\b[A-Za-z0-9+/]{50,}={0,2}\b/g, '[ENCODED_DATA]')
+    );
   }
 
   classifyDecision(line) {
