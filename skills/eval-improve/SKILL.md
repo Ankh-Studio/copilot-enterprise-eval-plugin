@@ -1,22 +1,50 @@
-
-
-
 name: eval-improve
-description: Improve artifacts with targeted enhancement and optimization
+description: Improve artifacts with evidence-based enhancement and comprehensive validation
 
 ---
 
-
-
-
-Improve any Copilot artifact by applying targeted enhancements based on evaluation results.
+Improve any Copilot artifact by applying targeted enhancements based on evidence-based evaluation results and comprehensive validation.
 
 ## Process
 
 1. **Analyze**: Read artifact, check evaluation results, identify low-scoring areas (<3.0)
-2. **Strategize**: Generate specific improvements for each low-scoring area
-3. **Apply**: Rewrite artifact with improvements, preserve intent and structure
-4. **Verify**: Review improvements against rubric criteria, estimate score gains
+2. **Evidence Assessment**: Gather concrete evidence for improvement opportunities
+3. **Strategize**: Generate specific improvements with measurable score gains
+4. **Apply**: Rewrite artifact with improvements, preserve intent and structure
+5. **Validate**: Evidence-based validation with score impact measurement
+6. **Verify**: Compatibility testing and intent preservation confirmation
+
+## Evidence-Based Improvement Framework
+
+### Improvement Effectiveness (Weight: 0.30)
+
+- Quantifiable score gains >0.5 points per targeted criterion
+- Specific before/after evidence with measurable metrics
+- Concrete examples of enhanced functionality
+
+### Targeting Accuracy (Weight: 0.25)
+
+- Precise identification of low-scoring areas (<3.0)
+- Accurate focus on specified improvement areas
+- Comprehensive coverage of identified issues
+
+### Intent Preservation (Weight: 0.20)
+
+- Complete maintenance of original artifact purpose
+- No changes to core functionality or objectives
+- Enhanced clarity without intent modification
+
+### Enhancement Quality (Weight: 0.15)
+
+- Professional-grade improvements with best practices
+- Comprehensive additions that add significant value
+- Exceptional clarity and specificity improvements
+
+### Compatibility Maintenance (Weight: 0.10)
+
+- Complete preservation of existing integrations
+- No breaking changes to dependencies
+- Full backward compatibility
 
 ## Usage
 
