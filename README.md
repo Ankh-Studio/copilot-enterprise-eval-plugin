@@ -1,4 +1,4 @@
-# Copilot Evaluation Plugin
+# Copilot Enterprise Evaluation Plugin
 
 **Production-grade evaluation toolkit for Copilot artifacts with Chain-of-Verification methodology
 and adversarial rubric testing.**
@@ -21,7 +21,7 @@ System Admin personas to resolve complex design decisions.
 **Automated Quality Hooks**: Pre/post-command evaluation that integrates quality assurance directly
 into your Copilot workflow.
 
-## 🚀 Why Choose Copilot Eval?
+## 🚀 Why Choose Copilot Enterprise Eval?
 
 - **🔍 Higher Accuracy**: Chain-of-Verification reduces evaluation errors by 40%+
 - **🛡️ Reliable Rubrics**: Adversarial stress-testing eliminates scoring vulnerabilities
@@ -57,7 +57,7 @@ into your Copilot workflow.
 
 ## 📊 Plugin Skills Overview
 
-This plugin provides **17 evaluation-focused skills** organized into four categories:
+This plugin provides **20 evaluation-focused skills** organized into four categories:
 
 ### 🔍 Core Evaluation Skills (10)
 
@@ -90,23 +90,65 @@ This plugin provides **17 evaluation-focused skills** organized into four catego
 
 ## Installation
 
-### From GitHub Repository
+### 🚀 Quick Install (Recommended)
 
-````bash
-copilot plugin install Ankh-Studio/copilot-eval-plugin
-```bash
-
-### From Local Path
+Install directly from GitHub - this is the fastest way to get started:
 
 ```bash
-copilot plugin install ./copilot-eval-plugin
+copilot plugin install Ankh-Studio/copilot-enterprise-eval-plugin
+```
+
+### 📦 Alternative Installation Methods
+
+#### From Local Path
+
 ```bash
+copilot plugin install ./copilot-enterprise-eval-plugin
+```
+
+#### From Specific Version
+
+```bash
+# Install a specific version
+copilot plugin install Ankh-Studio/copilot-enterprise-eval-plugin@v2.0.0
+```
+
+#### From Marketplace (if available)
+
+```bash
+# If added to a marketplace
+copilot plugin install copilot-enterprise-eval@marketplace-name
+```
+
+### ✅ Verification
+
+After installation, verify the plugin is working:
+
+```bash
+# Test basic evaluation
+/artifact --help
+
+# List all available skills
+copilot plugin list
+```
+
+### 🔄 Updates
+
+To update to the latest version:
+
+```bash
+# Reinstall from GitHub (gets latest version)
+copilot plugin install Ankh-Studio/copilot-enterprise-eval-plugin
+
+# Or install specific version
+copilot plugin install Ankh-Studio/copilot-enterprise-eval-plugin@v2.0.0
+```
 
 ## Usage
 
 ### Basic Evaluation
 
-```bash
+````bash
 # Universal evaluation with verification
 /artifact .github/prompts/code-review.prompt.md
 
@@ -290,7 +332,7 @@ Systematic approach to evaluation reliability:
 
 ```bash
 # 1. Install the plugin
-copilot plugin install ./copilot-eval-plugin
+copilot plugin install Ankh-Studio/copilot-enterprise-eval-plugin
 
 # 2. Evaluate your first artifact with verification
 /artifact .github/prompts/your-prompt.prompt.md
@@ -413,11 +455,11 @@ The total score is calculated using the weighted criteria.
 ## Plugin Structure
 
 ```bash
-copilot-eval-plugin/
-├── plugin.json              # Plugin manifest (12 skills registered)
+copilot-enterprise-eval-plugin/
+├── plugin.json              # Plugin manifest (20 skills registered)
 ├── agents/
 │   └── evaluator.agent.md   # Specialized evaluation AI agent
-├── skills/                  # 12 production-ready skills
+├── skills/                  # 20 production-ready skills
 │   ├── artifact/           # 🧠 Universal evaluation with verification
 │   ├── prompt/             # Specialized prompt evaluation
 │   ├── instruction/        # Specialized instruction evaluation
@@ -465,7 +507,7 @@ copilot-eval-plugin/
 
 ```bash
 # Install locally for testing
-copilot plugin install ./copilot-eval-plugin
+copilot plugin install ./copilot-enterprise-eval-plugin
 
 # Test all skills
 /artifact .github/prompts/test.prompt.md
@@ -493,6 +535,6 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 For issues and questions:
 
-- GitHub Issues: [Create an issue](https://github.com/yourusername/copilot-eval-plugin/issues)
+- GitHub Issues: [Create an issue](https://github.com/Ankh-Studio/copilot-eval-plugin/issues)
 - Documentation: [GitHub Copilot CLI Plugin Docs](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-finding-installing)
 ````

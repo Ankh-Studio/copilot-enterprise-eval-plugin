@@ -4,10 +4,10 @@
 
 ````bash
 # From GitHub repository
-copilot plugin install yourusername/copilot-eval-plugin
+copilot plugin install Ankh-Studio/copilot-enterprise-eval-plugin
 
 # Or from local directory
-copilot plugin install ./copilot-eval-plugin
+copilot plugin install ./copilot-enterprise-eval-plugin
 ```bash
 
 ## Verify Installation
@@ -38,10 +38,10 @@ copilot
 
 ## What's Included
 
-- **Evaluation Skill**: `/artifact` - Universal artifact evaluation
+- **20 Evaluation Skills**: Universal and specialized artifact evaluation
 - **Evaluator Agent**: `/agent evaluator` - Specialized evaluation assistant
 - **Automated Hooks**: Quality checks during generation/editing
-- **9 Rubrics**: Structured evaluation criteria for all artifact types
+- **Enterprise Rubrics**: Structured evaluation criteria for all artifact types with Chain-of-Verification
 
 The plugin automatically detects artifact types and applies the appropriate evaluation rubric.
 ````

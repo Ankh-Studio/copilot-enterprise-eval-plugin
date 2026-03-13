@@ -142,10 +142,11 @@ src/
 - [ ] Architecture misclassification
 - [ ] Documentation manipulation › npm run lint:check
 
-> @ankh-studio/copilot-eval-plugin@1.1.0 lint:check markdownlint 'README.md' 'CODE*OF_CONDUCT.md'
-> 'CONTRIBUTING.md' 'SECURITY.md' 'ROADMAP.md' '.github/**/\*.md' 'agents/**/*.md' 'evals/\*\*/_.md'
-> 'skills/**/\*.md' 'rubrics/**/_.md' 'personas/\*\*/_.md' 'frameworks/\*_/_.md' && yamllint-js
-> $(find .github -name '_.yml' -o -name '\_.yaml') --config-file .yamllint.yml
+> @ankh-studio/copilot-enterprise-eval-plugin@2.0.0 lint:check markdownlint 'README.md'
+> 'CODE*OF_CONDUCT.md' 'CONTRIBUTING.md' 'SECURITY.md' 'ROADMAP.md' '.github/**/\*.md'
+> 'agents/**/*.md' 'evals/\*\*/_.md' 'skills/**/\*.md' 'rubrics/**/_.md' 'personas/\*\*/_.md'
+> 'frameworks/\*_/_.md' && yamllint-js $(find .github -name '_.yml' -o -name '\_.yaml')
+> --config-file .yamllint.yml
 
 rubrics/repo-assessment.md:143 error MD022/blanks-around-headings Headings should be surrounded by
 blank lines [Expected: 1; Actual: 0; Below] [Context: "### Quality Thresholds"]

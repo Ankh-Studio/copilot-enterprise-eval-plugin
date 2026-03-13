@@ -1,0 +1,79 @@
+{
+  "name": "ankh-studio-copilot-plugins",
+  "owner": {
+    "name": "Ankh Studio",
+    "email": "matt@ankhstudio.com"
+  },
+  "metadata": {
+    "description": "Enterprise-grade evaluation toolkit for Copilot artifacts with Chain-of-Verification methodology and adversarial rubric testing",
+    "version": "2.0.0",
+    "homepage": "https://github.com/Ankh-Studio/copilot-enterprise-eval-plugin"
+  },
+  "plugins": [
+    {
+      "name": "copilot-enterprise-eval",
+      "description": "Production-grade evaluation toolkit for Copilot artifacts with Chain-of-Verification methodology and adversarial rubric testing. Enterprise-grade reliability through systematic quality assessment, mandatory self-critique, and stress-tested evaluation rubrics.",
+      "version": "2.0.0",
+      "source": "./",
+      "keywords": [
+        "evaluation",
+        "rubric",
+        "assessment",
+        "quality",
+        "chain-of-verification",
+        "adversarial-testing",
+        "enterprise"
+      ],
+      "homepage": "https://github.com/Ankh-Studio/copilot-enterprise-eval-plugin",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/Ankh-Studio/copilot-enterprise-eval-plugin.git"
+      },
+      "author": {
+        "name": "Matthew Van Dusen",
+        "email": "matt@ankhstudio.com"
+      },
+      "license": "MIT",
+      "skills": [
+        "skills/artifact/",
+        "skills/prompt/",
+        "skills/instruction/",
+        "skills/skill/",
+        "skills/template/",
+        "skills/workflow/",
+        "skills/agent/",
+        "skills/context/",
+        "skills/validation/",
+        "skills/integration/",
+        "skills/batch/",
+        "skills/quality-gates/",
+        "skills/performance/",
+        "skills/improve/",
+        "skills/debate/",
+        "skills/validate-rubrics/",
+        "skills/adversarial/",
+        "skills/regression/",
+        "skills/tldr/",
+        "skills/recommend-workspace-pack/",
+        "skills/starter-pack/",
+        "skills/repo-assessment/"
+      ],
+      "features": [
+        "Chain-of-Verification evaluation methodology",
+        "Adversarial rubric stress testing",
+        "Multi-persona architecture analysis",
+        "Automated quality assurance hooks",
+        "Enterprise-grade governance and compliance",
+        "Batch evaluation and processing",
+        "Performance optimization and caching",
+        "Iterative improvement workflows"
+      ],
+      "quality": {
+        "overall_score": "3.8/4.0",
+        "enterprise_ready": true,
+        "production_grade": true,
+        "stress_tested": true
+      }
+    }
+  ]
+}
