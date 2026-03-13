@@ -244,7 +244,8 @@ class LifecycleManager {
     );
 
     // Update ADR entries
-    index.adrs[fromADR].relationships[type].push(toADR);
+    const relationshipField = type === 'dependencies' ? 'dependsOn' : type;
+    index.adrs[fromADR].relationships[relationshipField].push(toADR);
     if (type === 'superseded') {
       index.adrs[toADR].relationships.supersededBy.push(fromADR);
     }
