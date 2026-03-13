@@ -110,15 +110,15 @@ For key skills (eval-improve, eval-validate-rubrics):
 
 ```bash
 # Create skill-specific evaluation framework
-mkdir -p skills/eval-improve/references
-mkdir -p skills/eval-improve/assets
-mkdir -p skills/eval-improve/scripts
+mkdir -p skills/improve/references
+mkdir -p skills/improve/assets
+mkdir -p skills/improve/scripts
 ```
 
 1. **Add Evidence-Based Evaluation**
 
 ```javascript
-// Example: skills/eval-improve/scripts/run-improvement-tests.js
+// Example: skills/improve/scripts/run-improvement-tests.js
 const ImprovementTestSuite = require('./run-improvement-tests');
 const testSuite = new ImprovementTestSuite();
 testSuite.runAllTests();
@@ -138,7 +138,7 @@ testSuite.runAllTests();
 
 ```bash
 # Run skill tests
-cd skills/eval-improve/scripts
+cd skills/improve/scripts
 node run-improvement-tests.js --category=basic
 
 # Validate improvements

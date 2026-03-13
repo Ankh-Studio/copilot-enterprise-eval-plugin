@@ -50,7 +50,7 @@ node rubrics/evaluation-framework/adversarial-validation.js rubrics/skill.md
 
 ```bash
 # Create evaluation config
-cp rubrics/evaluation-framework/assets/eval-config-template.json my-eval.json
+cp rubrics/evaluation-framework/assets/config-template.json my-eval.json
 
 # Run evaluation
 node rubrics/evaluation-framework/agentskills-eval.js my-eval.json ./workspace

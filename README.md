@@ -54,16 +54,16 @@ This plugin provides **17 evaluation-focused skills** organized into four catego
 
 ### 🔍 Core Evaluation Skills (10)
 
-- `evaluate-artifact` - Universal evaluation with Chain-of-Verification
-- `evaluate-prompt` - Specialized prompt quality assessment
-- `evaluate-instruction` - Instruction clarity and effectiveness
-- `evaluate-skill` - Skill functionality and design
-- `evaluate-template` - Template structure and usability
-- `evaluate-workflow` - Workflow efficiency and logic
-- `evaluate-agent` - Agent capability and reliability
-- `evaluate-context` - Context provider accuracy
-- `evaluate-validation` - Validation rule effectiveness
-- `evaluate-integration` - Integration pattern quality
+- `artifact` - Universal evaluation with Chain-of-Verification
+- `prompt` - Specialized prompt quality assessment
+- `instruction` - Instruction clarity and effectiveness
+- `skill` - Skill functionality and design
+- `template` - Template structure and usability
+- `workflow` - Workflow efficiency and logic
+- `agent` - Agent capability and reliability
+- `context` - Context provider accuracy
+- `validation` - Validation rule effectiveness
+- `integration` - Integration pattern quality
 
 ### ⚡ Enhanced Evaluation Skills (3)
 
@@ -101,11 +101,11 @@ copilot plugin install ./copilot-eval-plugin
 
 ```bash
 # Universal evaluation with verification
-/evaluate-artifact .github/prompts/code-review.prompt.md
+/artifact .github/prompts/code-review.prompt.md
 
 # Specialized evaluation
-/evaluate-prompt .github/prompts/api-design.prompt.md
-/evaluate-skill .github/skills/deploy/SKILL.md
+/prompt .github/prompts/api-design.prompt.md
+/skill .github/skills/deploy/SKILL.md
 ```bash
 
 ### Advanced Quality Assurance
@@ -115,7 +115,7 @@ copilot plugin install ./copilot-eval-plugin
 /validate-rubrics rubrics/prompt.md
 
 # Resolve architecture decisions with expert perspectives
-/architecture-debate "Should we use universal or specialized skills?"
+/debate "Should we use universal or specialized skills?"
 
 # Batch evaluate multiple artifacts
 /batch-evaluation --directory .github/prompts --format summary
@@ -127,7 +127,7 @@ copilot plugin install ./copilot-eval-plugin
 /performance-optimizer --cache-clear --stats
 
 # Apply targeted improvements based on evaluation
-/improve-artifact .github/prompts/api-design.prompt.md --focus="clarity,specificity"
+/improve .github/prompts/api-design.prompt.md --focus="clarity,specificity"
 
 # Automated iterative improvement workflow
 /iterative-improvement .github/skills/deploy/SKILL.md --target=3.5 --cycles=3
@@ -141,13 +141,13 @@ The plugin supports powerful prompt chaining workflows for systematic quality en
 
 ```bash
 # 1. Evaluate current state
-/evaluate-artifact .github/prompts/api-design.prompt.md
+/artifact .github/prompts/api-design.prompt.md
 
 # 2. Apply targeted improvements based on rubric feedback
-/improve-artifact .github/prompts/api-design.prompt.md --focus="clarity,specificity"
+/improve .github/prompts/api-design.prompt.md --focus="clarity,specificity"
 
 # 3. Verify improvements with Chain-of-Verification
-/evaluate-artifact .github/prompts/api-design.prompt.md
+/artifact .github/prompts/api-design.prompt.md
 ```bash
 
 #### Automated Iterative Improvement
@@ -164,16 +164,16 @@ The plugin supports powerful prompt chaining workflows for systematic quality en
 
 ```bash
 # 1. Baseline evaluation
-/evaluate-artifact .github/workflows/ci-cd/WORKFLOW.md
+/artifact .github/workflows/ci-cd/WORKFLOW.md
 
 # 2. Architecture debate for improvement strategies
-/architecture-debate "How to improve workflow efficiency and error handling?"
+/debate "How to improve workflow efficiency and error handling?"
 
 # 3. Apply recommended improvements
-/improve-artifact .github/workflows/ci-cd/WORKFLOW.md --focus="functionality,error-handling"
+/improve .github/workflows/ci-cd/WORKFLOW.md --focus="functionality,error-handling"
 
 # 4. Final verification
-/evaluate-artifact .github/workflows/ci-cd/WORKFLOW.md
+/artifact .github/workflows/ci-cd/WORKFLOW.md
 ```bash
 
 ### Automated Quality Checks
@@ -286,13 +286,13 @@ Systematic approach to evaluation reliability:
 copilot plugin install ./copilot-eval-plugin
 
 # 2. Evaluate your first artifact with verification
-/evaluate-artifact .github/prompts/your-prompt.prompt.md
+/artifact .github/prompts/your-prompt.prompt.md
 
 # 3. Test your rubrics for reliability
 /validate-rubrics rubrics/prompt.md
 
 # 4. Make better architecture decisions
-/architecture-debate "How should we structure our skills?"
+/debate "How should we structure our skills?"
 ```bash
 
 ## Evaluation Criteria
@@ -411,18 +411,18 @@ copilot-eval-plugin/
 ├── agents/
 │   └── evaluator.agent.md   # Specialized evaluation AI agent
 ├── skills/                  # 12 production-ready skills
-│   ├── evaluate-artifact/   # 🧠 Universal evaluation with verification
-│   ├── evaluate-prompt/     # Specialized prompt evaluation
-│   ├── evaluate-instruction/ # Specialized instruction evaluation
-│   ├── evaluate-skill/      # Specialized skill evaluation
-│   ├── evaluate-template/   # Specialized template evaluation
-│   ├── evaluate-workflow/   # Specialized workflow evaluation
-│   ├── evaluate-agent/      # Specialized agent evaluation
-│   ├── evaluate-context/    # Specialized context evaluation
-│   ├── evaluate-validation/ # Specialized validation evaluation
-│   ├── evaluate-integration/# Specialized integration evaluation
+│   ├── artifact/           # 🧠 Universal evaluation with verification
+│   ├── prompt/             # Specialized prompt evaluation
+│   ├── instruction/        # Specialized instruction evaluation
+│   ├── skill/              # Specialized skill evaluation
+│   ├── template/           # Specialized template evaluation
+│   ├── workflow/           # Specialized workflow evaluation
+│   ├── agent/              # Specialized agent evaluation
+│   ├── context/            # Specialized context evaluation
+│   ├── validation/         # Specialized validation evaluation
+│   ├── integration/        # Specialized integration evaluation
 │   ├── validate-rubrics/    # ⚡ Adversarial rubric testing
-│   └── architecture-debate/ # 🏛️ Multi-perspective decisions
+│   └── debate/             # 🏛️ Multi-perspective decisions
 ├── hooks.json              # Automated quality assurance hooks
 ├── rubrics/                # 9 stress-tested evaluation rubrics
 │   ├── prompt.md
@@ -445,13 +445,13 @@ copilot-eval-plugin/
 
 ```bash
 # Test evaluation with verification
-/evaluate-artifact .github/prompts/test.prompt.md
+/artifact .github/prompts/test.prompt.md
 
 # Validate rubrics before deployment
 /validate-rubrics rubrics/prompt.md
 
 # Test architecture decisions
-/architecture-debate "Should we add a new skill type?"
+/debate "Should we add a new skill type?"
 ```bash
 
 ### Local Testing
@@ -461,9 +461,9 @@ copilot-eval-plugin/
 copilot plugin install ./copilot-eval-plugin
 
 # Test all skills
-/evaluate-artifact .github/prompts/test.prompt.md
+/artifact .github/prompts/test.prompt.md
 /validate-rubrics rubrics/prompt.md
-/architecture-debate "Test question"
+/debate "Test question"
 ```bash
 
 ### Custom Rubrics

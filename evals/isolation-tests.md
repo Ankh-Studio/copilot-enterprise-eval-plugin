@@ -178,9 +178,9 @@ copilot eval eval-regression --cache-key skill2
 ```bash
 # Test: Plugin loading failure
 # Remove core plugin files and test error handling
-mv skills/evaluate-artifact skills/evaluate-artifact.bak
+mv skills/artifact skills/artifact.bak
 copilot eval evaluate-artifact .github/prompts/code-review.prompt.md
-mv skills/evaluate-artifact.bak skills/evaluate-artifact
+mv skills/artifact.bak skills/artifact
 
 # Test: Skill dependency resolution
 # Test skill loading order and dependencies

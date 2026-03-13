@@ -205,6 +205,6 @@ skills/repo-assessment/references/adversarial-test-cases.md:193 error MD031/blan
 
 ```bash
 # Run adversarial evaluation on Phase 2
-/adversarial --full-suite --target skills/repo-assessment/
-/adversarial --attack-pattern scoring --rubric rubrics/repo-assessment.md
-/adversarial --stress-test performance --skill repo-assessment
+/eval-adversarial --full-suite --target skills/repo-assessment/
+/eval-adversarial --attack-pattern scoring --rubric rubrics/repo-assessment.md
+/eval-adversarial --stress-test performance --skill repo-assessment

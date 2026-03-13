@@ -30,7 +30,7 @@ copilot agent list
 copilot
 
 # Evaluate an artifact
-/evaluate-artifact .github/prompts/my-prompt.prompt.md
+/artifact .github/prompts/my-prompt.prompt.md
 
 # Use the evaluator agent
 /agent evaluator
@@ -38,7 +38,7 @@ copilot
 
 ## What's Included
 
-- **Evaluation Skill**: `/evaluate-artifact` - Universal artifact evaluation
+- **Evaluation Skill**: `/artifact` - Universal artifact evaluation
 - **Evaluator Agent**: `/agent evaluator` - Specialized evaluation assistant
 - **Automated Hooks**: Quality checks during generation/editing
 - **9 Rubrics**: Structured evaluation criteria for all artifact types

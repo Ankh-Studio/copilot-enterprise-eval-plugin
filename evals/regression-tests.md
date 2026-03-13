@@ -59,7 +59,7 @@ copilot eval eval-performance --stress-test --concurrent 5
 copilot eval eval-improve .github/prompts/code-review.prompt.md --focus=clarity
 
 # Regression test: Verify improvement recommendations
-copilot eval eval-improve skills/evaluate-artifact/SKILL.md --comprehensive
+copilot eval eval-improve skills/artifact/SKILL.md --comprehensive
 # Expected: Actionable improvement suggestions
 ```bash
 
