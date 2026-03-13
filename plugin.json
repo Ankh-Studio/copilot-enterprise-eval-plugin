@@ -1,6 +1,6 @@
 {
-  "name": "react-repo-assessment",
-  "description": "Assess React repositories and recommend UI/UX improvement packs",
+  "name": "copilot-enterprise-eval",
+  "description": "Production-grade evaluation toolkit for Copilot artifacts with Chain-of-Verification methodology and enterprise AI adoption assessment",
   "version": "2.0.0",
   "author": {
     "name": "Matthew Van Dusen",
@@ -8,13 +8,13 @@
   },
   "license": "MIT",
   "keywords": [
-    "react",
-    "typescript",
-    "repository-assessment",
-    "frontend",
-    "ui-patterns",
-    "accessibility",
-    "pack-recommendations",
+    "copilot",
+    "enterprise-evaluation",
+    "ai-adoption",
+    "chain-of-verification",
+    "adversarial-testing",
+    "quality-assurance",
+    "architectural-decisions",
     "plugin"
   ],
   "homepage": "https://github.com/Ankh-Studio/copilot-enterprise-eval-plugin",
@@ -23,10 +23,5 @@
     "url": "https://github.com/Ankh-Studio/copilot-enterprise-eval-plugin.git"
   },
   "agents": "agents/",
-  "skills": [
-    "skills/artifact/",
-    "skills/repo-assessment/",
-    "skills/recommend-workspace-pack/",
-    "skills/adr-authoring/"
-  ]
+  "skills": ["skills/enterprise-ai-adoption-audit/"]
 }

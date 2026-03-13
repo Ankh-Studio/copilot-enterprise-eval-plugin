@@ -1,36 +1,55 @@
-# React Repository Assessment Plugin
+---
+provides:
+  - Enterprise AI adoption assessment
+  - Copilot artifact evaluation
+  - Chain-of-verification methodology
+  - Adversarial testing
+  - Quality assurance workflows
+  - Architectural decision evaluation
+---
 
-**Assess React repositories and receive UI/UX improvement pack recommendations for frontend teams.**
+# Copilot Enterprise Evaluation Plugin
 
-This plugin helps teams, especially those with non-designer engineers, improve frontend consistency
-and accessibility through systematic repository analysis and targeted pack recommendations.
+**Production-grade evaluation toolkit for Copilot artifacts with Chain-of-Verification methodology
+and enterprise AI adoption assessment.**
+
+This plugin provides comprehensive evaluation capabilities for organizations implementing Copilot,
+with specialized tools for artifact assessment, quality assurance, and enterprise AI adoption
+workflows.
 
 ## 🎯 What Makes This Different
 
-**React-Focused Assessment**: Specialized analysis for React + TypeScript repositories with specific
-UI/UX pattern recognition.
+**Enterprise-Grade Evaluation**: Production-ready assessment framework specifically designed for
+enterprise Copilot deployments and AI adoption workflows.
 
-**Pack-Based Recommendations**: Suggests proven frontend packs that address common non-designer
-challenges like accessibility and consistency.
+**Chain-of-Verification Methodology**: Implements rigorous verification processes to ensure
+evaluation accuracy and reliability in enterprise environments.
 
-**Team Enablement Focus**: Designed for teams inheriting frontend work, providing clear guidance for
-engineers without UI/UX backgrounds.
+**Adversarial Testing**: Built-in adversarial testing capabilities to stress-test Copilot artifacts
+and identify potential issues before production deployment.
 
-## 🚀 Why Choose React Repository Assessment?
+**Architectural Decision Evaluation**: Evaluates and generates structured ADRs for enterprise
+Copilot implementations with governance and compliance considerations.
 
-- **🎯 Focused Analysis**: React-specific insights instead of generic evaluation
-- **🛡️ Proven Patterns**: Pack recommendations based on real-world React projects
-- **👥 Team Enablement**: Helps non-designer engineers create better UI
-- **⚡ Quick Setup**: Get actionable insights in under 30 seconds
-- **📋 Clear Next Steps**: Specific pack recommendations with implementation guidance
+**One-Command Assessment**: Complete enterprise Copilot evaluation from artifact analysis to
+adoption recommendations in a single interaction.
+
+## 🚀 Why Choose Copilot Enterprise Evaluation?
+
+- **🔍 Enterprise Assessment**: Comprehensive evaluation of Copilot deployments and AI adoption
+  maturity
+- **⚡ One-Command Analysis**: Complete enterprise evaluation in a single interaction
+- **🎯 Actionable Insights**: Get specific improvement recommendations for Copilot workflows
+- **📋 Quality Assurance**: Built-in testing and validation for Copilot artifacts
+- **🌐 Enterprise Focus**: Specialized for enterprise governance, compliance, and scalability
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
-  - [React Repository Assessment](#react-repository-assessment)
+  - [Enterprise Copilot Evaluation](#enterprise-copilot-evaluation)
 - [Quick Start](#quick-start)
-- [Plugin Structure](#plugin结构)
+- [Plugin Structure](#plugin-structure)
 - [Development](#development)
   - [Local Testing](#local-testing)
 - [License](#license)
@@ -38,13 +57,16 @@ engineers without UI/UX backgrounds.
 
 ## 📊 Plugin Skills Overview
 
-This plugin provides **3 focused skills** for React repository assessment and team enablement:
+This plugin provides **enterprise-grade evaluation skills** for Copilot artifact assessment:
 
-### 🔍 Core Skills (3)
+### 🔍 Enterprise Evaluation Skills
 
-- `artifact` - Universal evaluation for React components and patterns
-- `repo-assessment` - Comprehensive React repository analysis and technology detection
-- `recommend-workspace-pack` - Frontend pack recommendations for React teams
+- `enterprise-ai-adoption-audit` - Comprehensive AI adoption assessment with governance, compliance,
+  and enterprise readiness evaluation
+- `artifact-evaluation` - Production-grade artifact evaluation with Chain-of-Verification
+  methodology
+- `adversarial-testing` - Built-in adversarial testing for Copilot artifact validation
+- `quality-gates` - Enterprise quality assurance and compliance workflows
 
 ## Installation
 
@@ -104,31 +126,41 @@ copilot plugin install Ankh-Studio/copilot-enterprise-eval-plugin@v2.0.0
 
 ## Usage
 
-### React Repository Assessment
+### Universal Repository Audit
 
 ```bash
-# Assess your React repository
-/repo-assessment
+# Complete repository analysis (auto-detects technology stack)
+/universal-repo-audit
 
-# Get pack recommendations for your React setup
-/recommend-workspace-pack
+# Analyze specific repository path
+/universal-repo-audit ./my-project
 
-# Evaluate specific React components
-/artifact src/components/Button.tsx
+# Comprehensive analysis with detailed reporting
+/universal-repo-audit --depth comprehensive
+
+# Quick analysis for large repositories
+/universal-repo-audit --depth quick
 ```
 
 ### Example Output
 
 ```bash
-Repository Assessment Results:
-✅ React + TypeScript detected
-✅ UI components found in src/components/
-⚠️  No accessibility testing detected
-⚠️  Inconsistent styling patterns
+Universal Repository Audit Results:
+✅ Technology Stack Detected: React + TypeScript
+✅ Repository Type: Frontend Application
+✅ Architecture Patterns: Component-based, hooks usage
+⚠️  Issues: Missing accessibility testing, inconsistent styling
 
-Recommended Packs:
-- frontend-a11y-ux: Accessibility testing and patterns
-- frontend-ui-radix-tailwind: Consistent UI components
+Architectural Decision Generated:
+- ADR-001: Implement accessibility testing and UI consistency
+- Priority: High
+- Implementation: 2-3 weeks
+- Success Metrics: WCAG compliance, design system adoption
+
+Recommended Actions:
+1. Install frontend-a11y-ux pack for accessibility patterns
+2. Implement frontend-ui-radix-tailwind for consistency
+3. Set up automated testing for component accessibility
 ```
 
 ## Plugin Structure
@@ -137,9 +169,11 @@ Recommended Packs:
 copilot-eval-plugin/
 ├── plugin.json              # Plugin manifest
 ├── skills/
-│   ├── artifact/            # Component evaluation
-│   ├── repo-assessment/      # Repository analysis
-│   └── recommend-workspace-pack/  # Pack recommendations
+│   ├── universal-repo-audit/  # Universal repository analysis
+│   ├── artifact/               # Internal: Component evaluation
+│   ├── repo-assessment/        # Internal: Repository analysis
+│   ├── recommend-workspace-pack/  # Internal: Pack recommendations
+│   └── adr-authoring/           # Internal: ADR generation
 ├── packs/                    # Frontend guidance packs
 └── README.md                # This file
 ```
@@ -149,14 +183,14 @@ copilot-eval-plugin/
 ### Local Testing
 
 ```bash
-# Test repository assessment
-/repo-assessment
+# Test universal repository audit
+/universal-repo-audit
 
-# Test pack recommendations
-/recommend-workspace-pack
+# Test with specific repository path
+/universal-repo-audit ./test-project
 
-# Test component evaluation
-/artifact src/components/Button.tsx
+# Test comprehensive analysis
+/universal-repo-audit --depth comprehensive
 ```
 
 ## License
