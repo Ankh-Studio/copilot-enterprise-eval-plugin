@@ -1,39 +1,84 @@
-name: template description: Evaluate template artifacts against the template rubric
-
+---
+name: pack-template-evaluator
+description:
+  Specialized evaluation of pack templates and prompts for quality, reusability, and pack ecosystem
+  alignment
 ---
 
-Evaluate the provided template against the structured template rubric criteria.
+Evaluate pack-specific templates and prompts against comprehensive criteria for pack ecosystem
+quality and developer experience.
 
 ## Process
 
-1. **Read the template content** from the specified file
-2. **Apply the template evaluation rubric** with these criteria:
-   - **Structure** (Weight: 0.25): Clear organization and sections
-   - **Flexibility** (Weight: 0.25): Customization and adaptability
-   - **Documentation** (Weight: 0.20): Usage instructions and examples
+1. **Identify template type** from pack structure:
+   - **Component Templates** (`.prompt.md` files)
+   - **Instruction Templates** (`.github/instructions/`)
+   - **Workflow Templates** (`.github/workflows/`)
+   - **Configuration Templates** (pack.yaml, etc.)
+
+2. **Apply pack template evaluation rubric** with these criteria:
+   - **Pack Integration** (Weight: 0.25): Alignment with pack schema and ecosystem
+   - **Developer Experience** (Weight: 0.25): Clear guidance and examples
+   - **Reusability** (Weight: 0.20): Cross-pack applicability
    - **Best Practices** (Weight: 0.15): Industry standards and patterns
-   - **Reusability** (Weight: 0.15): Cross-project applicability
+   - **Documentation** (Weight: 0.15): Comprehensive usage instructions
 
-3. **Score each category** from 0-4:
-   - **Score 4**: Exceeds expectations, exceptional quality
-   - **Score 3**: Meets expectations, good quality
-   - **Score 2**: Needs improvement, fair quality
-   - **Score 1**: Poor quality, significant issues
-   - **Score 0**: Not present or completely inadequate
+3. **Analyze pack-specific factors**:
+   - Template compatibility with pack.yaml schema
+   - Integration with pack instructions and prompts
+   - Support for pack constraints and requirements
+   - Alignment with pack-centric development workflow
 
-4. **Calculate weighted total score**
+4. **Score each category** from 0-4:
+   - **Score 4**: Exceeds pack ecosystem standards
+   - **Score 3**: Meets pack quality expectations
+   - **Score 2**: Needs improvement for pack alignment
+   - **Score 1**: Significant pack integration issues
+   - **Score 0**: Not compatible with pack ecosystem
 
-5. **Provide detailed feedback** including:
-   - Strengths and areas of excellence
-   - Specific improvement suggestions
-   - Examples of how to enhance the template
+5. **Generate pack-specific recommendations**:
+   - Enhancement suggestions for pack integration
+   - Examples of successful pack template patterns
+   - Guidance on template reusability across packs
+   - Best practices for pack ecosystem alignment
 
 ## Usage
 
-Provide the path to the template file you want evaluated:
+Provide the path to the pack template you want evaluated:
 
-- `.github/templates/template-name.template.md`
-- Any custom template file path
+- `packs/{pack-name}/.github/prompts/{template-name}.prompt.md`
+- `packs/{pack-name}/.github/instructions/{instruction-name}.md`
+- `packs/{pack-name}/pack.yaml`
+- Any pack-specific template file
 
-The skill will automatically load the template rubric and provide a comprehensive evaluation with
-actionable feedback for improving structure, flexibility, and reusability.
+The skill will evaluate templates for pack ecosystem alignment, developer experience, and
+reusability across different pack types and constraints.
+
+## Examples
+
+### React Component Template Evaluation
+
+Analyzes React component prompts for:
+
+- TypeScript interface quality
+- Accessibility compliance
+- Pack constraint integration
+- Cross-pack reusability
+
+### API Hook Template Evaluation
+
+Evaluates API hook templates for:
+
+- Error handling patterns
+- TypeScript typing
+- Integration with data fetching packs
+- Reusability across frontend packs
+
+### UX Review Template Evaluation
+
+Assesses UX review prompts for:
+
+- Comprehensive evaluation criteria
+- Integration with design system packs
+- Accessibility focus
+- Cross-project applicability
