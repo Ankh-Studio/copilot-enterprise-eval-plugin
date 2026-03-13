@@ -1,12 +1,42 @@
 # ADR Authoring Skill
 
-**Status**: Active **Version**: 1.0.0 **Author**: Matthew Van Dusen
+**Purpose**: Enables clients to create and manage Architecture Decision Records in their
+repositories using automated evidence gathering and quality validation.
+
+**Target**: Client repositories where architectural decisions need to be documented and tracked.
+
+## Client Delivery Model
+
+This skill is designed for **client repositories**, not this plugin repository. When clients install
+this plugin, they get:
+
+- **Quality Gates**: Automated ADR validation via hooks in `.windsurf/hooks/`
+- **Templates**: ADR templates and prompts in their repository
+- **Scripts**: Analysis and validation tools for their architectural decisions
+- **Integration**: Seamless connection with repository assessment and pack recommendations
+
+### What Clients Get
+
+1. **ADR Quality Gates** (`.windsurf/hooks/adr-quality-gates.json`)
+   - Pre-file-write validation enforces minimum 3.0 score
+   - Session-start checks for missing ADRs
+   - Post-session quality summaries
+
+2. **Evidence-Based ADR Creation**
+   - Repository analysis provides concrete evidence
+   - Technology detection and pattern recognition
+   - Decision identification from TODOs/FIXMEs
+
+3. **Quality Management**
+   - Automated scoring with actionable feedback
+   - Performance optimization for large codebases
+   - Lifecycle tracking and relationship mapping
 
 ## Overview
 
 The ADR Authoring skill enables teams to create high-quality Architecture Decision Records (ADRs)
 that are grounded in repository evidence, follow best practices, and integrate seamlessly with the
-existing React repository assessment workflow.
+existing repository assessment workflow. existing React repository assessment workflow.
 
 ## When to Use
 
