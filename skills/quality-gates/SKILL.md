@@ -1,84 +1,138 @@
 ---
-name: quality-gates
-description: Enforce quality standards with automated gating and policy compliance
+name: enterprise-quality-governor
+description:
+  Enterprise-grade quality governance with automated policy enforcement and compliance management
+tools: ['read', 'search', 'list', 'write', 'bash']
+triggers:
+  - 'enforce enterprise quality standards'
+  - 'govern quality compliance'
+  - 'manage quality policies'
+  - 'audit quality governance'
 ---
 
-# Eval Quality Gates
+# Enterprise Quality Governor
 
-Implement automated quality gates that enforce standards and prevent low-quality artifacts from
-progressing.
+Comprehensive quality governance system that enforces enterprise standards, manages compliance
+policies, and provides automated quality assurance with full audit trails for enterprise Copilot
+deployments.
 
-## Process
+## Governance Process
 
-1. **Define**: Load quality gate policies and thresholds
-2. **Evaluate**: Apply rubrics with strict scoring requirements
-3. **Enforce**: Apply pass/fail criteria based on quality thresholds
-4. **Handle**: Manage waivers and special cases with approval workflows
-5. **Report**: Generate audit trails and compliance documentation
+1. **Policy Definition**: Load enterprise quality standards and compliance frameworks
+2. **Automated Enforcement**: Apply multi-tiered quality gates with strict criteria
+3. **Compliance Management**: Handle waivers, exceptions, and approval workflows
+4. **Audit Reporting**: Generate comprehensive compliance documentation and trails
+5. **Continuous Monitoring**: Track quality metrics, trends, and governance effectiveness
 
-## Gate Types
+## Enterprise Gate Framework
 
-### Entry Gates
+### Strategic Governance Gates
 
-- Prompt Quality: Minimum 3.0/4.0 for production use
-- Instruction Completeness: All mandatory sections, 2.5+ score
-- Skill Functionality: Core functionality must exceed 3.0/4.0
+- **Policy Compliance**: Enterprise standards, regulatory requirements, security policies
+- **Risk Assessment**: Security vulnerability scanning, dependency analysis, compliance validation
+- **Performance Standards**: Load testing, scalability validation, reliability metrics
+- **Accessibility Compliance**: WCAG standards, screen reader support, keyboard navigation
 
-### Progression Gates
+### Operational Quality Gates
 
-- Template Reusability: Minimum 2.5/4.0 for cross-project use
-- Workflow Reliability: Error handling scored 3.0+/4.0
-- Agent Performance: Task specialization 3.0+/4.0
+- **Code Quality Standards**: TypeScript best practices, testing coverage, documentation
+  completeness
+- **Integration Reliability**: API compatibility, system integration, error handling robustness
+- **User Experience Excellence**: Interface design, workflow efficiency, accessibility compliance
+- **Maintainability Standards**: Code organization, documentation quality, update procedures
 
-### Release Gates
+### Release Governance Gates
 
-- Integration Compatibility: All criteria 3.0+/4.0
-- Context Accuracy: Data quality and relevance 3.5+/4.0
-- Validation Coverage: Comprehensive scenario handling 3.0+/4.0
+- **Production Readiness**: End-to-end testing validation, performance benchmarks, security
+  clearance
+- **Compliance Verification**: Regulatory adherence, policy compliance, audit trail completeness
+- **Change Management**: Impact assessment, rollback procedures, stakeholder approval
+- **Documentation Standards**: Technical documentation completeness, user guide quality, API
+  references
 
-## Usage
-
-### Single Check
-
-````bash
-/quality-gates .github/prompts/api-design.prompt.md --gate production
-/quality-gates .github/skills/deploy/SKILL.md --gate release
-```bash
-
-### Bulk Enforcement
-
-```bash
-/quality-gates .github/ --all-gates --strict
-/quality-gates .github/prompts/ --gate entry --batch
-```bash
+## Enterprise Policy Management
 
 ### Policy Configuration
 
 ```bash
-/quality-gates --configure-policy organization-standards.json
-/quality-gates --set-threshold prompt-min-score:3.2
+# Load enterprise quality standards
+/enterprise-quality-governor --load-policy enterprise-standards.json
+
+# Configure compliance frameworks
+/enterprise-quality-governor --set-compliance sox,hipaa,gdpr,wcag
+
+# Define quality thresholds
+/enterprise-quality-governor --set-threshold production-min-score:3.8
+/enterprise-quality-governor --set-threshold compliance-strictness:high
+```
+
+### Automated Enforcement
+
 ```bash
+# Enterprise-wide quality enforcement
+/enterprise-quality-governor .github/ --enterprise-gates --strict-mode
 
-## Gate Actions
+# Compliance-specific validation
+/enterprise-quality-governor --compliance-audit --framework gdpr,wcag
 
-- **PASS**: Artifact meets all quality criteria
-- **FAIL**: Artifact below threshold - blocked from progression
-- **WARN**: Artifact meets minimum but below recommended - proceed with caution
-- **WAIVER**: Exception granted with documented justification
+# Risk assessment and security scanning
+/enterprise-quality-governor --security-scan --risk-assessment
+```
 
-## Integration Features
+## Governance Actions
 
-- **CI/CD Integration**: Automated gate checks in deployment pipelines
-- **Policy Management**: Centralized quality policy configuration
-- **Audit Trails**: Complete history of gate decisions and waivers
-- **Exception Workflows**: Structured approval processes for special cases
+### Quality Decisions
+
+- **APPROVED**: Meets all enterprise quality and compliance standards
+- **CONDITIONAL**: Approved with specific requirements and monitoring
+- **REJECTED**: Below enterprise standards - requires remediation
+- **EXEMPTION**: Granted waiver with documented business justification
+
+### Compliance Status
+
+- **COMPLIANT**: Full adherence to all applicable policies and standards
+- **PARTIALLY_COMPLIANT**: Minor exceptions documented and tracked
+- **NON_COMPLIANT**: Significant violations requiring immediate attention
+- **UNDER_REVIEW**: Compliance assessment in progress
+
+## Enterprise Integration
+
+### CI/CD Pipeline Integration
+
+- **Pre-commit Gates**: Local quality checks before code submission
+- **Integration Gates**: Automated testing and validation in merge pipelines
+- **Release Gates**: Production readiness validation and compliance verification
+- **Post-deployment Monitoring**: Continuous quality and compliance tracking
+
+### Enterprise System Integration
+
+- **Policy Management Systems**: Integration with enterprise policy repositories
+- **Compliance Platforms**: Connection to compliance management tools
+- **Audit Systems**: Automated audit trail generation and reporting
+- **Monitoring Dashboards**: Real-time quality metrics and compliance status
 
 ## Compliance Reporting
 
-- **Quality Metrics**: Organizational quality trends and KPIs
-- **Gate Performance**: Effectiveness of quality enforcement
-- **Exception Analysis**: Waiver patterns and policy optimization
-- **Compliance Status**: Audit-ready documentation for standards compliance
+### Executive Dashboards
 
-This skill ensures consistent quality enforcement across enterprise Copilot deployments with automated gating and comprehensive compliance tracking.
-````
+- **Quality KPIs**: Enterprise-wide quality metrics and trends
+- **Compliance Status**: Regulatory adherence and policy compliance rates
+- **Risk Assessment**: Quality risks and mitigation strategies
+- **Performance Analytics**: Quality gate effectiveness and optimization opportunities
+
+### Audit Documentation
+
+- **Compliance Reports**: Detailed audit-ready documentation for regulators
+- **Quality Trails**: Complete history of quality decisions and justifications
+- **Exception Management**: Documented waivers and business justifications
+- **Policy Evolution**: History of policy changes and impact analysis
+
+### Governance Analytics
+
+- **Trend Analysis**: Quality improvement trends and predictive analytics
+- **Effectiveness Metrics**: Quality gate performance and optimization insights
+- **Compliance Patterns**: Repeating compliance issues and policy improvements
+- **Business Impact**: Quality governance impact on business outcomes
+
+This enterprise quality governor ensures consistent, compliant, and auditable quality enforcement
+across large-scale Copilot deployments with comprehensive governance capabilities.
