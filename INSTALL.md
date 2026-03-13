@@ -1,18 +1,18 @@
-# Quick Installation Guide
+# Enterprise Evaluation Installation Guide
 
 ## Install the Plugin
 
-````bash
+```bash
 # From GitHub repository
 copilot plugin install Ankh-Studio/copilot-enterprise-eval-plugin
 
 # Or from local directory
 copilot plugin install ./copilot-enterprise-eval-plugin
-```bash
+```
 
 ## Verify Installation
 
-```bash
+````bash
 # List installed plugins
 copilot plugin list
 
@@ -38,10 +38,10 @@ copilot
 
 ## What's Included
 
-- **20 Evaluation Skills**: Universal and specialized artifact evaluation
-- **Evaluator Agent**: `/agent evaluator` - Specialized evaluation assistant
-- **Automated Hooks**: Quality checks during generation/editing
-- **Enterprise Rubrics**: Structured evaluation criteria for all artifact types with Chain-of-Verification
+- **Enterprise Evaluation Skills**: Production-grade artifact evaluation with Chain-of-Verification methodology
+- **Evaluator Agent**: `/agent evaluator` - Specialized enterprise evaluation assistant
+- **Automated Hooks**: Quality checks during generation/editing with enterprise compliance
+- **Enterprise Rubrics**: Structured evaluation criteria for all artifact types with governance and compliance
 
-The plugin automatically detects artifact types and applies the appropriate evaluation rubric.
+The plugin automatically detects artifact types and applies the appropriate enterprise evaluation rubric.
 ````
