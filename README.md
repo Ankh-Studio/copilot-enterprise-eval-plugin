@@ -1,45 +1,42 @@
 ---
 provides:
-  - React repository assessment
-  - Java Spring repository assessment
-  - Frontend pack recommendations
-  - Backend pack recommendations
-  - Component evaluation
-  - Accessibility analysis
-  - UI pattern detection
-  - Team enablement guidance
+  - Repository context analysis
+  - Constraint discovery for AI adoption
+  - Research-backed AI enablement recommendations
+  - Team productivity acceleration guidance
+  - Spec-driven development workflows
+  - Repository intelligence insights
 ---
 
-# Copilot Repository Assessment Plugin
+# AI Enablement Intelligence Plugin
 
-**Repository assessment and pack recommendation toolkit for development teams, with React and Java
-Spring support.**
+**Repository intelligence and AI enablement toolkit that helps teams accelerate their product goals
+through constraint-aware AI adoption and research-backed implementation guidance.**
 
-This plugin provides comprehensive assessment capabilities for development teams, with specialized
-tools for React and Java Spring repository analysis, pack recommendations, and component evaluation
-for improving frontend consistency and backend architecture.
+This plugin provides deep repository analysis to understand your team's context, discover
+constraints, and deliver research-backed AI enablement strategies that actually work for your
+specific situation. No generic governance - just actionable guidance to help you build better,
+faster with AI.
 
 ## 🎯 What Makes This Different
 
-**React & Spring-Focused Assessment**: Specialized analysis framework specifically designed for
-React development teams and Java Spring workflows with TypeScript support.
+**Context-Aware Intelligence**: We analyze your specific repository, team size, tech stack, and
+constraints to provide personalized AI enablement guidance that actually applies to your situation.
 
-**Full-Stack Recommendations**: Curated frontend and backend guidance with practical pack
-recommendations for improving UI consistency, accessibility, and Spring Boot architecture.
+**Research-Backed Recommendations**: Every recommendation includes market analysis, implementation
+research, and specific tools that work for teams like yours.
 
-**Team Enablement**: Built-in guidance for engineering teams without dedicated designers to improve
-frontend and backend development practices.
+**Product Acceleration Focus**: We don't do AI for AI's sake - we help you use AI to achieve your
+specific product goals faster.
 
-## 🚀 Why Choose Copilot Repository Assessment?
+## 🚀 Why Choose AI Enablement Intelligence?
 
-- **🔍 Technology Analysis**: Comprehensive evaluation of React, TypeScript, and Java Spring
-  repositories
-- **⚡ One-Command Assessment**: Complete repository analysis in a single interaction
-- **🎯 Actionable Recommendations**: Get specific improvement suggestions for frontend and backend
-  workflows
-- **📋 Pack Guidance**: Built-in pack recommendations for UI patterns, accessibility, and Spring
-  Boot architecture
-- **🌐 Team-Focused**: Specialized for engineering teams requiring frontend and backend guidance
+- **🔍 Deep Repository Analysis**: Understand your team's context, constraints, and opportunities
+- **⚡ Constraint Discovery**: Identify what's actually blocking AI adoption in your environment
+- **🎯 Research-Backed Guidance**: Get specific, tested recommendations for your tech stack and team
+  size
+- **📋 Implementation Ready**: Receive ready-to-use code snippets, prompts, and workflows
+- **🌐 Team-Focused**: Designed for development teams who want to move faster, not add bureaucracy
 
 ## Table of Contents
 
@@ -55,16 +52,12 @@ frontend and backend development practices.
 
 ## 📊 Plugin Skills Overview
 
-This plugin provides **repository assessment and pack recommendation skills** for React and Java
-Spring development:
+This plugin provides **AI enablement and repository intelligence** for development teams:
 
-### 🔍 Core Assessment Skills
+### 🔍 Core Enablement Skills
 
-- `repo-assessment` - Comprehensive repository analysis with React, TypeScript, and Java Spring
-  detection
-- `recommend-workspace-pack` - Frontend and backend pack recommendations for UI patterns,
-  accessibility, and Spring Boot
-- `artifact` - Component evaluation with quality assessment and improvement guidance
+- `ai-enablement-intelligence` - Comprehensive repository analysis with constraint discovery and
+  research-backed AI enablement recommendations
 
 ## Installation
 
@@ -124,50 +117,43 @@ copilot plugin install Ankh-Studio/copilot-eval-plugin@v2.0.0
 
 ## Usage
 
-### Repository Assessment
+### AI Enablement Analysis
 
 ```bash
-# Complete repository analysis (auto-detects technology stack)
-/repo-assessment
+# Complete repository analysis with constraint discovery
+/ai-enablement-intelligence
 
 # Analyze specific repository path
-/repo-assessment ./my-project
+/ai-enablement-intelligence ./my-project
 
 # Quick analysis for large repositories
-/repo-assessment --depth quick
+/ai-enablement-intelligence --depth quick
 
-# Backend-focused analysis
-/repo-assessment --focus backend
+# Constraint discovery focus
+/ai-enablement-intelligence --focus constraints
 
-# Frontend-focused analysis
-/repo-assessment --focus frontend
+# Research-backed recommendations
+/ai-enablement-intelligence --research-mode
 ```
 
 ### Example Output
 
 ```bash
-Repository Assessment Results:
-✅ Technology Stack Detected: React + TypeScript + Java Spring
-✅ Repository Type: Full-stack Application
-✅ Architecture Patterns: Component-based, Spring Boot REST API
-⚠️  Issues: Missing accessibility testing, inconsistent styling, Spring security gaps
+AI Enablement Analysis Results:
+✅ Repository Context: React + TypeScript team, 13 people, 6 months old
+✅ Constraints Discovered: Corporate AI policies, budget limits, existing GitHub Actions
+✅ AI Opportunities: Component generation, test automation, dependency management
+⚠️  Blocked: External AI services, custom model deployments
 
-Recommended Actions:
-1. Install frontend-a11y-ux pack for accessibility patterns
-2. Implement frontend-ui-radix-tailwind for consistency
-3. Add spring-security-pack for authentication patterns
-4. Set up automated testing for components and Spring controllers
+Recommended Enablement:
+1. Enable Copilot Chat for code review assistance
+2. Add spec-driven development prompts to PR template
+3. Implement AI-assisted testing workflow
 
-Pack Recommendations:
-Frontend:
-- frontend-a11y-ux: Accessibility patterns and testing
-- frontend-ui-radix-tailwind: UI consistency and design system
-- frontend-data-tanstack-axios: Data fetching patterns
-
-Backend:
-- spring-security-pack: Authentication and authorization patterns
-- spring-testing-pack: Comprehensive testing strategies
-- spring-architecture-pack: Best practices and design patterns
+Implementation Ready:
+- VS Code snippets for spec-driven development
+- GitHub Action for AI-enhanced code review
+- Team prompt templates for daily workflows
 ```
 
 ## Plugin Structure
@@ -176,11 +162,7 @@ Backend:
 copilot-eval-plugin/
 ├── plugin.json              # Plugin manifest
 ├── skills/
-│   ├── repo-assessment/       # Repository analysis
-│   ├── recommend-workspace-pack/  # Pack recommendations
-│   ├── artifact/               # Component evaluation
-│   └── adr-authoring/           # ADR generation
-├── packs/                    # Frontend guidance packs
+│   └── ai-enablement-intelligence/  # Repository analysis and AI enablement
 └── README.md                # This file
 ```
 
@@ -189,14 +171,14 @@ copilot-eval-plugin/
 ### Local Testing
 
 ```bash
-# Test repository assessment
-/repo-assessment
+# Test AI enablement analysis
+/ai-enablement-intelligence
 
 # Test with specific repository path
-/repo-assessment ./test-project
+/ai-enablement-intelligence ./test-project
 
-# Test pack recommendations
-/recommend-workspace-pack
+# Test constraint discovery
+/ai-enablement-intelligence --focus constraints
 ```
 
 ## License

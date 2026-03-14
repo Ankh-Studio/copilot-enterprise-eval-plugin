@@ -1,301 +1,340 @@
 ---
-name: enterprise-ai-adoption-audit
+name: ai-enablement-intelligence
 description:
-  Enterprise AI adoption assessment that evaluates Copilot implementation maturity and generates
-  improvement ADRs for organizations
+  Repository intelligence and AI enablement toolkit that analyzes team context, discovers
+  constraints, and provides research-backed AI adoption guidance for accelerated product
+  development.
 license: MIT
 compatibility:
-  Requires file system access, directory traversal, pattern recognition, and ADR generation
-  capabilities. Compatible with any repository type and size for enterprise AI adoption evaluation.
+  Requires file system access, directory traversal, pattern recognition, and constraint analysis
+  capabilities. Compatible with any repository type and size for team-level AI enablement analysis.
 metadata:
   author: matthewvandusen
-  version: '1.0'
+  version: '2.1.0'
   category: analysis
   tags:
-    enterprise-ai ai-adoption copilot-evaluation adr-generation orchestration enterprise-readiness
-  capabilities:
-    ai-adoption-detection enterprise-assessment architectural-decisions governance-compliance
+    ai-enablement repository-intelligence constraint-discovery team-productivity
+    spec-driven-development product-acceleration team-context research-backed
+  capabilities: repository-analysis constraint-detection ai-opportunity-mapping enablement-guidance
 allowed-tools: Read ListDir GrepSearch Bash(find:*,ls:*)
 ---
 
-# Enterprise AI Adoption Audit
+# AI Enablement Intelligence
 
-Perform comprehensive enterprise AI adoption assessment with Copilot implementation maturity
-evaluation, governance analysis, and architectural decision generation for organizations
-implementing AI-powered development workflows.
+Perform comprehensive repository intelligence analysis with constraint discovery and research-backed
+AI enablement recommendations that help teams accelerate their product goals within their actual
+constraints and context.
 
 ## Core Process
 
-### Phase 1: AI Adoption Assessment
+### Phase 1: Repository Context Analysis
 
-- **Technology Stack Analysis**: Identify AI-ready languages, frameworks, and tools
-- **Copilot Integration Detection**: Assess current Copilot usage and integration patterns
-- **AI Readiness Evaluation**: Evaluate repository structure for AI implementation
-- **Governance Analysis**: Assess existing AI governance and compliance frameworks
+- **Technology Stack Assessment**: Analyze languages, frameworks, and dependency maturity
+- **Team Size & Workflow Detection**: Evaluate development patterns and team structure
+- **Product Lifecycle Analysis**: Identify repository age, maintenance profile, and development
+  velocity
+- **Testing Strategy Evaluation**: Assess testing maturity and automation levels
 
-### Phase 2: Enterprise Evaluation Orchestration
+### Phase 2: Constraint Discovery
 
-- **Skill Selection**: Choose AI-focused evaluation skills based on adoption maturity
-- **Context Passing**: Share AI adoption findings with selected evaluation skills
-- **Parallel Execution**: Run compatible AI assessment skills simultaneously
-- **Result Aggregation**: Collect and normalize AI evaluation outputs
+- **External Constraints**: Identify corporate policies, security requirements, and budget
+  limitations
+- **Technical Constraints**: Analyze infrastructure limitations, tool availability, and access
+  restrictions
+- **Repository Constraints**: Evaluate existing patterns, processes, and team skill gaps
+- **YOLO Mode Testing**: Probe actual AI tool availability and connectivity
 
-### Phase 3: AI Strategy ADR Generation
+### Phase 3: AI Opportunity Mapping
 
-- **Assessment Synthesis**: Combine AI adoption findings into unified analysis
-- **Strategic Decision**: Create structured ADR for AI implementation improvements
-- **Implementation Roadmap**: Generate step-by-step AI adoption plan
-- **Success Metrics**: Define measurable AI adoption improvement criteria
+- **Context-Aware Analysis**: Map AI opportunities to specific repository characteristics
+- **Constraint-Compatible Recommendations**: Identify AI approaches that work within detected
+  limitations
+- **Research-Backed Tool Selection**: Provide market analysis and implementation research for team
+  profiles
+- **Product Acceleration Focus**: Prioritize recommendations that accelerate specific team goals
 
-### Phase 4: Enterprise Reporting
+### Phase 4: Enablement Guidance Generation
 
-- **Executive Summary**: High-level AI adoption maturity and recommendations
-- **Detailed Analysis**: Technical AI readiness findings with evidence and impact
-- **Action Plan**: Prioritized AI implementation steps with time estimates
-- **Resource Planning**: Team AI skill requirements and implementation timeline
+- **Implementation-Ready Artifacts**: Generate ready-to-use code snippets, prompts, and workflows
+- **Spec-Driven Development Guidance**: Promote specification-first AI workflows
+- **Adversarial Reasoning Encouragement**: Foster critical thinking with AI assistance
+- **Team Learning Enablement**: Build continuous improvement capabilities
 
-## AI Adoption Detection Logic
+## Repository Context Analysis
 
-### AI-Ready Technology Stacks
+### Technology Stack Maturity
 
-**AI-Friendly Languages:**
+**AI-Ready Technologies:**
 
-- Python: AI/ML libraries (TensorFlow, PyTorch, scikit-learn)
-- JavaScript/TypeScript: AI SDKs and Copilot integration
-- Java: Spring AI integration patterns
-- C#: Azure AI SDK and ML.NET integration
+- JavaScript/TypeScript: Rich ecosystem of AI tools and Copilot integration
+- Python: Extensive AI/ML libraries and automation frameworks
+- React/Vue/Angular: Component generation and UI pattern assistance
+- Node.js: API development and backend automation opportunities
 
-**AI Framework Detection:**
+**Maturity Assessment:**
 
-- AI/ML library dependencies in package files
-- Copilot SDK integration patterns
-- AI service API integrations (OpenAI, Azure AI, etc.)
-- Machine learning pipeline configurations
+- Dependency stability and update frequency analysis
+- Framework version and ecosystem maturity evaluation
+- Community support and documentation quality assessment
+- Integration complexity and learning curve analysis
 
-### Copilot Integration Assessment
+### Team Context Detection
 
-**Active Copilot Usage:**
+**Team Size Indicators:**
 
-- .copilot directory and configuration files
-- Copilot-specific annotations and prompts
-- AI-generated code patterns and comments
-- Copilot integration in CI/CD workflows
+- Commit frequency and contributor patterns
+- Code review processes and collaboration patterns
+- Documentation depth and onboarding resources
+- Branch strategy and release cadence analysis
 
-**AI Development Patterns:**
+**Workflow Maturity:**
 
-- Prompt engineering files and templates
-- AI model configuration files
-- Data preprocessing pipelines
-- Model evaluation and testing frameworks
+- CI/CD pipeline sophistication and automation levels
+- Testing coverage and quality assurance processes
+- Development tooling and productivity patterns
+- Communication and coordination mechanisms
 
-### Enterprise AI Governance Detection
+## Constraint Discovery Framework
 
-**AI Policy Frameworks:**
+### External Constraint Detection
 
-- AI usage guidelines and documentation
-- Model governance and compliance files
-- Data privacy and security configurations
-- AI ethics and responsibility frameworks
+**Corporate Policy Analysis:**
 
-**Compliance and Security:**
+- AI usage guidelines and policy documents
+- Security and compliance requirements
+- Data privacy and handling restrictions
+- Budget and procurement constraints
 
-- GDPR/AI Act compliance configurations
-- Data handling and privacy policies
-- Security scanning for AI vulnerabilities
-- Audit trails for AI model usage
+**Security & Compliance:**
 
-## AI Adoption Orchestration Matrix
+- Network restrictions and firewall policies
+- Data handling and privacy requirements
+- Audit trail and monitoring needs
+- Regulatory compliance frameworks
 
-### AI-Ready Organizations
+### Technical Constraint Analysis
 
-```
-ai-readiness-assessment → copilot-integration-audit → governance-evaluation → adr-authoring
-```
+**Infrastructure Limitations:**
 
-### Early AI Adopters
+- Development environment restrictions
+- Build system and deployment constraints
+- Tool installation and permission limitations
+- Network connectivity and API access
 
-```
-current-state-analysis → ai-strategy-recommendation → implementation-planning → adr-authoring
-```
+**Tool Availability Assessment:**
 
-### AI-Mature Organizations
+- Existing AI tool integration and usage
+- Development environment capabilities
+- External service access and authentication
+- Plugin and extension compatibility
 
-```
-advanced-ai-audit → optimization-recommendations → scaling-strategy → adr-authoring
-```
+### Repository Constraint Evaluation
 
-### AI Governance Focus
+**Process Constraints:**
 
-```
-compliance-assessment → policy-gap-analysis → governance-improvement → adr-authoring
-```
+- Existing development workflows and resistance to change
+- Code review processes and quality gates
+- Documentation standards and communication patterns
+- Team skill gaps and learning capacity
 
-### Non-AI Organizations
+**Technical Debt Assessment:**
 
-```
-ai-readiness-evaluation → adoption-roadmap → foundational-ai-setup → adr-authoring
-```
+- Legacy code and refactoring requirements
+- Testing gaps and quality assurance needs
+- Performance bottlenecks and scalability concerns
+- Maintenance burden and technical complexity
 
-- API integration patterns
+## AI Enablement Opportunity Mapping
 
-### ADR Structure
+### Context-Aware Recommendations
 
-```markdown
-# ADR-[NUMBER]: [AI_IMPLEMENTATION_TITLE]
+**Team Size-Based Guidance:**
 
-**Status:** Proposed **Date:** [CURRENT_DATE] **Confidence:** [HIGH/MEDIUM/LOW]
+- Small teams (2-5): Focus on individual productivity and rapid iteration
+- Medium teams (6-15): Emphasize collaboration and consistency patterns
+- Large teams (16+): Prioritize governance, scalability, and knowledge sharing
 
-## Context
+**Technology Stack Alignment:**
 
-[AI ADOPTION ASSESSMENT FINDINGS]
+- React/TypeScript: Component generation, testing automation, UI consistency
+- Python/ML: Data processing automation, model development assistance
+- Full-stack: API development, database schema generation, integration testing
 
-## Options Considered
+### Constraint-Compatible Solutions
 
-### Option 1: [AI_STRATEGY_DESCRIPTION]
+**Budget-Constrained Teams:**
 
-**Pros:** [AI_IMPLEMENTATION_BENEFITS] **Cons:** [AI_ADOPTION_DRAWBACKS]
+- Free and open-source AI tools and frameworks
+- Built-in IDE features and language server protocols
+- Community-supported tools and documentation
+- Gradual adoption with minimal upfront investment
 
-### Option 2: [ALTERNATIVE_AI_STRATEGY]
+**Security-Constrained Environments:**
 
-**Pros:** [ALTERNATIVE_BENEFITS] **Cons:** [ALTERNATIVE_DRAWBACKS]
+- Local AI tools and offline capabilities
+- Code-based AI assistance without external data sharing
+- Privacy-preserving approaches and data sanitization
+- On-premise solutions and air-gapped deployments
 
-## Decision
+## Enablement Guidance Generation
 
-[SELECTED AI APPROACH WITH RATIONALE]
+### Research-Backed Recommendations
 
-## Tradeoffs & Consequences
+**Market Analysis Integration:**
 
-### Positive Impacts
+- Tool comparison and feature analysis for team profiles
+- Implementation case studies and success patterns
+- Cost-benefit analysis and ROI estimation
+- Vendor evaluation and integration complexity assessment
 
-[EXPECTED_AI_BENEFITS]
+**Implementation Research:**
 
-### Negative Impacts
+- Best practices for similar team sizes and technologies
+- Common pitfalls and mitigation strategies
+- Success metrics and measurement approaches
+- Change management and adoption strategies
 
-[POTENTIAL_AI_RISKS]
+### Implementation-Ready Artifacts
 
-## Evidence
+**Development Workflows:**
 
-**AI Assessment Data:** [KEY FINDINGS FROM AI ANALYSIS]
+- VS Code snippets and templates for spec-driven development
+- GitHub Actions workflows for AI-enhanced code review
+- Pre-commit hooks for AI-assisted quality checks
+- Team prompt templates for consistent AI interactions
 
-**AI Readiness Analysis:** [AI INFRASTRUCTURE EVALUATED]
+**Documentation & Training:**
 
-## Follow-up Actions
-
-- [ ] [AI_IMPLEMENTATION_ACTION] - [OWNER] - [TIMELINE]
-- [ ] [AI_GOVERNANCE_ACTION] - [OWNER] - [TIMELINE]
-```
+- Team onboarding guides and AI usage policies
+- Best practice documentation and pattern libraries
+- Measurement frameworks and success tracking
+- Continuous improvement and feedback mechanisms
 
 ## Usage
 
-### Enterprise AI Adoption Assessment
+### Repository Intelligence Analysis
 
 ```bash
-/enterprise-ai-adoption-audit
+/ai-enablement-intelligence
 ```
 
 ### Specific Repository Path
 
 ```bash
-/enterprise-ai-adoption-audit ./my-project
+/ai-enablement-intelligence ./my-project
 ```
 
-### Custom Analysis Depth
+### Analysis Depth Options
 
 ```bash
-/enterprise-ai-adoption-audit --depth comprehensive
-/enterprise-ai-adoption-audit --depth quick
+/ai-enablement-intelligence --depth comprehensive
+/ai-enablement-intelligence --depth quick
 ```
 
-### AI Strategy ADR Generation Only
+### Constraint Discovery Focus
 
 ```bash
-/enterprise-ai-adoption-audit --generate-adr-only
+/ai-enablement-intelligence --focus constraints
+/ai-enablement-intelligence --focus opportunities
+```
+
+### Research-Backed Analysis
+
+```bash
+/ai-enablement-intelligence --research-mode
 ```
 
 ## Output Format
 
-### Executive Dashboard
+### Repository Context Dashboard
 
-- **AI Adoption Maturity:** [Current AI implementation level]
-- **Copilot Integration Score:** [0-100 Copilot readiness assessment]
-- **Critical AI Gaps:** [Top 3 immediate AI concerns]
-- **Recommended AI Actions:** [Priority AI implementation list]
+- **Team Profile**: [Size, maturity, workflow patterns]
+- **Technology Stack**: [Languages, frameworks, dependency analysis]
+- **Development Velocity**: [Commit patterns, release cadence, quality metrics]
+- **Constraint Summary**: [External policies, technical limitations, process restrictions]
 
-### Technical Analysis
+### Constraint Analysis Report
 
-- **AI Technology Stack:** [AI-ready languages and frameworks inventory]
-- **Copilot Integration Patterns:** [Detected AI usage and integration levels]
-- **AI Governance Metrics:** [Compliance, security, and policy indicators]
-- **AI Evaluation Results:** [Results from orchestrated AI assessment skills]
+- **External Constraints**: [Corporate policies, security requirements, budget limitations]
+- **Technical Constraints**: [Infrastructure limits, tool availability, access restrictions]
+- **Repository Constraints**: [Process patterns, skill gaps, technical debt]
+- **Opportunity Mapping**: [AI opportunities within constraint boundaries]
 
-### AI Strategy ADR Document
+### AI Enablement Recommendations
 
-- **AI Implementation Decision:** [Structured AI strategy recommendation]
-- **AI Adoption Roadmap:** [Step-by-step AI implementation guide]
-- **AI Success Metrics:** [Measurable AI adoption improvement criteria]
-- **AI Resource Requirements:** [Team AI skills and implementation timeline]
+- **Context-Aware Guidance**: [Team-specific AI adoption recommendations]
+- **Implementation Artifacts**: [Ready-to-use code, prompts, and workflows]
+- **Research-Backed Tools**: [Market analysis and tool recommendations]
+- **Product Acceleration Plan**: [Step-by-step enablement with success metrics]
 
 ## Performance Considerations
 
-### Optimization Strategies
+### Analysis Optimization
 
-- **Parallel Processing:** Execute compatible skills simultaneously
-- **Smart Caching:** Cache repository detection results
-- **Incremental Analysis**: Process only changed files for subsequent runs
-- **Resource Management**: Limit concurrent operations based on repository size
+- **Parallel Processing**: Simultaneous analysis of multiple repository aspects
+- **Smart Caching**: Cache repository patterns and constraint detection results
+- **Incremental Analysis**: Process only changed files for subsequent analyses
+- **Context Memory**: Retain team context for improved recommendation accuracy
 
 ### Resource Limits
 
-- **Maximum Repository Size**: 10,000 files
-- **Analysis Timeout**: 5 minutes for comprehensive mode
-- **Memory Limit**: 1GB for analysis process
-- **ADR Generation**: 2 minutes maximum
+- **Maximum Repository Size**: 50,000 files for comprehensive analysis
+- **Analysis Timeout**: 10 minutes for deep repository intelligence
+- **Memory Usage**: 2GB for constraint discovery and opportunity mapping
+- **Recommendation Generation**: 5 minutes maximum for enablement guidance
 
 ## Error Handling
 
-### Detection Failures
+### Analysis Failures
 
-- **Unknown Repository Type**: Apply generic analysis pattern
-- **Mixed Technologies**: Use multi-stack orchestration
+- **Unknown Repository Types**: Apply generic team context analysis patterns
+- **Mixed Technology Stacks**: Use multi-stack constraint discovery approaches
 - **Insufficient Data**: Provide partial analysis with confidence indicators
+- **Access Restrictions**: Focus on externally observable patterns and metrics
 
-### Skill Execution Errors
+### Constraint Detection Issues
 
-- **Skill Unavailable**: Gracefully skip and continue with available skills
-- **Timeout Failures**: Provide partial results with timeout indicators
-- **Resource Constraints**: Implement fallback analysis strategies
+- **Policy Document Access**: Infer constraints from observable patterns and behaviors
+- **Network Limitations**: Use offline analysis and local tool detection
+- **Tool Installation Restrictions**: Focus on built-in capabilities and free alternatives
+- **Incomplete Context**: Provide recommendations with uncertainty qualifiers
 
-### ADR Generation Issues
+### Recommendation Generation Problems
 
-- **Insufficient Evidence**: Generate ADR with "Requires Further Investigation" status
-- **Conflicting Recommendations**: Present multiple options with tradeoff analysis
-- **Implementation Complexity**: Provide phased approach with risk mitigation
+- **Limited AI Opportunities**: Focus on foundational improvements and preparation
+- **Conflicting Constraints**: Present multiple options with tradeoff analysis
+- **Implementation Complexity**: Provide phased approaches with risk mitigation
+- **Resource Constraints**: Emphasize low-cost and incremental adoption strategies
 
 ## Example Scenarios
 
-### React E-commerce Site
+### React Startup Team (5 people, 6 months old)
 
 ```
-Detection: React + TypeScript + Redux + Material-UI
-Skills: repo-assessment → recommend-workspace-pack → artifact
-ADR: Implement accessibility improvements and performance optimization
+Detection: React + TypeScript + Vite, rapid iteration, limited documentation
+Constraints: Budget limitations, small team, fast growth requirements
+Opportunities: Component generation, testing automation, UI consistency
+Recommendations: Copilot Chat integration, spec-driven development, prompt templates
 ```
 
-### Python API Backend
+### Enterprise Java Team (20 people, 5 years old)
 
 ```
-Detection: Django + PostgreSQL + Redis + Celery
-Skills: repo-assessment → recommend-python-arch → code-quality
-ADR: Migrate to async patterns and implement comprehensive testing
+Detection: Spring Boot + Maven, established processes, compliance requirements
+Constraints: Corporate AI policies, security restrictions, governance requirements
+Opportunities: Code review assistance, documentation generation, test automation
+Recommendations: Local AI tools, privacy-preserving approaches, gradual adoption
 ```
 
-### Full-Stack Application
+### Python Data Science Team (8 people, 2 years old)
 
 ```
-Detection: React frontend + Node.js API + MongoDB
-Skills: repo-assessment → recommend-full-stack → security-audit
-ADR: Implement microservices architecture and enhance security posture
+Detection: Python + Jupyter + pandas, research-focused, experimental workflows
+Constraints: Data privacy requirements, model governance, reproducibility needs
+Opportunities: Data processing automation, model development assistance, documentation
+Recommendations: AI-powered data cleaning, experiment tracking, research automation
 ```
 
-This universal audit provides comprehensive repository analysis with intelligent skill orchestration
-and actionable architectural decisions for any technology stack.
+This AI enablement intelligence provides comprehensive repository analysis with constraint-aware
+recommendations that help teams achieve their product goals faster with AI, not add bureaucracy or
+governance overhead.

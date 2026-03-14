@@ -1,178 +1,155 @@
-# Copilot Enterprise Evaluation Plugin Roadmap
+# AI Enablement Intelligence Plugin Roadmap
 
 ## Strategic Vision
 
-The Copilot Enterprise Evaluation Plugin provides production-grade evaluation capabilities for
-organizations implementing Copilot, with specialized tools for artifact assessment, quality
-assurance, and enterprise AI adoption workflows. Designed for enterprise teams requiring rigorous
-evaluation methodologies and governance compliance.
+The AI Enablement Intelligence Plugin provides repository intelligence and constraint-aware AI
+adoption guidance that helps teams accelerate their product goals. Designed for development teams
+who want to move faster with AI, not add bureaucracy.
 
-## Current State: Enterprise Evaluation (v2.0.0)
+## Current State: AI Enablement Intelligence (v2.1.0)
 
-### ✅ Completed Enterprise Features
+### ✅ Completed Core Features
 
-**Core Evaluation Capabilities:**
+**Repository Intelligence:**
 
-- Enterprise-grade Copilot artifact evaluation with Chain-of-Verification methodology
-- Production-ready assessment frameworks for AI adoption workflows
-- Adversarial testing capabilities for quality assurance
-- Automated quality gates and compliance enforcement
+- Deep repository context analysis (tech stack, team size, maturity)
+- Constraint discovery (external policies, technical limitations, repository patterns)
+- AI opportunity identification within existing constraints
 
-**Enterprise Governance:**
+**Research-Backed Enablement:**
 
-- Policy enforcement and compliance management frameworks
-- Audit trails and evaluation reporting for enterprise requirements
-- Team enablement with structured evaluation workflows
-- Scalable evaluation for large-scale enterprise deployments
-- Integration with enterprise systems and CI/CD pipelines
+- Market analysis for team-specific AI tools and approaches
+- Implementation research for detected constraints
+- Ready-to-use code snippets, prompts, and workflows
+
+**Product Acceleration Focus:**
+
+- Spec-driven development guidance
+- Adversarial reasoning encouragement
+- Team learning enablement workflows
 
 ---
 
-## Future Enhancement Opportunities
+## Current Capabilities
 
-### Potential Enterprise Extensions
+### Repository Analysis
 
-**Advanced Evaluation Features:**
+- Technology stack maturity assessment
+- Team size and workflow analysis
+- Product lifecycle stage detection
+- Dependency ecosystem analysis
+- Testing strategy maturity evaluation
 
-- Multi-language artifact evaluation and scoring
-- Performance benchmarking for Copilot-generated code
-- Security vulnerability assessment in AI-generated artifacts
-- Cross-repository consistency analysis
+### Constraint Discovery
 
-**Enhanced Enterprise Capabilities:**
+- External constraints detection (policies, security, budget)
+- Technical constraints analysis (infrastructure, tools, access)
+- Repository constraints evaluation (patterns, processes, skills)
+- YOLO mode capability testing
 
-- Advanced compliance frameworks (SOC2, ISO 27001, GDPR)
-- Integration with enterprise security tools (SonarQube, Snyk)
-- Custom evaluation rubrics for industry-specific requirements
-- Real-time evaluation monitoring and alerting
+### AI Enablement Guidance
 
-**Team Collaboration Features:**
+- Context-aware AI adoption recommendations
+- Implementation-ready artifacts and workflows
+- Research-backed tool selection and integration
+- Team productivity acceleration strategies
 
-- Shared evaluation results across enterprise teams
-- Evaluation workflow orchestration and automation
-- Integration with enterprise communication platforms (Slack, Teams)
-- Advanced reporting and analytics dashboards
-
-## Strategic Focus Areas
-
-### Enterprise Evaluation Excellence
-
-- **Assessment Accuracy**: Improve Copilot artifact pattern recognition and evaluation precision
-- **Enterprise Relevance**: Ensure evaluations address real enterprise AI adoption challenges
-- **Performance**: Optimize for large-scale enterprise codebases and deployments
-- **Security**: Focus on vulnerability assessment and compliance validation
-
-### Team Enablement
-
-- **Enterprise Support**: Enhanced guidance for teams implementing AI governance
-- **Learning Resources**: Integrated best practices for enterprise AI adoption
-- **Incremental Improvement**: Step-by-step enhancement recommendations for enterprise workflows
-- **Measurable Impact**: Clear before/after metrics for AI adoption improvements
-
-### Ecosystem Integration
-
-- **Tool Compatibility**: Integration with React development tools
-- **Framework Updates**: Support for latest React features and patterns
-- **Community Standards**: Alignment with React community best practices
-- **Documentation**: Maintain clear, actionable guidance
+---
 
 ## Success Metrics
 
-### React Team Adoption Metrics
+### Team Adoption Metrics
 
-- [ ] 50+ React teams actively using the assessment plugin
-- [ ] 90%+ assessment accuracy for React repository patterns
-- [ ] < 30 second average assessment time for typical React repos
-- [ ] 4.5/5.0 user satisfaction with pack recommendations
+- [ ] 50+ development teams using AI enablement analysis
+- [ ] 90%+ constraint detection accuracy for team environments
+- [ ] < 30 second average analysis time for typical repositories
+- [ ] 4.5/5.0 user satisfaction with enablement recommendations
 
-### UI/UX Improvement Metrics
+### Productivity Impact Metrics
 
-- [ ] 60%+ of teams report improved component consistency
-- [ ] 40%+ increase in accessibility compliance scores
-- [ ] 75%+ reduction in UI/UX decision-making time
-- [ ] 80%+ of recommended packs successfully implemented
+- [ ] 60%+ of teams report faster development cycles
+- [ ] 40%+ increase in AI tool adoption success rates
+- [ ] 75%+ reduction in AI adoption trial-and-error time
+- [ ] 80%+ of recommended workflows successfully implemented
 
 ### Team Enablement Metrics
 
-- [ ] 90%+ of non-designer engineers feel more confident with UI decisions
-- [ ] 70%+ reduction in design system inconsistencies
-- [ ] 3x faster onboarding for new frontend team members
-- [ ] 50%+ reduction in UI-related technical debt
+- [ ] 90%+ of teams feel more confident with AI adoption
+- [ ] 70%+ reduction in AI-related technical debt
+- [ ] 3x faster team onboarding for AI workflows
+- [ ] 50%+ reduction in AI implementation friction
+
+---
+
+## Strategic Focus Areas
+
+### Repository Intelligence Excellence
+
+- **Context Accuracy**: Improve repository pattern recognition and team context analysis
+- **Constraint Detection**: Enhance identification of blocking factors and enablers
+- **Performance**: Optimize for large-scale repository analysis and rapid insights
+- **Relevance**: Ensure enablement guidance addresses real team challenges
+
+### Research-Backed Enablement
+
+- **Market Intelligence**: Continuous research on AI tools and approaches for different team
+  profiles
+- **Implementation Research**: Deep analysis of successful AI adoption patterns
+- **Tool Curation**: Maintain high-quality, tested recommendations for team workflows
+- **Success Patterns**: Document and share effective AI enablement strategies
+
+### Product Acceleration
+
+- **Spec-Driven Development**: Promote specification-first AI workflows
+- **Adversarial Reasoning**: Encourage critical thinking with AI assistance
+- **Team Learning**: Build continuous improvement capabilities
+- **Measurable Impact**: Focus on productivity and outcome improvements
+
+---
 
 ## Implementation Approach
 
-### Customer-Driven Development
+### Team-Driven Development
 
-- **React Team Feedback**: Prioritize features based on React team needs
-- **Real-World Testing**: Validate recommendations in actual React projects
-- **Iterative Improvement**: continuously refine assessment algorithms
-- **Community Engagement**: Foster React community contribution
+- **Real Team Context**: Focus on actual development team challenges and constraints
+- **Practical Testing**: Validate recommendations in real team environments
+- **Iterative Improvement**: Continuously refine analysis based on team feedback
+- **Community Learning**: Share successful patterns across team ecosystems
 
 ### Quality Assurance
 
-- **Assessment Reliability**: Ensure consistent, actionable recommendations
-- **Pack Relevance**: Maintain high-quality, practical pack content
-- **Documentation Excellence**: Clear guides for React teams
-- **Performance Optimization**: Fast assessments for large codebases
+- **Analysis Reliability**: Ensure consistent, actionable constraint discovery
+- **Research Quality**: Maintain high-quality, tested enablement recommendations
+- **Implementation Success**: Focus on ready-to-use artifacts and workflows
+- **Performance Optimization**: Fast analysis for large team repositories
+
+---
 
 ## Technology Vision
 
-### Core Assessment Capabilities
+### Core Analysis Capabilities
 
-- **React Pattern Recognition**: Advanced React and TypeScript analysis
-- **Accessibility Testing**: Built-in a11y compliance checking
-- **Pack-Based Recommendations**: Curated frontend improvement guidance
-- **Team-Focused Output**: Clear guidance for non-designer engineers
+- **Repository Pattern Recognition**: Advanced analysis of team development patterns
+- **Constraint Detection**: Comprehensive identification of AI adoption blockers
+- **Context-Aware Recommendations**: Personalized guidance for team situations
+- **Implementation Artifacts**: Ready-to-use code, prompts, and workflows
 
 ### Innovation Focus Areas
 
-- **Component Analysis**: Deeper React component pattern recognition
-- **Performance Insights**: React performance optimization recommendations
-- **Design System Integration**: Component library gap analysis
-- **Team Collaboration**: Shared assessment and improvement tracking
+- **Team Context Analysis**: Deeper understanding of team dynamics and constraints
+- **AI Opportunity Mapping**: Better identification of high-impact AI use cases
+- **Research Integration**: Continuous learning from team adoption patterns
+- **Productivity Measurement**: Quantifiable impact on team outcomes
 
 ---
 
-This roadmap positions the react-repo-assessment plugin as the leading React repository assessment
-solution. The strategic focus emphasizes:
+This roadmap positions the AI Enablement Intelligence plugin as the leading repository intelligence
+solution for team-level AI adoption.
 
-- **React Excellence**: Specialized analysis for React + TypeScript repositories
-- **Team Enablement**: Empowering non-designer engineers to improve UI/UX
-- **Practical Impact**: Measurable improvements in frontend consistency and accessibility
-- **Community Growth**: Open source development focused on React team needs
+- **Repository Context as Foundation** with constraint discovery driving enablement
+- **Research-Backed Recommendations** providing credible, tested guidance
+- **Product Acceleration as Goal** with measurable team productivity impact
+- **Implementation-Ready Artifacts** ensuring immediate value and adoption
 
-## Timeline Summary
-
-| Week | Focus              | Deliverables                                                  |
-| ---- | ------------------ | ------------------------------------------------------------- |
-| 1    | Foundation         | Clean repository, working infrastructure                      |
-| 2    | Pack Architecture  | Extended pack schema, team context, classification system     |
-| 3    | Role/Process Packs | Spec-driven development, onboarding, teammate, reviewer packs |
-| 4    | Team Enablement    | Success metrics, PR delivery, GitHub hooks, documentation     |
-
-**Total Estimated Effort**: 4 weeks focused on pack-centric team enablement
-
----
-
-## Next Steps After Completion
-
-1. **User Testing**: Gather feedback from teams using the pack system
-2. **Pattern Library**: Build repository pattern knowledge base from successful applications
-3. **Advanced Features**: Consider additional pack types based on team needs
-4. **Integration**: Explore integration with existing development workflows
-5. **Ecosystem**: Assess need for additional team-specific pack categories
-
----
-
-This roadmap positions the copilot-enterprise-eval-plugin as the leading enterprise evaluation
-solution for Copilot artifacts.
-
-- **Packs as primary delivery mechanism** with evaluation serving as verification
-- **Team context integration** for personalized recommendations
-- **Spec-driven development workflows** with traceability
-- **PR-based delivery** generating concrete, reviewable changes
-- **Team success metrics** measuring actual development outcomes
-- **GitHub-aligned hooks** for enterprise-grade guardrails
-
-The 4-week timeline delivers a comprehensive pack ecosystem that helps teams work more effectively
-together while maintaining clean, well-documented repositories.
+The focus is on helping teams achieve their product goals faster with AI, not implementing AI
+governance for its own sake.
