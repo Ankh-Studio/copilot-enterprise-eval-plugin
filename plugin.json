@@ -1,7 +1,7 @@
 {
   "name": "copilot-repo-assessment",
   "description": "Repository assessment and pack recommendation toolkit for development teams, with React and Java Spring support",
-  "version": "2.0.0",
+  "version": "v2.0.1",
   "author": {
     "name": "Matthew Van Dusen",
     "email": "matt@ankhstudio.com"
