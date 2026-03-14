@@ -1,7 +1,7 @@
 {
-  "name": "@ankh-studio/copilot-enterprise-eval-plugin",
+  "name": "@ankh-studio/copilot-repo-assessment",
   "version": "2.0.0",
-  "description": "Production-grade evaluation toolkit for Copilot artifacts with Chain-of-Verification methodology and adversarial rubric testing",
+  "description": "Repository assessment and pack recommendation toolkit for React development teams",
   "main": "plugin.json",
   "files": [
     "plugin.json",
@@ -16,17 +16,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Ankh-Studio/copilot-enterprise-eval-plugin.git"
+    "url": "https://github.com/Ankh-Studio/copilot-eval-plugin.git"
   },
   "keywords": [
     "copilot",
-    "evaluation",
-    "rubric",
-    "assessment",
-    "quality",
-    "enterprise",
-    "chain-of-verification",
-    "adversarial-testing",
+    "repository-assessment",
+    "react",
+    "typescript",
+    "pack-recommendations",
+    "frontend",
+    "ui-patterns",
+    "accessibility",
     "plugin"
   ],
   "author": "Matthew Van Dusen <matt@ankhstudio.com>",

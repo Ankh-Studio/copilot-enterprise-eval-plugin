@@ -5,14 +5,14 @@
     "email": "matt@ankhstudio.com"
   },
   "metadata": {
-    "description": "React repository assessment and UI/UX pack recommendations for frontend teams",
+    "description": "Repository assessment and pack recommendation toolkit for React development teams",
     "version": "2.0.0",
-    "homepage": "https://github.com/Ankh-Studio/copilot-enterprise-eval-plugin"
+    "homepage": "https://github.com/Ankh-Studio/copilot-eval-plugin"
   },
   "plugins": [
     {
-      "name": "react-repo-assessment",
-      "description": "Assess React repositories and receive specific UI/UX improvement pack recommendations. Helps teams, especially those with non-designer engineers, improve frontend consistency and accessibility.",
+      "name": "copilot-repo-assessment",
+      "description": "Repository assessment and pack recommendation toolkit for React development teams",
       "version": "2.0.0",
       "source": "./",
       "keywords": [
@@ -20,14 +20,15 @@
         "typescript",
         "repository-assessment",
         "frontend",
+        "pack-recommendations",
         "ui-patterns",
         "accessibility",
-        "pack-recommendations"
+        "team-enablement"
       ],
-      "homepage": "https://github.com/Ankh-Studio/copilot-enterprise-eval-plugin",
+      "homepage": "https://github.com/Ankh-Studio/copilot-eval-plugin",
       "repository": {
         "type": "git",
-        "url": "https://github.com/Ankh-Studio/copilot-enterprise-eval-plugin.git"
+        "url": "https://github.com/Ankh-Studio/copilot-eval-plugin.git"
       },
       "author": {
         "name": "Matthew Van Dusen",
@@ -42,9 +43,9 @@
       "features": [
         "React repository analysis",
         "Technology stack detection",
-        "UI pattern assessment",
+        "Pack-based recommendations",
+        "Component evaluation",
         "Accessibility gap identification",
-        "Frontend pack recommendations",
         "Team enablement guidance"
       ],
       "quality": {

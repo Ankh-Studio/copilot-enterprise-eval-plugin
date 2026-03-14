@@ -1,6 +1,6 @@
 {
-  "name": "copilot-enterprise-eval",
-  "description": "Production-grade evaluation toolkit for Copilot artifacts with Chain-of-Verification methodology and enterprise AI adoption assessment",
+  "name": "copilot-repo-assessment",
+  "description": "Repository assessment and pack recommendation toolkit for development teams, with React and Java Spring support",
   "version": "2.0.0",
   "author": {
     "name": "Matthew Van Dusen",
@@ -9,19 +9,27 @@
   "license": "MIT",
   "keywords": [
     "copilot",
-    "enterprise-evaluation",
-    "ai-adoption",
-    "chain-of-verification",
-    "adversarial-testing",
-    "quality-assurance",
-    "architectural-decisions",
+    "repository-assessment",
+    "react",
+    "typescript",
+    "java",
+    "spring",
+    "spring-boot",
+    "pack-recommendations",
+    "frontend",
+    "backend",
+    "full-stack",
     "plugin"
   ],
-  "homepage": "https://github.com/Ankh-Studio/copilot-enterprise-eval-plugin",
+  "homepage": "https://github.com/Ankh-Studio/copilot-eval-plugin",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Ankh-Studio/copilot-enterprise-eval-plugin.git"
+    "url": "https://github.com/Ankh-Studio/copilot-eval-plugin.git"
   },
   "agents": "agents/",
-  "skills": ["skills/enterprise-ai-adoption-audit/"]
+  "skills": [
+    "skills/artifact/",
+    "skills/repo-assessment/",
+    "skills/recommend-workspace-pack/"
+  ]
 }

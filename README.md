@@ -1,47 +1,45 @@
 ---
 provides:
-  - Enterprise AI adoption assessment
-  - Copilot artifact evaluation
-  - Chain-of-verification methodology
-  - Adversarial testing
-  - Quality assurance workflows
-  - Architectural decision evaluation
+  - React repository assessment
+  - Java Spring repository assessment
+  - Frontend pack recommendations
+  - Backend pack recommendations
+  - Component evaluation
+  - Accessibility analysis
+  - UI pattern detection
+  - Team enablement guidance
 ---
 
-# Copilot Enterprise Evaluation Plugin
+# Copilot Repository Assessment Plugin
 
-**Production-grade evaluation toolkit for Copilot artifacts with Chain-of-Verification methodology
-and enterprise AI adoption assessment.**
+**Repository assessment and pack recommendation toolkit for development teams, with React and Java
+Spring support.**
 
-This plugin provides comprehensive evaluation capabilities for organizations implementing Copilot,
-with specialized tools for artifact assessment, quality assurance, and enterprise AI adoption
-workflows.
+This plugin provides comprehensive assessment capabilities for development teams, with specialized
+tools for React and Java Spring repository analysis, pack recommendations, and component evaluation
+for improving frontend consistency and backend architecture.
 
 ## 🎯 What Makes This Different
 
-**Enterprise-Grade Evaluation**: Production-ready assessment framework specifically designed for
-enterprise Copilot deployments and AI adoption workflows.
+**React & Spring-Focused Assessment**: Specialized analysis framework specifically designed for
+React development teams and Java Spring workflows with TypeScript support.
 
-**Chain-of-Verification Methodology**: Implements rigorous verification processes to ensure
-evaluation accuracy and reliability in enterprise environments.
+**Full-Stack Recommendations**: Curated frontend and backend guidance with practical pack
+recommendations for improving UI consistency, accessibility, and Spring Boot architecture.
 
-**Adversarial Testing**: Built-in adversarial testing capabilities to stress-test Copilot artifacts
-and identify potential issues before production deployment.
+**Team Enablement**: Built-in guidance for engineering teams without dedicated designers to improve
+frontend and backend development practices.
 
-**Architectural Decision Evaluation**: Evaluates and generates structured ADRs for enterprise
-Copilot implementations with governance and compliance considerations.
+## 🚀 Why Choose Copilot Repository Assessment?
 
-**One-Command Assessment**: Complete enterprise Copilot evaluation from artifact analysis to
-adoption recommendations in a single interaction.
-
-## 🚀 Why Choose Copilot Enterprise Evaluation?
-
-- **🔍 Enterprise Assessment**: Comprehensive evaluation of Copilot deployments and AI adoption
-  maturity
-- **⚡ One-Command Analysis**: Complete enterprise evaluation in a single interaction
-- **🎯 Actionable Insights**: Get specific improvement recommendations for Copilot workflows
-- **📋 Quality Assurance**: Built-in testing and validation for Copilot artifacts
-- **🌐 Enterprise Focus**: Specialized for enterprise governance, compliance, and scalability
+- **🔍 Technology Analysis**: Comprehensive evaluation of React, TypeScript, and Java Spring
+  repositories
+- **⚡ One-Command Assessment**: Complete repository analysis in a single interaction
+- **🎯 Actionable Recommendations**: Get specific improvement suggestions for frontend and backend
+  workflows
+- **📋 Pack Guidance**: Built-in pack recommendations for UI patterns, accessibility, and Spring
+  Boot architecture
+- **🌐 Team-Focused**: Specialized for engineering teams requiring frontend and backend guidance
 
 ## Table of Contents
 
@@ -57,16 +55,16 @@ adoption recommendations in a single interaction.
 
 ## 📊 Plugin Skills Overview
 
-This plugin provides **enterprise-grade evaluation skills** for Copilot artifact assessment:
+This plugin provides **repository assessment and pack recommendation skills** for React and Java
+Spring development:
 
-### 🔍 Enterprise Evaluation Skills
+### 🔍 Core Assessment Skills
 
-- `enterprise-ai-adoption-audit` - Comprehensive AI adoption assessment with governance, compliance,
-  and enterprise readiness evaluation
-- `artifact-evaluation` - Production-grade artifact evaluation with Chain-of-Verification
-  methodology
-- `adversarial-testing` - Built-in adversarial testing for Copilot artifact validation
-- `quality-gates` - Enterprise quality assurance and compliance workflows
+- `repo-assessment` - Comprehensive repository analysis with React, TypeScript, and Java Spring
+  detection
+- `recommend-workspace-pack` - Frontend and backend pack recommendations for UI patterns,
+  accessibility, and Spring Boot
+- `artifact` - Component evaluation with quality assessment and improvement guidance
 
 ## Installation
 
@@ -75,7 +73,7 @@ This plugin provides **enterprise-grade evaluation skills** for Copilot artifact
 Install directly from GitHub - this is the fastest way to get started:
 
 ```bash
-copilot plugin install Ankh-Studio/copilot-enterprise-eval-plugin
+copilot plugin install Ankh-Studio/copilot-eval-plugin
 ```
 
 ### 📦 Alternative Installation Methods
@@ -83,14 +81,14 @@ copilot plugin install Ankh-Studio/copilot-enterprise-eval-plugin
 #### From Local Path
 
 ```bash
-copilot plugin install ./copilot-enterprise-eval-plugin
+copilot plugin install ./copilot-eval-plugin
 ```
 
 #### From Specific Version
 
 ```bash
 # Install a specific version
-copilot plugin install Ankh-Studio/copilot-enterprise-eval-plugin@v2.0.0
+copilot plugin install Ankh-Studio/copilot-eval-plugin@v2.0.0
 ```
 
 #### From Marketplace (if available)
@@ -105,8 +103,8 @@ copilot plugin install copilot-enterprise-eval@marketplace-name
 After installation, verify the plugin is working:
 
 ```bash
-# Test basic evaluation
-/artifact --help
+# Test repository assessment
+/repo-assessment
 
 # List all available skills
 copilot plugin list
@@ -118,49 +116,58 @@ To update to the latest version:
 
 ```bash
 # Reinstall from GitHub (gets latest version)
-copilot plugin install Ankh-Studio/copilot-enterprise-eval-plugin
+copilot plugin install Ankh-Studio/copilot-eval-plugin
 
 # Or install specific version
-copilot plugin install Ankh-Studio/copilot-enterprise-eval-plugin@v2.0.0
+copilot plugin install Ankh-Studio/copilot-eval-plugin@v2.0.0
 ```
 
 ## Usage
 
-### Universal Repository Audit
+### Repository Assessment
 
 ```bash
 # Complete repository analysis (auto-detects technology stack)
-/universal-repo-audit
+/repo-assessment
 
 # Analyze specific repository path
-/universal-repo-audit ./my-project
-
-# Comprehensive analysis with detailed reporting
-/universal-repo-audit --depth comprehensive
+/repo-assessment ./my-project
 
 # Quick analysis for large repositories
-/universal-repo-audit --depth quick
+/repo-assessment --depth quick
+
+# Backend-focused analysis
+/repo-assessment --focus backend
+
+# Frontend-focused analysis
+/repo-assessment --focus frontend
 ```
 
 ### Example Output
 
 ```bash
-Universal Repository Audit Results:
-✅ Technology Stack Detected: React + TypeScript
-✅ Repository Type: Frontend Application
-✅ Architecture Patterns: Component-based, hooks usage
-⚠️  Issues: Missing accessibility testing, inconsistent styling
-
-Architectural Decision Generated:
-- ADR-001: Implement accessibility testing and UI consistency
-- Priority: High
-- Implementation: 2-3 weeks
-- Success Metrics: WCAG compliance, design system adoption
+Repository Assessment Results:
+✅ Technology Stack Detected: React + TypeScript + Java Spring
+✅ Repository Type: Full-stack Application
+✅ Architecture Patterns: Component-based, Spring Boot REST API
+⚠️  Issues: Missing accessibility testing, inconsistent styling, Spring security gaps
 
 Recommended Actions:
 1. Install frontend-a11y-ux pack for accessibility patterns
 2. Implement frontend-ui-radix-tailwind for consistency
-3. Set up automated testing for component accessibility
+3. Add spring-security-pack for authentication patterns
+4. Set up automated testing for components and Spring controllers
+
+Pack Recommendations:
+Frontend:
+- frontend-a11y-ux: Accessibility patterns and testing
+- frontend-ui-radix-tailwind: UI consistency and design system
+- frontend-data-tanstack-axios: Data fetching patterns
+
+Backend:
+- spring-security-pack: Authentication and authorization patterns
+- spring-testing-pack: Comprehensive testing strategies
+- spring-architecture-pack: Best practices and design patterns
 ```
 
 ## Plugin Structure
@@ -169,11 +176,10 @@ Recommended Actions:
 copilot-eval-plugin/
 ├── plugin.json              # Plugin manifest
 ├── skills/
-│   ├── universal-repo-audit/  # Universal repository analysis
-│   ├── artifact/               # Internal: Component evaluation
-│   ├── repo-assessment/        # Internal: Repository analysis
-│   ├── recommend-workspace-pack/  # Internal: Pack recommendations
-│   └── adr-authoring/           # Internal: ADR generation
+│   ├── repo-assessment/       # Repository analysis
+│   ├── recommend-workspace-pack/  # Pack recommendations
+│   ├── artifact/               # Component evaluation
+│   └── adr-authoring/           # ADR generation
 ├── packs/                    # Frontend guidance packs
 └── README.md                # This file
 ```
@@ -183,14 +189,14 @@ copilot-eval-plugin/
 ### Local Testing
 
 ```bash
-# Test universal repository audit
-/universal-repo-audit
+# Test repository assessment
+/repo-assessment
 
 # Test with specific repository path
-/universal-repo-audit ./test-project
+/repo-assessment ./test-project
 
-# Test comprehensive analysis
-/universal-repo-audit --depth comprehensive
+# Test pack recommendations
+/recommend-workspace-pack
 ```
 
 ## License
